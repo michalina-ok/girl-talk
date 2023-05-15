@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon'
+const navLinks = [{
+    name: 'Home',
+    url: '/',
+},
+{
+    name: 'Pigeunivers',
+    url: '/pigeunivers/main',
+},
+{
+    name: 'Om os',
+    url: '/om-os',
+},
+{
+    name: 'Bliv frivillig',
+    url: '/frivillig',
+},
+{
+    name: 'Forældre',
+    url: '/foraeldre',
+}]
+---
+
+<nav>
+    <div class="nav-links" role="navigation">
+{navLinks.map(link => (
+    <a href={link.url}>{link.name}</a>
+))}
+</div>
+</nav>
