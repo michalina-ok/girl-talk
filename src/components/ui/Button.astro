@@ -1,0 +1,7 @@
+---
+const { link, name, style = "dark" } = Astro.props;
+---
+
+<a class:list={[ 'btn', style ]} href={link}>
+        {name}
+</a>

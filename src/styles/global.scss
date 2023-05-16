@@ -6,17 +6,40 @@
 }
 
 :root {
-  --bkg: #fbfbfb;
-  --text: #1d1d1b;
-  --accent1: ;
-  --accents2: ;
+  --bkg-light: #fbfbfb;
+  --bkg-dark: #1d1d1b;
+  --accent1: #ffe4ee;
+  --accent2: #edcff8;
+  --accent3: #d1ff99;
+  --text-dark: #1d1d1b;
+  --text-light: #faf7f2;
 }
+
+/* THEME */
+.dark {
+  color: var(--text-light);
+  background-color: var(--bkg-dark);
+}
+
+.light {
+  color: var(--text-dark);
+  background-color: var(--bkg-light);
+}
+
 
 body {
   font-family: "Work Sans", sans-serif;
   background-color: var(--bkg);
   color: var(--text);
   max-width: 2000px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /* LAYOUT */
@@ -29,13 +52,18 @@ body {
 
 main {
   display: grid;
-  gap: clamp(5rem, 7vw, 7.5rem);
+  gap: clamp(3rem, 5vw, 5rem);
 }
 
 /* text styles */
 h1 {
   font-weight: 700;
   font-size: clamp(2rem, 10vw, 4rem);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: clamp(2rem, 8vw, 3rem);
 }
 
 /* COMPONENTS */
@@ -49,5 +77,32 @@ nav {
 }
 
 footer {
-  background-color: black;
+  background-color: var(--bkg-dark);
+  color: var(--text-light);
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px var(--bkg-light) solid;
+  }
+
+  input[type="submit"] {
+    width: 150px;
+    align-self: center;
+  }
 }
+
+/* BUTTONS */
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
