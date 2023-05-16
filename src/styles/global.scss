@@ -26,10 +26,9 @@
   background-color: var(--bkg-light);
 }
 
-
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: var(--bkg);
+  background-color: var(--bkg-light);
   color: var(--text);
   max-width: 2000px;
 }
@@ -69,13 +68,14 @@ h3 {
 /* COMPONENTS */
 
 /* NAVIGATION PRIMARY */
-nav {
+.NavPrimary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: pink;
 }
 
+/* FOOTER */
 footer {
   background-color: var(--bkg-dark);
   color: var(--text-light);
@@ -97,12 +97,50 @@ footer {
   }
 }
 
-/* BUTTONS */
+/* COLOR SECTION */
+.ColorSection {
+.flex-container {
+  display: flex;
+  width: 70%;
+}
 
+  h1 {
+    font-size: 3vw;
+    padding: 5px;
+  }
+
+  .color-background {
+    position: relative;
+    flex-grow: 1;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    background-color: #ffe4ee;
+  }
+
+  svg {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    left: -8px;
+  }
+
+  .description {
+    width: 70%;
+    border-radius: 8px 0 8px 8px;
+    background-color: #ffe4ee;
+  }
+
+  p {
+    font-size: 2vw;
+    padding: 5px;
+  }
+}
+
+/* BUTTONS */
 .btn {
   padding: 15px 25px;
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: 700;
 }
-

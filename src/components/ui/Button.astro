@@ -1,7 +1,7 @@
 ---
-const { link, name, style = "dark" } = Astro.props;
+const { link, name, style = "dark", size = "large" } = Astro.props;
 ---
 
-<a class:list={[ 'btn', style ]} href={link}>
+<a class:list={[ 'btn', style, size ]} href={link}>
         {name}
 </a>
