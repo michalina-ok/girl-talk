@@ -1,78 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-
+import Button from "../components/ui/Button.astro"
 ---
 <BaseLayout title="GirlTalk">
 	<section>
 		<h1>Du er altid god nok</h1>
-		<p>... men vi er her, når du bliver i tvivl</p>
-	<div class="parent">
-		<div class="top">
-		
-			<p>GirlTalk’s Brevkasse</p>
-			<div class="next-to">
-				<svg width="8" height="8" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="75" height="75" fill="#F5F5F5"/>
-					<rect x="-75" y="-75" width="150" height="150" fill="#FFE4EE"/>
-					<circle r="75" fill="#FBFBFB"/>
-					</svg>
-				
-			</div>
-			
-		</div>
-<div class="below">
-	<p>dhdhbdbfdhfbdsd</p>
-	</div>
-</div>
+		<h2>... men vi er her, når du bliver i tvivl</h2>
 	</section>
+<div>
+	<Button text="Go to Girls Universe" link="/pigeunivers/main" size="extra-large"/>
+</div>
 	</BaseLayout>
-
-	<style>
-
-
-.parent {
-	margin: 40px;
-}
-
-.below {
-	width: 70%;
-	height: 80px;
-	border-radius: 8px 0 8px 8px;
-	background-color: #FFE4EE;
-}
-
-.next-to {
-	position: relative;
-	flex-grow: 1;
-	height: auto;
-	border-radius: 8px 8px 0 0;
-	background-color: #FFE4EE;
-}
-
-p {
-	font-size: 3vw;
-	padding: 5px;
-}
-
-.top {
-	display: flex;
-	width: 70%;
-}
-
-
-svg {
-
-  content: "";
-  position: absolute;
-  
-  background-color: transparent;
-  bottom: 0;
-  left: -8px;
-
-}
-
-
-
-
-
-	</style>

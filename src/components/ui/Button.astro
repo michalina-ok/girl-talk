@@ -1,7 +1,52 @@
 ---
-const { link, name, style = "dark", size = "large" } = Astro.props;
+const { link, text, style = "dark", size = "medium" } = Astro.props;
 ---
 
-<a class:list={[ 'btn', style, size ]} href={link}>
-        {name}
+<a class:list={["btn", style, size]} href={link}>
+  {text}
 </a>
+
+<style>
+  /* SIZES */
+
+  .extra-small {
+    font-size: var(--font-size-xs);
+    padding: 10px 15px;
+  }
+  .small {
+    font-size: var(--font-size-small);
+    padding: 15px 30px;
+  }
+
+  .medium {
+    font-size: var(--font-size-medium);
+    padding: 20px 40px;
+  }
+
+  .large {
+    font-size: var(--font-size-large);
+    padding: 25px 40px;
+  }
+
+  .extra-large {
+    font-size: var(--font-size-xl);
+    padding: 25px 40px;
+  }
+
+  /* STYLES */
+
+  .dark {
+    color: var(--color-off-white);
+    background-color: var(--color-black-ish);
+  }
+
+  .light {
+    color: var(--color-black-ish);
+    background-color: var(--color-off-white);
+  }
+
+  .color {
+    color: var(--color-black-ish);
+    background-color: var(--color-purple);
+  }
+</style>

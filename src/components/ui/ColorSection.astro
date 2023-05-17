@@ -1,25 +1,42 @@
 ---
 import Button from "./Button.astro";
-const { color } = Astro.props;
+const { color, hex, title } = Astro.props;
 ---
 
 
-  <section class:list={[ 'ColorSection', color ]}>
+  <section class:list={[ 'ColorSection']}>
     <div class="flex-container">
     <section class="headline">
-        <h1>GirlTalk’s Brevkasse</h1>
+        <h1>{title}</h1>
       </section>
-      <div class="color-background">
+      <div class:list={[ 'color-background', color]}>
         <svg width="8" height="8" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="75" height="75" fill="#F5F5F5"></rect>
-          <rect x="-75" y="-75" width="150" height="150" fill="#FFE4EE"></rect>
+          <rect x="-75" y="-75" width="150" height="150" fill={color}></rect>
           <circle r="75" fill="#FBFBFB"></circle>
         </svg>
       </div>
     </div>
-    <section class="description">
-      <p>Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
+    <section class:list={[ 'description', color]}>
+      <slot></slot>
     </section>
+  </div>
+
 </section>
+
+<style> 
+
+.pink {
+  background-color: var( --color-pink);
+}
+
+.green {
+  background-color: var( --color-green);
+}
+
+.purple {
+  background-color: var( --color-purple);
+}
+  </style>
 
 
