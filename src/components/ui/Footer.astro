@@ -14,9 +14,10 @@ import Button from "./Button.astro";
       <label for="email">Din e-mail</label>
       <input type="email" id="email" name="email" class="dark" />
     </div>
-    <input class="btn light" type="submit" value="Timeld her" />
+    <Button size="extra-small" style="light" text="Tilmeld dig" />
   </form>
-</div> </section> 
+</div> 
+</section> 
  <section>
   <div class="footer_links">
  <ul>
@@ -25,7 +26,6 @@ import Button from "./Button.astro";
   <li> <a href="frivillig.html">Frivillig</a></li>
   <li> <a href="foraeldre.html">Forældre</a></li>
   <li> <a href="main.html">Pigeunivers</a></li>
-
  </ul>
  <ul>
   <li> <a href="main.html">Pigeunivers</a></li>
@@ -89,4 +89,12 @@ display: flex;
 flex-direction: row;
 }
 
+.footer_links ul{
+list-style: none;
+padding-right: 1rem;
+}
+
+.footer_contact{
+
+}
 </style>

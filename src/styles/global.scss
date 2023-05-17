@@ -196,12 +196,6 @@ main {
 }
 
 /* BUTTON */
-.btn {
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: var(--font-weight-bold);
-}
-
 @media screen and (min-width: var(--media-query-max-width-mobile)) {
   /* TEXT STYLES DESKTOP */
 
