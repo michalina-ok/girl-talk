@@ -18,7 +18,7 @@ import Button from "./Button.astro";
   </form>
 </div> 
 </section> 
- <section>
+ <section class="bottom_section">
   <div class="footer_links">
  <ul>
   <li> <a href="index.html">Forside</a></li>
@@ -36,15 +36,19 @@ import Button from "./Button.astro";
  </ul>
   </div>
   
-  <div class="footer_contact">
+  <section class="footer_contact">
+  <div>
   <h5>GirlTalk</h5>
   <p>Martinsvej 7, 1</p>
   <p>1926 Frederiksberg C</p>
   <p>CVR 30 14 53 48</p>
+</div>
+  <div>
   <h5>Kontakt os</h5>
   <p>51 91 33 77</p>
-  <p>info@girltalk.dk</p></section>
-</div>
+  <p>info@girltalk.dk</p></div>
+</section>
+  </section>
 </footer>
 
 <style>
@@ -72,6 +76,7 @@ footer {
 .footer_newsletter{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   }
 
 .first_footer_div{
@@ -81,7 +86,7 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-items: end;
+  
 }
 
 .footer_links{
@@ -95,6 +100,17 @@ padding-right: 1rem;
 }
 
 .footer_contact{
+  display: flex;
+  flex-direction: row;
+}
 
+.bottom_section{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+}
+
+div{
+  padding-top: 20px;
 }
 </style>
