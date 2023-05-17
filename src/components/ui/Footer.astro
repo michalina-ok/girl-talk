@@ -2,21 +2,91 @@
 import Button from "./Button.astro";
 ---
 <footer>
+  <section class="footer_newsletter">
+  <div class="first_footer_div">
   <h3>Nyhedsbrev</h3>
   <p>Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
+  <p>Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
+</div>
+  <div>
   <form>
-    <div>
+    <div class="footer_newsletter_form">
       <label for="email">Din e-mail</label>
       <input type="email" id="email" name="email" class="dark" />
     </div>
     <input class="btn light" type="submit" value="Timeld her" />
   </form>
-  <p>Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
+</div> </section> 
+ <section>
+  <div class="footer_links">
+ <ul>
+  <li> <a href="index.html">Forside</a></li>
+  <li> <a href="om-os.html">Om os</a></li>
+  <li> <a href="frivillig.html">Frivillig</a></li>
+  <li> <a href="foraeldre.html">Forældre</a></li>
+  <li> <a href="main.html">Pigeunivers</a></li>
+
+ </ul>
+ <ul>
+  <li> <a href="main.html">Pigeunivers</a></li>
+  <li> <a href="chat.html">Chat</a></li>
+  <li> <a href="brevkasse.html">Brevkasse</a></li>
+  <li> <a href="faellesskaber.html">Fællesskaber</a></li>
+  <li> <a href="medier.html">Medier</a></li>
+ </ul>
+  </div>
+  
+  <div class="footer_contact">
   <h5>GirlTalk</h5>
   <p>Martinsvej 7, 1</p>
   <p>1926 Frederiksberg C</p>
   <p>CVR 30 14 53 48</p>
   <h5>Kontakt os</h5>
   <p>51 91 33 77</p>
-  <p>info@girltalk.dk</p>
+  <p>info@girltalk.dk</p></section>
+</div>
 </footer>
+
+<style>
+
+footer {
+  background-color: var(--color-black-ish);
+  color: var(--color-off-white); }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px var(--color-off-white) solid;
+  }
+
+  input[type="submit"] {
+    width: 150px;
+    align-self: center;
+  }
+
+.footer_newsletter{
+  display:flex;
+  flex-wrap: wrap;
+  }
+
+.first_footer_div{
+  width: 50%;
+}
+.footer_newsletter_form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+}
+
+.footer_links{
+display: flex;
+flex-direction: row;
+}
+
+</style>

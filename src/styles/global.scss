@@ -155,27 +155,7 @@ main {
   box-shadow: var(--shadow-gray);
 }
 
-/* FOOTER */
-footer {
-  background-color: var(--color-black-ish);
-  color: var(--color-off-white);
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  input[type="email"] {
-    width: 250px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px var(--color-off-white) solid;
-  }
 
-  input[type="submit"] {
-    width: 150px;
-    align-self: center;
-  }
-}
 
 /* COLOR SECTION */
 .ColorSection {
