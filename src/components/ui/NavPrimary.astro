@@ -25,14 +25,17 @@ const navLinks = [{
 <nav class="NavPrimary"> 
 
 <div class="nav-primary-logo">
-    <h1><a href="index.html"> GirlTalk</a></h1>
+    <div class="logo"><a href="index.html"> GirlTalk</a></div>
+
+<div class="searchdiv">
     <div class="search-container">
         <form action="/search" method="get">
           <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
           <label class="searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
         </form>
-      </div>
-</div>
+      </div></div>
+ </div>
+
 <ul class="nav-links" role="navigation">
  {navLinks.map(link => (
  <li> <a href={link.url}>{link.name}</a></li> ))}
@@ -87,6 +90,7 @@ const navLinks = [{
 	height: 50px;
 	width: 50px;
 	vertical-align: bottom;
+    align-self: flex-end;
 }
 
 .mglass {
@@ -254,11 +258,14 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
 /*NAV PRIMARY*/
 
 .nav-primary-logo{
+position: relative;
 display: flex;
-justify-content: space-evenly;
+justify-content: center;
 padding-bottom: 20px;
 padding-top: 20px;
 }
+
+
 
 .nav-links{
         display: flex;
@@ -268,6 +275,8 @@ padding-top: 20px;
         padding-bottom: 30px;
     }
     
+
+
 .NavPrimary{
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.10)
 
