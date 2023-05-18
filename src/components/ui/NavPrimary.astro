@@ -26,15 +26,16 @@ const navLinks = [{
 
 <div class="nav-primary-logo">
     <div class="logo"><a href="index.html"> GirlTalk</a></div>
-
-<div class="searchdiv">
+<div class="search-flex">
     <div class="search-container">
         <form action="/search" method="get">
           <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
           <label class="searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
         </form>
-      </div></div>
+      </div>
  </div>
+</div>
+
 
 <ul class="nav-links" role="navigation">
  {navLinks.map(link => (
@@ -82,7 +83,18 @@ const navLinks = [{
 <style>
 
 /*SEARCH BAR*/
+.search-flex{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
 
+.logo{
+  display: flex;
+  width:100%;
+  justify-content: end;
+  align-items: center;
+}
 .search-container {
 	position: relative;
 	display: inline-block;
@@ -90,7 +102,6 @@ const navLinks = [{
 	height: 50px;
 	width: 50px;
 	vertical-align: bottom;
-    align-self: flex-end;
 }
 
 .mglass {
