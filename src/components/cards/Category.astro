@@ -1,0 +1,13 @@
+---
+const { category, header  } = Astro.props;
+---
+<div class="Category">
+<p>● {category}</p>
+<p>{header}</p>
+</div>
+
+<style>
+p {
+    margin-bottom: var(--spacing-xs)
+}
+</style>
