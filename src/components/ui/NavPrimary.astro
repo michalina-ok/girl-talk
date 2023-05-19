@@ -36,7 +36,7 @@ const navLinks = [{
 </div>
 
 
-<ul class="nav-links" role="navigation">
+<ul class="nav-links nav-links-container" role="navigation">
  {navLinks.map(link => (
  <li> <a href={link.url}>{link.name}</a></li> ))}
  </ul>
@@ -57,7 +57,7 @@ const navLinks = [{
       <div class="nav-wrapper">
         <nav>
 	
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Forside</a></li>
                 <li><a href="om-os.html">Om os</a></li>
                 <li><a href="stot.html">Støt</a></li>
@@ -278,7 +278,7 @@ padding-top: 10px;
 
 
 
-.nav-links{
+.nav-links-container{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
