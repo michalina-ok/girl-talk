@@ -4,22 +4,22 @@ import Button from "./Button.astro";
 <footer>
   <section class="footer_newsletter">
   <div class="first_footer_div">
-  <h3>Nyhedsbrev</h3>
-  <p>Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
-  <p>Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
+  <h3 class="secondary-header">Nyhedsbrev</h3>
+  <p class="themeheader">Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
+  <p class="">Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
 </div>
   <div>
   <form>
     <div class="footer_newsletter_form">
-      <label for="email">Din e-mail</label>
+      <label class="themeheader" for="email">Din E-mail</label>
       <input type="email" id="email" name="email" class="dark" />
     </div>
-    <Button size="extra-small" style="light" text="Tilmeld dig" />
+    <Button size="extra-small" text="Tilmeld dig" />
   </form>
 </div> 
 </section> 
  <section class="bottom_section">
-  <div class="footer_links">
+  <div class="footer-links-container footer_links">
  <ul>
   <li> <a href="index.html">Forside</a></li>
   <li> <a href="om-os.html">Om os</a></li>
@@ -38,24 +38,32 @@ import Button from "./Button.astro";
   
   <section class="footer_contact">
   <div>
-  <h5>GirlTalk</h5>
+  <h5 class="subheader">GirlTalk</h5>
   <p>Martinsvej 7, 1</p>
   <p>1926 Frederiksberg C</p>
   <p>CVR 30 14 53 48</p>
 </div>
-  <div>
-  <h5>Kontakt os</h5>
+  <div class="pl20">
+  <h5 class="subheader">Kontakt os</h5>
   <p>51 91 33 77</p>
   <p>info@girltalk.dk</p></div>
 </section>
+  </section>
+  <section class="socialmedia">
+<a href="https://www.facebook.com/GirlTalkdk"> <img src="/facebook.svg" alt="facebook"> </a>
+<a href="https://www.instagram.com/girltalkdk/"> <img src="/instagram.svg" alt="instagram"> </a>
+<a href="https://www.tiktok.com/@girltalkdk"> <img src="/tiktok.svg" alt="tiktok"> </a>
+<a href="https://www.youtube.com/channel/UCYMPMeYqeojUzmiplzk78sg"> <img src="youtube.svg" alt="youtube"> </a>
+<a href="https://www.linkedin.com/company/girltalk.dk/mycompany/"> <img src="linkedin.svg" alt="linkedin"> </a>
   </section>
 </footer>
 
 <style>
 
 footer {
-  background-color: var(--color-black-ish);
-  color: var(--color-off-white); }
+  background-color: rgb(255, 228, 238, 0.75);
+  color: var(--color-black-ish); 
+padding: 30px;}
   form {
     display: flex;
     flex-direction: column;
@@ -65,7 +73,7 @@ footer {
     width: 250px;
     padding: 10px;
     border-radius: 8px;
-    border: 1px var(--color-off-white) solid;
+    border: 1px var(--color-black-ish) solid;
   }
 
   input[type="submit"] {
@@ -73,10 +81,22 @@ footer {
     align-self: center;
   }
 
+.socialmedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialmedia a{
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .footer_newsletter{
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
   }
 
 .first_footer_div{
@@ -89,12 +109,12 @@ footer {
   
 }
 
-.footer_links{
+.footer-links-container{
 display: flex;
 flex-direction: row;
 }
 
-.footer_links ul{
+.footer-links-container ul{
 list-style: none;
 padding-right: 1rem;
 }
@@ -110,7 +130,20 @@ padding-right: 1rem;
 justify-content: space-between;
 }
 
-div{
-  padding-top: 20px;
+.pl20{
+  padding-left: 20px;
 }
+
+footer div{
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 600px){
+  .first_footer_div{
+    width: 100%;
+  }
+
+  
+}
+
 </style>
