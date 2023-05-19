@@ -1,10 +1,55 @@
 ---
-import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
-import QuoteSection from "../components/ui/QuoteSection.astro"
+import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
+import QuoteSection from "../components/ui/QuoteSection.astro";
+import Button from "../components/ui/Button.astro";
+import ColorSection from "../components/ui/ColorSection.astro";
 ---
-<GirlsUniLayout title="Pigeunivers">
-	<section>
-		<p>Pigeunivers</p>
-		<QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="pink"/>
-	</section>
-	</GirlsUniLayout>
+
+<div class="Faelleskaber">
+  <GirlsUniLayout title="Faellesskaber">
+    <section>
+      <h1 class="primary-header">Fællesskaber</h1>
+      <p class="subheader">Sammen, er vi stærkere</p>
+      <p>Vi giver dig et trygt rum med andre piger og unge kvinder, hvor vi taler om det, der fylder og styrker hinanden.</p>
+      <p>På denne her side kan du finde et gruppeforløb, som passer til lige netop dig eller du kan læse om alle vores gruppetilbud.</p>
+      <QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="pink" />
+      <h2 class="secondary-header">Læs om vores fællesskaber</h2>
+    </section>
+    <p class="light-text">filtrér efter vores fællesskaber</p>
+    <div class="filter-buttons-container">
+      <Button text="All" style="color" size="medium" />
+      <Button text="13-16 år" style="color" size="medium" />
+      <Button text="16-24 år" style="color" size="medium" />
+    </div>
+    <ColorSection color="green" title="EmpowR" hex="#d1ff99">
+      <p>
+        I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+        som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+      </p>
+      <p>To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+    </ColorSection>
+	<ColorSection color="pink" title="EmpowR" hex="#d1ff99">
+		<p>
+		  I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+		  som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+		</p>
+		<p>To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+	  </ColorSection>
+	  <ColorSection color="purple" title="EmpowR" hex="#d1ff99">
+		<p>
+		  I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+		  som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+		</p>
+		<p>To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+	  </ColorSection>
+  </GirlsUniLayout>
+</div>
+
+<style>
+  .Faelleskaber {
+    width: 100%;
+  }
+  .filter-buttons-container {
+    display: flex;
+  }
+</style>
