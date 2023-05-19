@@ -1,8 +1,8 @@
 ---
 import { Icon } from 'astro-icon'
 const navLinks = [{
-    name: 'Home',
-    url: '/',
+    name: 'Støt',
+    url: '/stot',
 },
 {
     name: 'Pigeunivers',
@@ -21,12 +21,295 @@ const navLinks = [{
     url: '/foraeldre',
 }]
 ---
-<header>
-<nav class="NavPrimary">
-    <div class="nav-links" role="navigation">
-{navLinks.map(link => (
-    <a href={link.url}>{link.name}</a>
-))}
+
+<nav class="NavPrimary"> 
+
+<div class="nav-primary-logo">
+    <div class="logo"><a href="index.html"> GirlTalk</a></div>
+<div class="search-flex">
+    <div class="search-container">
+        <form action="/search" method="get">
+          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+          <label class="searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+        </form>
+      </div>
+ </div>
 </div>
+
+
+<ul class="nav-links" role="navigation">
+ {navLinks.map(link => (
+ <li> <a href={link.url}>{link.name}</a></li> ))}
+ </ul>
+
 </nav>
-</header>
+
+<div class="NavPrimaryMobile"> 
+    <input id="toggle" type="checkbox"></input>
+
+    <label for="toggle" class="hamburger">
+    <!-- creating hamburger icon   -->
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    
+    <div class="nav">
+      <div class="nav-wrapper">
+        <nav>
+	
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="om-os.html">Om os</a></li>
+                <li><a href="stot.html">Støt</a></li>
+                <li><a href="frivillig.html">Bliv frivillig</a></li>
+                <li><a href="foraeldre.ht">Forældre</a></li>
+        <li class="last-mobile-link"> <a href="main.html">Pigeunivers</a></li>
+        
+            </ul>
+        
+           
+		</div>
+	</nav>
+      </div>
+    </div>
+            
+    
+</div>
+
+
+
+
+<style>
+
+/*SEARCH BAR*/
+.search-flex{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.logo{
+  display: flex;
+  width:100%;
+  justify-content: end;
+  align-items: center;
+}
+.search-container {
+	position: relative;
+	display: inline-block;
+	margin: 4px 2px;
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.mglass {
+	display: inline-block;
+	pointer-events: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+	position: absolute;
+	font-size: 32px;
+	width: 100%;
+    height: 100%;
+	margin: 0;
+	padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search {
+	position: absolute;
+	left: 50px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+
+/*BURGER MENU*/
+
+#toggle {
+  display: none;
+}
+
+/**
+  Hamburger
+**/
+.hamburger {
+  position: absolute;
+  top: 5em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 2.5em;
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--color-black-ish);
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/**
+
+/*STYLING BURGER MENU*/
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-off-white);
+  top: -100%; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+.NavPrimaryMobile nav {
+  text-align: left;
+  margin-left: 25%;
+}
+
+.NavPrimaryMobile nav ul{
+    list-style: none;
+    margin-top: 4rem;
+}
+.NavPrimaryMobile nav a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 1.25em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.NavPrimaryMobile nav a:hover {
+  color:var( --color-purple);
+  font-weight:bolder; 
+}
+
+/*LAST LINK*/
+.last-mobile-link{
+    padding-top: 40px;
+}
+
+
+/**
+FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
+**/
+#toggle:checked + .hamburger .bar1 {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bar3 {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .bar2 {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+
+
+/*NAV PRIMARY*/
+
+.nav-primary-logo{
+position: relative;
+display: flex;
+justify-content: center;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+
+
+.nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        padding-bottom: 30px;
+    }
+    
+
+
+.NavPrimary{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.10)
+
+}
+
+
+
+
+    @media only screen and (min-width: 600px){
+    .NavPrimaryMobile{
+        display: none;
+    }}
+
+ 
+
+
+    @media only screen and (max-width: 600px){
+    .NavPrimary{
+        display: none;
+    }
+
+    }
+
+
+</style>
