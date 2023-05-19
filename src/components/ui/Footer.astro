@@ -4,14 +4,14 @@ import Button from "./Button.astro";
 <footer>
   <section class="footer_newsletter">
   <div class="first_footer_div">
-  <h3>Nyhedsbrev</h3>
-  <p>Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
-  <p>Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
+  <h3 class="secondary-header">Nyhedsbrev</h3>
+  <p class="themeheader">Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
+  <p class="">Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
 </div>
   <div>
   <form>
     <div class="footer_newsletter_form">
-      <label for="email">Din e-mail</label>
+      <label class="themeheader" for="email">Din E-mail</label>
       <input type="email" id="email" name="email" class="dark" />
     </div>
     <Button size="extra-small" style="dark" text="Tilmeld dig" />
@@ -19,7 +19,7 @@ import Button from "./Button.astro";
 </div> 
 </section> 
  <section class="bottom_section">
-  <div class="footer-links-container">
+  <div class="footer-links-container nav-links">
  <ul>
   <li> <a href="index.html">Forside</a></li>
   <li> <a href="om-os.html">Om os</a></li>
@@ -38,16 +38,19 @@ import Button from "./Button.astro";
   
   <section class="footer_contact">
   <div>
-  <h5>GirlTalk</h5>
+  <h5 class="subheader">GirlTalk</h5>
   <p>Martinsvej 7, 1</p>
   <p>1926 Frederiksberg C</p>
   <p>CVR 30 14 53 48</p>
 </div>
   <div class="pl20">
-  <h5>Kontakt os</h5>
+  <h5 class="subheader">Kontakt os</h5>
   <p>51 91 33 77</p>
   <p>info@girltalk.dk</p></div>
 </section>
+  </section>
+  <section class="socialmedia">
+
   </section>
 </footer>
 
@@ -74,6 +77,9 @@ padding: 30px;}
     align-self: center;
   }
 
+.socialmedia{
+  
+}
 .footer_newsletter{
   display:flex;
   flex-wrap: wrap;
@@ -117,8 +123,8 @@ justify-content: space-between;
   padding-left: 20px;
 }
 
-div{
-  padding-top: 20px;
+footer div{
+  padding-top: 10px;
 }
 
 @media only screen and (max-width: 600px){
