@@ -4,10 +4,10 @@ const { color, hex, title } = Astro.props;
 ---
 
 
-  <section class:list={[ 'ColorSection']}>
+  <section class='ColorSection'>
     <div class="flex-container">
     <section class="headline">
-        <h1>{title}</h1>
+        <h1 class="primary-header">{title}</h1>
       </section>
       <div class:list={[ 'color-background', color]}>
         <svg width="8" height="8" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,15 +26,16 @@ const { color, hex, title } = Astro.props;
 
 </section>
 
-<style> 
+<style lang="scss"> 
 
 
 
 /* COLOR SECTION */
 .ColorSection {
+  width: 70vw;
   .flex-container {
     display: flex;
-    width: 90vw;
+    width: 70vw;
   }
 
   h1 {
@@ -61,21 +62,9 @@ const { color, hex, title } = Astro.props;
   }
 
   .description {
-    width: 90vw;
+    width: 70vw;
     border-radius: 8px 0 8px 8px;
   }
-}
-
-.pink {
-  background-color: var( --color-pink);
-}
-
-.green {
-  background-color: var( --color-green);
-}
-
-.purple {
-  background-color: var( --color-purple);
 }
   </style>
 
