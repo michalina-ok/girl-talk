@@ -77,22 +77,36 @@ body {
   max-width: 2000px;
 }
 
+/* COLORS */
+.pink {
+  background-color: var( --color-pink);
+}
+
+.green {
+  background-color: var( --color-green);
+}
+
+.purple {
+  background-color: var( --color-purple);
+}
+
 /* TEXT STYLES MOBILE */
 
-h1 {
+.primary-header {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
 }
 
-h2 {
+.secondary-header {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
 }
 
-h3 {
+.subheader {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-semibold);
 }
+
 
 p {
   font-family: var(--font-body);
@@ -100,12 +114,12 @@ p {
   font-weight: var(--font-weight-regular);
 }
 
-.highlighted-text {
+.light-text {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-light);
 }
 
-.highlighted-quote {
+.quote-light {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-light);
 }
@@ -115,24 +129,13 @@ p {
   font-weight: var(--font-weight-bold);
 }
 
-.breadcrumbs {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-light);
-}
-
-.inputfield-default {
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-regular);
-  opacity: var(--opacity-50);
-}
-
 .nav-links {
 font-size: var(--font-size-3xl);
 font-weight: var(--font-weight-semibold);
 }
 
 .footer_links {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
 font-weight: var(--font-weight-regular);
 opacity: var(--opacity-50);
 }
@@ -153,41 +156,34 @@ a {
 
 @media only screen and (min-width: 600px) {
   /* TEXT STYLES DESKTOP */
-  h1 {
+  .primary-header {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
   }
 
-  h2 {
+  .secondary-header {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
   }
 
-h3 {
+.subheader {
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-semibold);
   }
 
-  .highlighted-text {
+  .light-text {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-light);
   }
 
-  .highlighted-quote {
+  .quote-light {
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-light);
   }
 
-
   .themeheader {
     font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-bold);
-  }
-  
-  .inputfield-default {
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-regular);
-    opacity: var(--opacity-50);
+    font-weight: var(--font-weight-semibold);
   }
   
   .nav-links {
@@ -196,7 +192,7 @@ h3 {
   }
   
   .footer_links {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-xl);
   font-weight: var(--font-weight-regular);
   opacity: var(--opacity-50);
   }
