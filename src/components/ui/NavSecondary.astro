@@ -24,7 +24,7 @@ const navLinks = [{
 <nav class="NavPrimary"> 
 
 <div class="nav-primary-logo">
-    <div class="logo"><a href="index.html">PIGEUNIVERSET</a></div>
+    <div class="logo"><a href="index.html"><img class="pigelogo" src="images/Pigeunivers_logo.png" alt=""></a></div>
 <div class="search-flex">
     <div class="search-container">
         <form action="/search" method="get">
@@ -84,19 +84,18 @@ a {
         color: var(--color-black-ish);
     }
 
-/*SEARCH BAR*/
+
 .search-flex{
-  display: flex;
-  width: 100%;
-  justify-content: end;
+align-self: flex-end;
   padding: 0%;
-}
+} 
 
 .logo{
-  display: flex;
-  width:100%;
-  justify-content: end;
-  align-items: center;
+  align-self: center;
+} 
+
+.pigelogo{
+    height: 35px;
 }
 .search-container {
 	position: relative;
@@ -275,7 +274,6 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
 .nav-primary-logo{
 position: relative;
 display: flex;
-justify-content: center;
 padding-bottom: 10px;
 padding-top: 10px;
 }
@@ -293,6 +291,8 @@ padding-top: 10px;
 
 
 .NavPrimary{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
 background-color: var(--color-pink);
 box-shadow: 0 3px 10px rgb(255 228 238 / 0.50)
 
