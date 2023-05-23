@@ -15,8 +15,10 @@ const { category, header  } = Astro.props;
         width: 200px;
         display: flex;
         flex-direction: column;
-        margin-top: var(--spacing-large);
-        padding: var(--spacing-medium);
+        /* margin-top: var(--spacing-medium); */
+        padding-left: var(--spacing-small);
+        padding-right: var(--spacing-small);
+        padding-top:  var(--spacing-xs);
         border-radius: 15px;
         border: 2px var(--color-purple) solid;
     }
@@ -24,7 +26,7 @@ const { category, header  } = Astro.props;
 
     @media only screen and (min-width: 600px) {
 .BrevkasseCard {
-    width: 400px;
+    max-width: 400px;
 }
 }
 
