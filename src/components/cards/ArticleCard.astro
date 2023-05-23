@@ -1,10 +1,10 @@
 ---
 import Category from "./Category.astro"
-const { category, header  } = Astro.props;
+const { category, header, link, alt  } = Astro.props;
 ---
 
 <div class="ArticleCard">
-    <img src="" alt="">
+    <img src={link} alt={alt}>
 
     <Category {header} {category}/>
 
@@ -14,7 +14,7 @@ const { category, header  } = Astro.props;
 div.ArticleCard {
     display: flex;
     direction: column;
-    gap: var(--spacing-xs)
+    gap: var(--spacing-xs);
 }
 
 

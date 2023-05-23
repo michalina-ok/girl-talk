@@ -1,0 +1,31 @@
+---
+import Category from "./Category.astro"
+const { category, header  } = Astro.props;
+---
+
+<div class="BrevkasseCard">
+    <p class="themeheader">● Brev</p>
+    <p class="light-text">{header}</p>
+    <p class="themeheader">Læs mere</p>
+</div>
+
+<style>
+
+    .BrevkasseCard {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--spacing-large);
+        padding: var(--spacing-medium);
+        border-radius: 15px;
+        border: 2px var(--color-purple) solid;
+    }
+
+
+    @media only screen and (min-width: 600px) {
+.BrevkasseCard {
+    width: 400px;
+}
+}
+
+</style>

@@ -92,22 +92,6 @@ body {
 
 /* TEXT STYLES MOBILE */
 
-.primary-header {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-}
-
-.secondary-header {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-}
-
-.subheader {
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-semibold);
-}
-
-
 p {
   font-family: var(--font-body);
   font-size: var(--font-size-medium);
@@ -115,30 +99,53 @@ p {
   margin-bottom: var(--spacing-2xs);
 }
 
+.primary-header {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-display);
+}
+
+.secondary-header {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-display);
+}
+
+.subheader {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-display);
+}
+
 .light-text {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-light);
+  font-family: var(--font-display);
 }
 
 .quote-light {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-light);
+  font-family: var(--font-display);
 }
 
 .themeheader {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-bold);
+  font-family: var(--font-display);
 }
 
 .nav-links {
 font-size: var(--font-size-3xl);
 font-weight: var(--font-weight-semibold);
+font-family: var(--font-display);
 }
 
 .footer_links {
   font-size: var(--font-size-large);
 font-weight: var(--font-weight-regular);
 opacity: var(--opacity-50);
+font-family: var(--font-display);
 }
 
 a {

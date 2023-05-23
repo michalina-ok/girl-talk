@@ -1,0 +1,14 @@
+---
+
+const {header} = Astro.props;
+---
+
+<h2 class="secondary-header">{header}</h2>
+
+<style>
+.secondary-header {
+    margin-bottom: var(--spacing-medium);
+    border-bottom: 2px var(--color-black-ish) solid;
+}
+
+</style>
