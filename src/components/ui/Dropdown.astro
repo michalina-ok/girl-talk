@@ -1,0 +1,67 @@
+---
+import Button from "./Button.astro";
+---
+    <div class="desktopfilter">
+      <Button size="medium" style="purple" text="Venskaber og familie" />
+      <Button size="medium" style="purple" text="Krop og sex" />
+      <Button size="medium" style="purple" text="Selvværd" />
+      <Button size="medium" style="purple" text="Kærlighed" />
+      <Button size="medium" style="purple" text="Trivsel" />
+      <Button size="medium" style="purple" text="Skole og uddannelse" />
+      <Button size="medium" style="purple" text="Andet" />
+    </div>
+
+    
+    <div class="mobilefilter">
+         <label class="light-text label-text" for="filter">Filtrér efter tema</label>
+    
+        <select class="select" name="filter" id="filtering">
+          <option value="choose">Vælg tema</option>
+          <option value="venskaber">Venskaber og familie</option>
+          <option value="krop">Krop og sex</option>
+          <option value="selvværd">Selvværd</option>
+          <option value="kærlighed">Kærlighed</option>
+          <option value="trivsel">Trivsel</option>
+          <option value="skole">Skole og uddannelse</option>
+          <option value="andet">Andet</option>
+          </select> 
+    </div>
+
+
+    <style>
+
+        .mobilefilter {
+            display: flex;
+            flex-direction: column;
+        }
+        .select {
+          width: 100%;
+          border-radius: 8px;
+          padding: 5px;
+        }
+
+        .label-text {
+          margin-bottom: 10px;
+        }
+
+        .desktopfilter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1000px;
+            gap: 2rem;
+        }    
+
+         @media only screen and (min-width: 600px) {
+            
+            .mobilefilter{
+            display: none;
+            }
+         }
+         @media only screen and (max-width: 600px) {
+            
+            .desktopfilter{
+            display: none;
+            }
+         }
+    </style>
