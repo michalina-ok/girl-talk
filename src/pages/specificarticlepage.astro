@@ -1,6 +1,6 @@
 ---
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
-import BoxColor from "../components/ui/BoxColor.astro";
+import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 import QuoteHeadingSection from "../components/ui/QuoteHeading.astro";
 import BreadCrumbSection from "../components/ui/BreadCrumbs.astro"
 import Button from "../components/ui/Button.astro";
@@ -26,11 +26,9 @@ import Button from "../components/ui/Button.astro";
      </section>
 <div class="specificarticlelayout">
 
- <div class="category">
+ <div >
     <p class="themeheader">• Venskaber og Familie</p> 
     <h2 class="primary-header">Hvordan vander vi venskabets blomst?</h2> 
-</div>   
-<div >
     <img class="heroimg" src="images/articleimages/flower2.jpg" alt="Piger på trapper">
 </div>
 
@@ -57,7 +55,7 @@ import Button from "../components/ui/Button.astro";
     Men venskaber kan også ændre sig og udvikle sig over tid. Nogle gange kan venskaber falme, mens andre kan blive stærkere og mere meningsfulde. Derfor er det vigtigt at være åben for nye venskaber og muligheder, mens man også værner om og plejer de venskaber, der betyder noget.</p>
 </section>
 
-
+<h2 class="sub-header-underlined">Læs mere</h2>
 <section class="readmore">
 <img src="images/articleimages/bananaarticle.png" alt="Hvordan onanerer man? Artikel">
 <img src="images/articleimages/girlsarticle.png" alt="Kropsbilleder - Hvordan påvirker de os? Artikel">
@@ -69,14 +67,13 @@ import Button from "../components/ui/Button.astro";
 </GirlsUniLayout>
 
 <style>
-    .specificletterlayout{
+    .specificarticlelayout{
         display: flex;
         flex-direction: column;
         gap: 20px;
         justify-content: center;
         align-items: center;
-  
-     
+
     }
 
 
@@ -119,4 +116,51 @@ width:100%;
 margin:auto;
 }
 
-   
+.readmore{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.readmore img{
+    width:40%
+}
+
+.sub-header-underlined{
+font-family: var(--font-display);
+font-weight: var(--font-weight-semibold);
+font-size: var(font-size-large);
+align-self: flex-start;
+border-bottom: 2px solid var(--color-black-ish);
+width: 100%;
+margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 800px){
+        .specificarticlelayout{
+            padding: 70px 200px;
+        }
+
+        .BreadCrumbSection{
+display: flex;
+gap: 10px;
+flex-direction: column;
+align-self: flex-start;
+    }
+    }
+    
+    @media only screen and (min-width: 1200px){
+        .BreadCrumbSection{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .specificarticlelayout{
+            padding: 40px 380px;
+        }
+
+
+    }
+
+   </style>
