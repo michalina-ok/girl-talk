@@ -38,12 +38,11 @@ const { link, text, size = "m-small-d-large" } = Astro.props;
 
 /* COLOR SECTION */
 .ColorSection {
-  margin-bottom: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
 }
 
   .flex-container {
     display: flex;
-
   }
 
   h2 {
@@ -69,7 +68,7 @@ const { link, text, size = "m-small-d-large" } = Astro.props;
   }
 
   .description {
-    border-radius: 8px 0 8px 8px;
+    border-radius: 8px 0 0 0;
   }
 
   .button-wrapper {
@@ -77,6 +76,7 @@ const { link, text, size = "m-small-d-large" } = Astro.props;
     padding-right: 40px;
     display: flex;
     justify-content: center;
+    border-radius: 0 0 8px 8px;
   }
 
 
@@ -101,7 +101,11 @@ const { link, text, size = "m-small-d-large" } = Astro.props;
   }
 }
 
-
+@media only screen and (min-width: 1024px) {
+    .ColorSection {
+  min-width: 900px;
+}
+}
   </style>
 
 
