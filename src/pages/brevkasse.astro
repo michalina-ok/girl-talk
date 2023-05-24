@@ -17,11 +17,13 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       <Button size="small" text="Click me" />
     </ColorSection>
     <UnderlinedHeader header="Læs andre pigers tanker" class="subheader"></UnderlinedHeader>
-    <div>
-      <p class="light-text searchcopy">Søg efter breve</p>
-      <SearchBar></SearchBar>
+  <div>
+    <div class="searchcontainer">
+          <p class="light-text searchcopy">Søg efter breve</p>
+          <SearchBar></SearchBar>
     </div>
-    <Dropdown></Dropdown>
+      <Dropdown></Dropdown>
+  </div>
     <p class="indicator">8 ud af 129</p>
     <div class="lettercontainer">
       <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
@@ -33,7 +35,6 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
       <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
     </div>
-  
   </div>
 </GirlsUniLayout>
 
@@ -63,8 +64,11 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     align-items: center;
     flex-direction: column;
     margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
 
   }
+
+  
   @media only screen and (max-width: 600px) {
     .indicator {
     
@@ -72,6 +76,10 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     margin-top: var(--spacing-small);
   }
           
-         }
+  .searchcontainer {
+    height: 100px;
+    width: 100%;
+  }
+}
 
 </style>
