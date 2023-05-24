@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BoxColor from "../components/ui/BoxColor.astro";
+import ColorSection from "../components/ui/ColorSection.astro";
 ---
 
 <BaseLayout title="Om os">
@@ -64,22 +65,24 @@ import BoxColor from "../components/ui/BoxColor.astro";
 
     <div class="section-3">
       <div class="width-box">
-      	<BoxColor
-	        color="green"
-	        title="Kvalitetsmærke på GirlTalks rådgivning"
-	        text="GirlTalk er i 2021 blevet genakkrediteret af RådgivningsDanmark, som er brancheforening for sociale rådgivningstilbud i Danmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningen."
-	      />
+        <BoxColor
+          color="green"
+          title="Kvalitetsmærke på GirlTalks rådgivning"
+          text="GirlTalk er i 2021 blevet genakkrediteret af RådgivningsDanmark, som er brancheforening for sociale rådgivningstilbud i Danmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningen."
+        />
       </div>
       <div class="text-section-3">
         <h2>Hvilke tilbud har GirlTalk?</h2>
-		<div class="body-text-section-3">
+        <div class="body-text-section-3">
           <p>
             GirlTalk har mange forskellige tilbud og indsatser til forskellige
             alders- og målgrupper.
           </p>
           <ul>
             <li>
-             <a href="brevkasse.html"> Vi rådgiver unge på chat, sms og i vores brevkasse.</a>
+              <a href="brevkasse.html">
+                Vi rådgiver unge på chat, sms og i vores brevkasse.</a
+              >
             </li><li>
               Vi holder foredrag for både unge, forældre og fagpersoner
             </li>
@@ -98,6 +101,33 @@ import BoxColor from "../components/ui/BoxColor.astro";
         </div>
       </div>
     </div>
+    <ColorSection
+      color="pink"
+      hex="#ffe4ee"
+      title="Hvem arbejder i GirlTalk?"
+      text="Mød teamet her"
+      link="/"
+    >
+      <div slot="description" class="text-in-component">
+        <p slot="description">
+          GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
+          København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig
+          uddannet, med ekspertise på området. Derudover har GirlTalk
+          medarbejdere med flere forskellige baggrunde og fagligheder, hvoraf
+          mange er uddannet inden for psykologi, pædagogik samt kommunikation og
+          marketing. <br> <br> En stor del af arbejdskraften hos GirlTalk ligger dog vores
+          frivillige. GirlTalk er drevet og skabt på et fundament af
+          frivillighed og ville ikke kunne eksistere uden vores frivillige.
+          Samlet set er der omkring 300 frivillige i GirlTalk. Hovedparten af
+          vores frivillige er engageret i vores indsatser målrettet unge, og
+          alle frivillige i ungeindsatserne er kvinder i alderen 20-35.
+          Uddannelse og rammesætning er helt afgørende i vores arbejde med
+          frivillige, og vi lægger stor vægt på at have et omfattende
+          sikkerhedsnet for vores frivillige i form af sparring, fællesskab,
+          introforløb, uddannelse, supervision og trivselssamtaler.
+        </p>
+      </div>
+    </ColorSection>
   </section>
 </BaseLayout>
 
@@ -121,10 +151,10 @@ import BoxColor from "../components/ui/BoxColor.astro";
     flex-direction: column;
   }
 
-  .section-3{
-	margin-top: var(--spacing-small);
-	display: flex;
-	flex-direction: column;
+  .section-3 {
+    margin-top: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
   }
 
   .text-section {
@@ -134,19 +164,19 @@ import BoxColor from "../components/ui/BoxColor.astro";
   }
 
   .text-section-3 {
-	margin-top: var(--spacing-small);
+    margin-top: var(--spacing-small);
   }
 
   .text-section-3 ul {
-	padding-left: 5%;
-	font-family: var(--font-body);
+    padding-left: 5%;
+    font-family: var(--font-body);
   }
 
   .body-text-section-3 {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-xs);
-	margin-top: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-small);
   }
 
   .image-mobile {
@@ -157,7 +187,7 @@ import BoxColor from "../components/ui/BoxColor.astro";
   .image-container-mobile {
     max-width: 400px;
     height: 100%;
-	margin: auto;
+    margin: auto;
   }
 
   @media only screen and (min-width: 1000px) {
@@ -186,26 +216,23 @@ import BoxColor from "../components/ui/BoxColor.astro";
       display: flex;
       flex-direction: row;
       gap: var(--spacing-large);
-	  align-items: center;
+      align-items: center;
     }
 
     .section-2 {
       display: flex;
       flex-direction: row-reverse;
       gap: var(--spacing-large);
-	  align-items: center;
+      align-items: center;
     }
 
-	.section-3 {
-		flex-direction: row;
-		gap: var(--spacing-medium);
-		align-items: center;
-	}
-	
-
+    .section-3 {
+      flex-direction: row;
+      gap: var(--spacing-medium);
+      align-items: center;
+    }
   }
 
-  
   @media only screen and (max-width: 1000px) {
     .hide-mobile {
       display: none;
