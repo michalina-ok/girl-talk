@@ -10,16 +10,11 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 
 <GirlsUniLayout title="Brevkasse">
   <div class="brevkasselayout">
-    <ColorSection color="pink" title="GirlTalk's brevkasse">
-      <p></p>
-        Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder
-        mindre?
-      </p>
-      <p>
-        Del dem med os her eller læs andre pigers spørgsmål, følelser og
-        oplevelser.
-      </p>
-      <Button size="small" text="Click me" />
+    <ColorSection color="pink" hex="#ffe4ee" title="GirlTalk's brevkasse" text="Skriv et brev" link="/">
+      <div slot="description" class="text-in-component">
+      <p slot="description" class="themeheader">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
+      <p slot="description">Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
+    </div>
     </ColorSection>
     <UnderlinedHeader header="Læs andre pigers tanker" class="subheader" />
 
@@ -32,30 +27,14 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     </div>
     <p class="indicator">8 ud af 129</p>
     <div class="lettercontainer">
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
-      <BrevkasseCard
-        header="Jeg har opdaget at min datter kaster op inden hun går i seng"
-      />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
     </div>
   </div>
 </GirlsUniLayout>
@@ -72,8 +51,7 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     color: var(--color-black-ish);
     opacity: var(--opacity-50);
     margin-bottom: var(--spacing-small);
-      margin-top: var(--spacing-small);
-    
+    margin-top: var(--spacing-small);
   }
   .lettercontainer {
     display: flex;
@@ -92,14 +70,16 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
   }
 
   @media only screen and (min-width: 600px) {
+    .text-in-component {
+      max-width: 65%;
+    }
     .indicator {
       margin-bottom: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
     }
     .dropdowncontainer {
-    width: 100%;
-  }
-
+      width: 100%;
+    }
 
     /* .searchcontainer {
       height: 100px;

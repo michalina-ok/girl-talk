@@ -102,7 +102,11 @@ const { link, text, size = "m-small-d-large" } = Astro.props;
   }
 }
 
-
+@media only screen and (min-width: 1024px) {
+    .ColorSection {
+  min-width: 900px;
+}
+}
   </style>
 
 
