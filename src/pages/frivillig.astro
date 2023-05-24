@@ -3,7 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import ColorSection from "../components/ui/ColorSection.astro"
 
 ---
-<BaseLayout title="Volunteer">
+<BaseLayout title="Bliv frivillig">
+	<div class="Frivillig">
+		<h1 class="primary-header">Bliv frivilig</h1>
+		<p class="subheader">Vi har brug for dig, fordi flere har brug for os</p>
 	<section>
 		<ColorSection color="green" title="Gruppeleder" hex="#d1ff99" text="Ansøg som gruppeleder" link="/">
 		  <p slot="description">
@@ -12,14 +15,14 @@ import ColorSection from "../components/ui/ColorSection.astro"
 		  <p slot="description">Vores frivillige gruppeledere gør en direkte forskel for pigerne i gruppen, samtidig med at deres faglige profil styrkes, og der opnås erfaring med at facilitere en gruppe. Hver gruppe består af 4-10 piger i aldersgrupperne 13-16 år, 15-18 år og 16-24 år.</p>
 		  <p slot="description">Vores gruppeforløb varer imellem 8 og 16 uger. Du skal forvente at afsætte 3-5 timer ugentligt som gruppeleder i de uger, forløbet varer.</p>
 		</ColorSection>
-		<ColorSection color="pink" title="Rådgiver" hex="#d1ff99" text="Ansøg som rådgiver" link="/">
+		<ColorSection color="pink" title="Rådgiver" hex="#ffe4ee" text="Ansøg som rådgiver" link="/">
 			<p slot="description">
 				Vores ungerådgivning har til opgave at besvare henvendelser på chat og SMS fra piger, der rækker ud til os. Pigerne kan blandt andet skrive om emner som kærestesorg, ensomhed, selvskade, konflikter med venner og familie, præstationsangst eller udfordringer i skolen.
 			</p>
 			<p slot="description">I rådgivningen er det vigtigt, at der skabes et tillidsfuldt rum til pigerne, så de oplever at kunne tale ud om de svære ting i livet uden at føle sig dømt eller misforstået.</p>
 			<p slot="description">Som rådgiver har du en hverdagsvagt hver anden uge og en weekendvagt hver anden måned, begge á 2,5 time. Alle vagter ligger i aftentimerne, da chat- og SMS-rådgivningens åbningstid er i tidsrummet 18:30-24:00.</p>
 		  </ColorSection>
-		  <ColorSection color="purple" title="Foredragsholder" hex="#d1ff99" text="Ansøg som fordragholder" link="/">
+		  <ColorSection color="purple" title="Foredragsholder" hex="#edcff8" text="Ansøg som fordragholder" link="/">
 			<p slot="description">
 				Vil du være med til at fortælle unge piger, at de er gode nok som de er? Give dem redskaber til at navigere i teenageårene, når usikkerheden banker på? Er du god til at tale foran mange mennesker? Så bliv foredragsholder i GirlTalk.
 			</p>
@@ -29,4 +32,16 @@ import ColorSection from "../components/ui/ColorSection.astro"
 					Vi holder samtaler løbende, så søg gerne så hurtigt som muligt via formularen herunder</p>
 		  </ColorSection>
 	</section>
+</div>
 	</BaseLayout>
+
+	<style>
+
+.Frivillig {
+    width: 100%;
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  }
+
+	</style>
