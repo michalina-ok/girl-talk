@@ -8,9 +8,24 @@ import Button from "../components/ui/Button.astro";
 
 ---
 
-<GirlsUniLayout title="Brev">
+<GirlsUniLayout title="Brev">   
+     <section class="BreadCrumbSection">
+        <ul class="breadcrumblinks"> 
+            <li><a href="main.html">Pigeunivers</a></li>
+            <span>/</span>
+           <li> <a href="">Brevkassen </a></li>
+           <span>/</span>
+          <li>  <a href="">Brev</a></li>
+        </ul>
+     
+     <a class="tilbagesection" href="">
+         <img src="images/gobackarrow.svg" alt="arrow">
+         Tilbage
+     </a>
+     
+     </section>
 <div class="specificletterlayout">
-<BreadCrumbSection firstCrumb="Pigeunivers" secondCrumb="Brevkassen" thirdCrumb="Brev"></BreadCrumbSection>
+
 <QuoteHeadingSection color="purple" themeHeader="• Krop og Sex" firstLine="Jeg bliver tiltrukket af piger" secondLine="- også selvom jeg er til drenge"></QuoteHeadingSection>
 <section class="letter">
     <p>Hej brevkasse!</p>
@@ -55,11 +70,79 @@ Mathilde
     .specificletterlayout{
         display: flex;
         flex-direction: column;
+        gap: 20px;
         justify-content: center;
+        align-items: center;
+  
+     
     }
     .coloredletter{
         background-color: var(--color-pink);
         padding: 20px 30px;
         border-radius: 10px;
+        
     }
+
+    .BreadCrumbSection{
+display: flex;
+gap: 5px;
+flex-direction: column;
+align-self: flex-start;
+padding-top: 30px;
+    }
+
+    .BreadCrumbSection a{
+        font-family:var(--font-display);
+        font-size: var(--font-size-small);
+    }
+
+    .tilbagesection{
+        display: flex;
+    }
+
+    .breadcrumblinks {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+
+    @media only screen and (min-width: 600px){
+        .specificletterlayout{
+            padding: 70px 100px;
+        }
+
+        .BreadCrumbSection{
+display: flex;
+gap: 10px;
+flex-direction: column;
+align-self: flex-start;
+    }
+    }
+
+    @media only screen and (min-width: 800px){
+        .specificletterlayout{
+            padding: 70px 200px;
+        }
+
+        .BreadCrumbSection{
+display: flex;
+gap: 10px;
+flex-direction: column;
+align-self: flex-start;
+    }
+    }
+    
+    @media only screen and (min-width: 1200px){
+        .BreadCrumbSection{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .specificletterlayout{
+            padding: 40px 380px;
+        }
+
+
+    }
+
 </style>

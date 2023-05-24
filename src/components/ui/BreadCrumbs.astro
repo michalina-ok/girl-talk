@@ -2,7 +2,7 @@
 const {  firstCrumb, secondCrumb, thirdCrumb } = Astro.props;
 ---
 <section class="BreadCrumbSection">
-   <div class="breadcrumblinks"> <a href="">{firstCrumb}</a><a href="">{secondCrumb}</a><a href="">{thirdCrumb}</a>
+   <div class="breadcrumblinks"> <a href="">Pigeunivers</a><a href="">Brevkassen</a><a href="">Brev</a>
 </div>
 
 <a class="tilbagesection" href="">
@@ -14,9 +14,7 @@ const {  firstCrumb, secondCrumb, thirdCrumb } = Astro.props;
 
 <style>
     .BreadCrumbSection{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+align-self: flex-start;
     }
 
     .BreadCrumbSection p{
