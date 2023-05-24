@@ -3,9 +3,93 @@ import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
 import ArticleCard from "../components/cards/ArticleCard.astro"
 ---
 <GirlsUniLayout title="Pigeunivers">
-	<section>
-		<p>Medier</p>
-		<ArticleCard header="Hvordan onnaner man?" category="Krop og sex" />
 
+<div class="medier-first-section">
+	<section class="largearticlecard">
+		<a href="#">
+		<img src="images/articleimages/largearticleimage.png" alt="Hvordan vander vi venskabets blomst? Artikel">
+		<p class="subheader-firstarticle">Jagten på den perfekte buket
+			af venskaber kan være svær at sammensætte, men også fyldt af farverige glæder?</p></a>
 	</section>
+	<section class="doublearticlecard">
+	<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+		<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+</div>
+
+<div>
+	
+	<section class="medier-second-grid">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+	</section>
+</div>
 	</GirlsUniLayout>
+
+	<style>
+		.medier-first-section{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}
+
+.largearticlecard{
+	max-width: 300px;
+	display: flex;
+	gap: 10px;
+}
+
+.largearticlecard img{
+	max-height: 335px;
+
+}
+
+.subheader-firstarticle{
+	font-family: var(--font-display);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-semibold);
+}
+
+		.doublearticlecard{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}
+
+@media only screen and (min-width: 572px){
+	.largearticlecard{
+max-width: 500px;
+}
+
+.largearticlecard img{
+	max-height: 575px;
+
+}
+		}
+
+
+@media only screen and (min-width: 900px){
+
+ .doublearticlecard{
+	flex-direction: column;
+ }
+
+ .largearticlecard{
+max-width: 600px;
+}
+
+.largearticlecard img{
+	max-height: 700px;
+
+}
+
+.subheader-firstarticle{
+	font-size: var(--font-size-large);
+    }
+}
+	</style>
