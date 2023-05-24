@@ -24,7 +24,7 @@ const navLinks = [{
 <nav class="NavPrimary"> 
 
 <div class="nav-primary-logo">
-    <div class="logo"><a href="index.html"> GirlTalk</a></div>
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
 <div class="search-flex">
     <div class="search-container">
         <form action="/search" method="get">
@@ -94,10 +94,13 @@ const navLinks = [{
 }
 
 .logo{
-  display: flex;
-  width:100%;
-  justify-content: end;
-  align-items: center;
+position: absolute;
+width: 200px;
+margin: auto;
+}
+
+.logo img{
+  width: 280px;
 }
 .search-container {
 	position: relative;
@@ -106,6 +109,7 @@ const navLinks = [{
 	height: 30px;
 	width: 50px;
 	vertical-align: bottom;
+  margin-left: auto;
 }
 
 .mglass {
