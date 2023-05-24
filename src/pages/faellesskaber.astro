@@ -5,9 +5,10 @@ import Button from "../components/ui/Button.astro";
 import ColorSection from "../components/ui/ColorSection.astro";
 ---
 
-<div class="Faelleskaber">
+
   <GirlsUniLayout title="Faellesskaber">
-    <section>
+    <div class="Faelleskaber">
+    <section class="header">
       <h1 class="primary-header">Fællesskaber</h1>
       <p class="subheader">Sammen, er vi stærkere</p>
       <p>Vi giver dig et trygt rum med andre piger og unge kvinder, hvor vi taler om det, der fylder og styrker hinanden.</p>
@@ -17,9 +18,9 @@ import ColorSection from "../components/ui/ColorSection.astro";
     </section>
     <p class="light-text">filtrér efter vores fællesskaber</p>
     <div class="filter-buttons-container">
-      <Button text="All" style="color" size="medium" />
-      <Button text="13-16 år" style="color" size="medium" />
-      <Button text="16-24 år" style="color" size="medium" />
+      <Button text="All" style="color" size="m-small-d-large" />
+      <Button text="13-16 år" style="color" size="m-small-d-large" />
+      <Button text="16-24 år" style="color" size="m-small-d-large" />
     </div>
     <ColorSection color="green" title="EmpowR" hex="#d1ff99" text="Timeld EmpowR" link="/">
 		<p slot="subheader">For dig mellem 13-16 år.</p>
@@ -52,9 +53,21 @@ import ColorSection from "../components/ui/ColorSection.astro";
   .Faelleskaber {
     width: 100%;
 	display: flex;
-	align-self: center;
+  flex-direction: column;
+	align-items: center;
   }
   .filter-buttons-container {
     display: flex;
   }
+
+  p.subheader {
+    margin-bottom: 40px;
+  }
+  @media only screen and (min-width: 600px) {
+  .Faelleskaber {
+
+  }
+}
+
+ 
 </style>

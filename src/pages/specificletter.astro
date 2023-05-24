@@ -1,0 +1,148 @@
+---
+import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
+import BoxColor from "../components/ui/BoxColor.astro";
+import QuoteHeadingSection from "../components/ui/QuoteHeading.astro";
+import BreadCrumbSection from "../components/ui/BreadCrumbs.astro"
+import Button from "../components/ui/Button.astro";
+
+
+---
+
+<GirlsUniLayout title="Brev">   
+     <section class="BreadCrumbSection">
+        <ul class="breadcrumblinks"> 
+            <li><a href="main.html">Pigeunivers</a></li>
+            <span>/</span>
+           <li> <a href="">Brevkassen </a></li>
+           <span>/</span>
+          <li>  <a href="">Brev</a></li>
+        </ul>
+     
+     <a class="tilbagesection" href="">
+         <img src="images/gobackarrow.svg" alt="arrow">
+         Tilbage
+     </a>
+     
+     </section>
+<div class="specificletterlayout">
+
+<QuoteHeadingSection color="purple" themeHeader="• Krop og Sex" firstLine="Jeg bliver tiltrukket af piger" secondLine="- også selvom jeg er til drenge"></QuoteHeadingSection>
+<section class="letter">
+    <p>Hej brevkasse!</p>
+    <p>Jeg vil gerne spørge om det er normalt at man bliver tiltrukket af andre pigers bryster, selvom man er til drenge? Det er et ret mærkeligt spørgsmål, men det er fordi at jeg har oplevet at blive tiltrukket af andre piger, selvom jeg er ret sikker på at jeg er til drenge.</p>
+    <p>Kh mig</p>
+</section>
+
+
+<section class="coloredletter">
+    <h2>Kære du</h2> 
+<p>Tak for dit fine brev.</p>
+<p>Det er sejt at du deler dit spørgsmål og det du oplever. Jeg kan godt forstå din forvirring og de tanker du sidder med, og jeg vil gøre mit bedste for at svare på dit brev.
+</p>
+<p>
+Når man identificerer sig med at være til drenge, men samtidigt oplever at føle sig tiltrukket af piger, eller specifikke dele af kvindekroppen, så kan man blive godt og grundigt forvirret. 
+Man kan tænke: “Er jeg så slet ikke til drenge? Er jeg til piger nu? Hvorfor mærker jeg en tiltrækning til piger, når nu jeg ved, at jeg er til drenge?”. 
+</p>
+<p>Pludselig stiller man sig selv en masse spørgsmål, og man kan blive lidt bange for, om man så har taget fejl omkring sig selv, og måske slet ikke er til det køn, som man troede man var til.
+    Jeg håber, at du vil tro mig når jeg siger, at det du oplever er noget af det mest naturlige i verden.
+     Der er rigtig mange der oplever det samme som dig, men man kan føle, at man er den eneste, fordi mange ikke tør sige hvad de mærker - det kan føles skamfuldt og forkert, så derfor holder mange tæt, og det gør at man kan tænke, at man måske er den eneste i verden der har det sådan. Det er du ikke. Det lover jeg.</p>
+<p>
+    Du skal vide, at din tiltrækning til piger sagtens kan være okay, selv med din tiltrækning til drenge. Man kan føle, at man nærmest er nødt til at vælge hvilket køn man er til, for det kan føles trygt at have besluttet hvilket ben man står på. Du behøver ikke at vælge. Du behøver ikke at vide eller at bestemme dig for, om du er 100% til piger, eller 100% til drenge.
+ Sådan fungerer seksualitet ikke - seksualitet er flydende, og kan skifte undervejs i livet.
+</p>
+<p>
+Derudover skal du vide, at selvom mange går og siger, at de kun er til drenge, eller kun er til piger, så behøver du ikke at gøre det samme. Du behøver ikke at involvere andre i din seksualitet, og hvad du er tiltrukket af. 
+Det må gerne være din egen, private viden om dig selv, som du kun deler med folk hvis du har lyst. Se om du kan give plads til det du mærker. Lad vær med at forsøge at få det til at gå væk, ved at udskamme det. 
+</p>
+<p>Bare mærk dét du mærker, når du ser nogle bryster. Det kan man sagtens, selvom man måske helst vil være kærester med en dreng. Du er lige som du skal være. </p>
+<p>Jeg håber, at du kan bruge mit svar. Hvis du har brug for lidt ekstra, så kan du lytte til vores podcast-afsnit om sexlyst og seksualitet. Husk at du altid er velkommen til at skrive ind til os, hvis du har noget på hjerte. Vi vil altid gerne lytte til dig og rådgive dig så godt vi kan.</p>
+<p>
+Alt det bedste,<br>
+Mathilde
+</p>
+</section>
+
+</div>
+    
+</GirlsUniLayout>
+
+<style>
+    .specificletterlayout{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+  
+     
+    }
+    .coloredletter{
+        background-color: var(--color-pink);
+        padding: 20px 30px;
+        border-radius: 10px;
+        
+    }
+
+    .BreadCrumbSection{
+display: flex;
+gap: 5px;
+flex-direction: column;
+align-self: flex-start;
+padding-top: 30px;
+    }
+
+    .BreadCrumbSection a{
+        font-family:var(--font-display);
+        font-size: var(--font-size-small);
+    }
+
+    .tilbagesection{
+        display: flex;
+    }
+
+    .breadcrumblinks {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+
+    @media only screen and (min-width: 600px){
+        .specificletterlayout{
+            padding: 70px 100px;
+        }
+
+        .BreadCrumbSection{
+display: flex;
+gap: 10px;
+flex-direction: column;
+align-self: flex-start;
+    }
+    }
+
+    @media only screen and (min-width: 800px){
+        .specificletterlayout{
+            padding: 70px 200px;
+        }
+
+        .BreadCrumbSection{
+display: flex;
+gap: 10px;
+flex-direction: column;
+align-self: flex-start;
+    }
+    }
+    
+    @media only screen and (min-width: 1200px){
+        .BreadCrumbSection{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .specificletterlayout{
+            padding: 40px 380px;
+        }
+
+
+    }
+
+</style>
