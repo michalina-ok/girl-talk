@@ -1,17 +1,23 @@
 ---
 import ArticleCard from "../components/cards/ArticleCard.astro"
+const { linkMain, linkMainAlt, link, alt, header } = Astro.props;
+import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro"
 ---
 
 
 <div class="ArticleLayout">
-    <img src="" alt="">
-    <ArticleCard />
-    <ArticleCard />
+    <UnderlinedHeader />
+    <div class="cards-container">
+    <img src={linkMain} alt={linkMainAlt}>
+    <ArticleCard {link} {alt} />
+    <ArticleCard {link} {alt} />
+</div>
 </div>
 
 
 <style>
-    .ArticleLayout {
+
+    .cards-container {
         display: flex;
         gap: var(--spacing-small);
     }

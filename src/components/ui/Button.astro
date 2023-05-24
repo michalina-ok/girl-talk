@@ -1,5 +1,5 @@
 ---
-const { link, text, style = "dark", size = "medium" } = Astro.props;
+const { link, text, style = "dark", size = "m-small-d-large" } = Astro.props;
 ---
 
 <a class:list={["btn", style, size]} href={link}>
@@ -16,7 +16,7 @@ const { link, text, style = "dark", size = "medium" } = Astro.props;
   justify-content: center;
 }
 
-  /* SIZES */
+  /* OLD SIZES - PLEASE DON'T USE ANYMORE */
 
 
   .extra-small {
@@ -43,11 +43,27 @@ const { link, text, style = "dark", size = "medium" } = Astro.props;
     padding: 25px 40px;
   }
 
+    /* RESPONSIVE SIZES */
+
+  .m-extra-small-d-medium {
+    font-size: var(--font-size-xs);
+    padding: 10px 15px;
+  }
+
+  .m-small-d-large {
+    font-size: var(--font-size-small);
+    padding: 15px 30px;
+  }
+
   /* STYLES */
 
   .dark {
     color: var(--color-off-white);
     background-color: var(--color-black-ish);
+  }
+
+  .dark:hover {
+    color: var(--color-green);
   }
 
   .light {
@@ -59,4 +75,24 @@ const { link, text, style = "dark", size = "medium" } = Astro.props;
     color: var(--color-black-ish);
     background-color: var(--color-purple);
   }
+
+  .color:hover {
+    background-color: var(--color-green);
+  }
+
+  .color:active {
+    background-color: var(--color-green);
+  }
+
+  @media only screen and (min-width: 600px) {
+    .m-extra-small-d-medium {
+      font-size: var(--font-size-medium);
+    padding: 20px 40px;
+  }
+
+  .m-small-d-large {
+    font-size: var(--font-size-large);
+    padding: 25px 40px;
+  }
+}
 </style>

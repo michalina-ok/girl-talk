@@ -2,15 +2,76 @@
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
 import ColorSection from "../components/ui/ColorSection.astro";
 import Button from "../components/ui/Button.astro";
+import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
+import SearchBar from "../components/ui/SearchBar.astro";
+import Dropdown from "../components/ui/Dropdown.astro";
+import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 ---
 
 <GirlsUniLayout title="Brevkasse">
-  <ColorSection color="purple" title="GirlTalk's brevkasse">
-    
-    <p>Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
-    <p>Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
-    <Button size="small" text="Click me" />
-  </ColorSection>
+  <div class="brevkasselayout">
+    <ColorSection color="pink" title="GirlTalk's brevkasse">
+      
+      <p>Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
+      <p>Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
+      <Button size="small" text="Click me" />
+    </ColorSection>
+    <UnderlinedHeader header="Læs andre pigers tanker" class="subheader"></UnderlinedHeader>
+    <div>
+      <p class="light-text searchcopy">Søg efter breve</p>
+      <SearchBar></SearchBar>
+    </div>
+    <Dropdown></Dropdown>
+    <p class="indicator">8 ud af 129</p>
+    <div class="lettercontainer">
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+    </div>
+  
+  </div>
 </GirlsUniLayout>
 
+<style>
 
+
+
+  .searchcopy {
+    color: var(--color-black-ish);
+    opacity: var(--opacity-75);
+  }
+  .indicator {
+    color: var(--color-black-ish);
+    opacity: var(--opacity-50);
+    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+  .lettercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-small);
+  }
+
+  .brevkasselayout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--spacing-small);
+
+  }
+  @media only screen and (max-width: 600px) {
+    .indicator {
+    
+    margin-bottom: var(--spacing-small);
+    margin-top: var(--spacing-small);
+  }
+          
+         }
+
+</style>

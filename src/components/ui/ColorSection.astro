@@ -1,14 +1,14 @@
 ---
 import Button from "./Button.astro";
 const { color, hex, title } = Astro.props;
-const { link, text, size = "large" } = Astro.props;
+const { link, text, size = "m-small-d-large" } = Astro.props;
 ---
 
 
   <section class='ColorSection'>
     <div class="flex-container">
     <section class="headline">
-        <h1 class="primary-header">{title}</h1>
+        <h2 class="secondary-header">{title}</h2>
         <slot name="subheader"></slot>
       </section>
       <div class:list={[ 'color-background', color]}>
@@ -23,10 +23,10 @@ const { link, text, size = "large" } = Astro.props;
       <section class="description-container">
       <slot name="description"></slot>
     </section>
-    <div class="button-wrapper">
-    <Button {link} {text} {size}/>
-  </div>
     </section>
+    <div class:list={[ 'button-wrapper', color]}>
+      <Button {link} {text} {size}/>
+    </div>
    
   </div>
 
@@ -38,21 +38,20 @@ const { link, text, size = "large" } = Astro.props;
 
 /* COLOR SECTION */
 .ColorSection {
-  margin-top: var(--spacing-2xl);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-medium);
 }
+
   .flex-container {
     display: flex;
-    width: 90vw;
+
   }
 
-  h1 {
-    padding: 5px;
+  h2 {
+    padding: 5px 10px;
   }
 
   .color-background {
     position: relative;
-    //flex-grow: 1;
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
@@ -70,21 +69,35 @@ const { link, text, size = "large" } = Astro.props;
   }
 
   .description {
-    width: 90vw;
     border-radius: 8px 0 8px 8px;
+  }
+
+  .button-wrapper {
+    padding-bottom: var(--spacing-large);
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
   }
 
 
 
 
   @media only screen and (min-width: 600px) {
+    .ColorSection {
+  margin-bottom: var(--spacing-2xl);
+}
     .flex-container {
     display: flex;
-    width: 75vw;
+    max-width: 1000px;
   }
 
   .description {
-    width: 75vw;
+    max-width: 1000px;
+  }
+
+  .button-wrapper {
+    max-width: 1000px;
+    justify-content: flex-end;
   }
 }
 
