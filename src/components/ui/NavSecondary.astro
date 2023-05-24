@@ -25,14 +25,12 @@ const navLinks = [{
 
 <div class="nav-primary-logo">
     <div class="logo"><a href="index.html"><img class="pigelogo" src="images/Pigeunivers_logo.png" alt=""></a></div>
-<div class="search-flex">
     <div class="search-container">
         <form action="/search" method="get">
           <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
           <label class="searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
         </form>
       </div>
- </div>
 </div>
 
 
@@ -85,14 +83,42 @@ a {
     }
 
 
-.search-flex{
-align-self: flex-end;
-  padding: 0%;
-} 
+  /*NAV PRIMARY*/
+
+.nav-primary-logo{
+position: relative;
+display: flex;
+padding-bottom: 10px;
+padding-top: 10px;
+justify-content: center;
+}
+
+
+
+.nav-links-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        padding-bottom: 20px;
+    }
+    
+
+
+.NavPrimary{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+background-color: var(--color-pink);
+box-shadow: 0 3px 10px rgb(255 228 238 / 0.50)
+
+}
 
 .logo{
-  align-self: center;
-} 
+position: absolute;
+width: auto;
+margin: auto;
+}
+
 
 .pigelogo{
     height: 35px;
@@ -104,6 +130,7 @@ align-self: flex-end;
 	height: 30px;
 	width: 50px;
 	vertical-align: bottom;
+margin-left: auto;
 }
 
 .mglass {
@@ -124,6 +151,7 @@ align-self: flex-end;
 	padding: 0;
     display: flex;
     justify-content: center;
+
 }
 
 .search:focus + .searchbutton {
@@ -149,6 +177,7 @@ align-self: flex-end;
 	-moz-transition-duration: 0.4s;
 	-webkit-transition-duration: 0.4s;
 	-o-transition-duration: 0.4s;
+  
 }
 
 .search:focus {
@@ -268,35 +297,6 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
 }
 
 
-
-/*NAV PRIMARY*/
-
-.nav-primary-logo{
-position: relative;
-display: flex;
-padding-bottom: 10px;
-padding-top: 10px;
-}
-
-
-
-.nav-links-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        list-style: none;
-        padding-bottom: 20px;
-    }
-    
-
-
-.NavPrimary{
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-background-color: var(--color-pink);
-box-shadow: 0 3px 10px rgb(255 228 238 / 0.50)
-
-}
 
 
 
