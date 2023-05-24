@@ -1,0 +1,122 @@
+---
+import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
+import BoxColor from "../components/ui/BoxColor.astro";
+import QuoteHeadingSection from "../components/ui/QuoteHeading.astro";
+import BreadCrumbSection from "../components/ui/BreadCrumbs.astro"
+import Button from "../components/ui/Button.astro";
+
+
+---
+
+<GirlsUniLayout title="Artikel">   
+     <section class="BreadCrumbSection">
+        <ul class="breadcrumblinks"> 
+            <li><a href="main.html">Pigeunivers</a></li>
+            <span>/</span>
+           <li> <a href="">Medier </a></li>
+           <span>/</span>
+          <li>  <a href="">Hvordan vander vi venskabets blomst?</a></li>
+        </ul>
+     
+     <a class="tilbagesection" href="">
+         <img src="images/gobackarrow.svg" alt="arrow">
+         Tilbage
+     </a>
+     
+     </section>
+<div class="specificarticlelayout">
+
+ <div class="category">
+    <p class="themeheader">• Venskaber og Familie</p> 
+    <h2 class="primary-header">Hvordan vander vi venskabets blomst?</h2> 
+</div>   
+<div >
+    <img class="heroimg" src="images/articleimages/flower2.jpg" alt="Piger på trapper">
+</div>
+
+
+<section class="article">
+   
+<p class="subheader-article">Jagten på den perfekte buket af venskaber kan være svær at sammensætte, når udvalget både kan virke svær at finde, stort, uoverskueligt, men også fyldt af farverige glæder? Venskaber kommer i mange forskellige facetter og kan på hver deres måde være med til at bidrage til os som mennesker.</p>
+<p>Du befinder dig måske i en fase af dit liv, hvor du søger efter meningsfulde venskaber og relationer. Måske nyder du følelsen af at have en livslang ven, der altid vil støtte dig og være der for dig i tykt og tyndt. Måske kan du slet ikke relatere til denne følelse. Eller også oplever du det indimellem – når du er omgivet af gode venner – mens resten af tiden er fyldt ud af bekymringer om, hvor du skal finde disse venner og frygt for at blive afvist eller ikke være god nok til at opbygge dybe relationer.</p>
+
+<p>Det kan være, at det store udvalg af potentielle venner og sociale muligheder giver dig en følelse af at være faret vild og ikke ane, hvordan du skal finde socialt fodfæste blandt så mange mulige relationer. Og måske føler du dig som den eneste, der har det på den måde. Men det er du ikke.</p>
+<h2 class="secondary-header">
+    Venskabets blomst
+</h2>
+<p>Venskabets blomst er en svær plante at holde. Du betragter den måske nogle gange og ser den stråle i fuldt flor, mens den til tider kan have visne blade på sig, som skal plukkes og fjernes. Andre gange ser den frodig ud mens den kort tid efter har brug for vand til sine rødder. Det kræver tålmodighed, pleje og opmærksomhed at opretholde sine blomster.</p>
+
+<p>Man skal så frøene og give dem tid til at spire, man skal give dem vand og næring og beskære dem, når det er nødvendigt. Og selvom man gør alt det rigtige, kan det stadig være svært at få blomsten til at blomstre. Denne følelse kender de fleste nok. Uanset hvor man er i sit liv, ung som gammel, kan det være en udfordring at dyrke venskaber, der holder ved og blomstrer. Det kan til tider føles som en svær opgave at navigere i det sociale landskab og finde de rette mennesker at omgås med, især når man er i en fase af sit liv, hvor man er i gang med at opbygge sin identitet og finde sin plads i verden.</p>
+
+<h2 class="secondary-header">
+   Den sociale jungle
+</h2>
+
+<p>At finde de rette venner kan endda føles, som om at man navigerer blindt i en social jungle, hvor man konstant skal finde ud hvem man egentlig er og hvem man gerne vil være. Det kan være en udfordrende og til tider ensom proces, men det er vigtigt at huske, at alle venskaber er forskellige, starter på forskellige måder og findes forskellige steder.
+    At pleje venskabet kræver aktiv deltagelse og engagement, og det indebærer at lytte, støtte og tage sig tid til at værne om disse. Det er også vigtigt at du føler dig tryg ved at tale åbent og ærligt med dem om dine følelser og tanker.
+    Men venskaber kan også ændre sig og udvikle sig over tid. Nogle gange kan venskaber falme, mens andre kan blive stærkere og mere meningsfulde. Derfor er det vigtigt at være åben for nye venskaber og muligheder, mens man også værner om og plejer de venskaber, der betyder noget.</p>
+</section>
+
+
+<section class="readmore">
+<img src="images/articleimages/bananaarticle.png" alt="Hvordan onanerer man? Artikel">
+<img src="images/articleimages/girlsarticle.png" alt="Kropsbilleder - Hvordan påvirker de os? Artikel">
+
+
+</section>
+</div>
+    
+</GirlsUniLayout>
+
+<style>
+    .specificletterlayout{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+  
+     
+    }
+
+
+    .BreadCrumbSection{
+display: flex;
+gap: 5px;
+flex-direction: column;
+align-self: flex-start;
+padding-top: 30px;
+    }
+
+.BreadCrumbSection a{
+        font-family:var(--font-display);
+        font-size: var(--font-size-small);
+    }
+
+.tilbagesection{
+        display: flex;
+    }
+
+.breadcrumblinks {
+        display: flex;
+        flex-wrap:wrap;
+        list-style: none;
+        gap: 10px;
+    }
+
+.category{
+    align-self:flex-start;
+}
+
+.subheader-article{
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold)
+
+}
+
+.heroimg{
+width:100%;
+margin:auto;
+}
+
+   
