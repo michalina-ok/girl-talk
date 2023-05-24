@@ -3,12 +3,29 @@
 const {header} = Astro.props;
 ---
 
-<h2 class="secondary-header">{header}</h2>
+<div class="underlined-header-container"><h2 class="secondary-header">{header}</h2></div>
 
 <style>
-.secondary-header {
-    margin-bottom: var(--spacing-medium);
-    border-bottom: 2px var(--color-black-ish) solid;
+
+    .secondary-header {
+        padding-bottom: var(--spacing-small);
+    }
+@media only screen and (max-width: 600px) {
+    .underlined-header-container {
+        border-bottom: 2px var(--color-black-ish) solid;
+        max-width: 1000px;
+        width: 80%;
+        margin-bottom: var(--spacing-medium);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .underlined-header-container {
+        border-bottom: 2px var(--color-black-ish) solid;
+        max-width: 1000px;
+        width: 70%;
+        margin-bottom: var(--spacing-2xl);
+    }
 }
 
 </style>
