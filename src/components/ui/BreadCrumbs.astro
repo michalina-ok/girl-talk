@@ -1,0 +1,32 @@
+---
+const {  firstCrumb, secondCrumb, thirdCrumb } = Astro.props;
+---
+<section class="BreadCrumbSection">
+   <div class="breadcrumblinks"> <a href="">Pigeunivers</a><a href="">Brevkassen</a><a href="">Brev</a>
+</div>
+
+<a class="tilbagesection" href="">
+    <img src="images/gobackarrow.svg" alt="arrow">
+    Tilbage
+</a>
+
+</section>
+
+<style>
+    .BreadCrumbSection{
+align-self: flex-start;
+    }
+
+    .BreadCrumbSection p{
+        font-family:var(--font-display);
+        font-size: var(--font-size-small);
+    }
+
+    .tilbagesection{
+        display: flex;
+    }
+
+    .breadcrumblinks{
+        display: flex;
+    }
+</style>
