@@ -4,8 +4,10 @@ const { color, subheader, text, title, link, size } = Astro.props;
 ---
 
 <section class:list={["BoxColor", color]}>
+    <div class="text-container">
   <h2 class="title secondary-header">{title}</h2>
   <p class="text">{subheader}</p>
+</div>
   <div class:list={["button-wrapper", color]}>
     <Button {link} {text} {size} />
   </div>
@@ -15,6 +17,12 @@ const { color, subheader, text, title, link, size } = Astro.props;
   .BoxColor {
     padding: var(--spacing-xs) var(--spacing-small);
     border-radius: 15px;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   p.title {
@@ -40,6 +48,10 @@ const { color, subheader, text, title, link, size } = Astro.props;
     }
     .button-wrapper {
       justify-content: flex-end;
+    }
+
+    .text-container {
+        align-items: flex-start;
     }
   }
 </style>
