@@ -41,6 +41,7 @@ import Button from "../components/ui/Button.astro";
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 40px ;
 }
 
 /*HEROSECTION*/
@@ -73,6 +74,7 @@ margin-bottom: 20px;
 	justify-content: space-evenly;
 	gap: 20px;}
 
+
 	.double-articlecard-second{
 			display: flex;
 			flex-direction: row;
@@ -81,12 +83,22 @@ margin-bottom: 20px;
 			gap: 20px;
 		}	
 
+		.mediumarticlecard img{
+width: 100%;
+}
+
+
 
 /*QUOTESECTION*/
 .fp-quote-section{
 	display:flex;
 	flex-direction: column;
 	gap: 20px;
+}
+
+.button-wrapper{
+	display: flex;
+	align-self: flex-end;
 }
 
 	@media only screen and (min-width: 712px){
@@ -103,6 +115,17 @@ margin-bottom: 20px;
 
 .girls-frontpage-layout{
 	padding: 40px 140px;
+}
+    }
+
+	@media only screen and (min-width: 1100px){
+
+.fp-quote-section{
+	padding: 0px 100px;
+}
+
+.button-wrapper{
+	padding-right: 50px;
 }
     }
 
