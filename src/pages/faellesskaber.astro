@@ -9,15 +9,19 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 
 <GirlsUniLayout title="Faellesskaber">
   <div class="Faelleskaber">
+    <div class="header-container">
     <section class="header">
+      <div>
       <h1 class="primary-header">Fællesskaber</h1>
       <p class="subheader">Sammen, er vi stærkere</p>
       <p>Vi giver dig et trygt rum med andre piger og unge kvinder, hvor vi taler om det, der fylder og styrker hinanden.</p>
       <p>På denne her side kan du finde et gruppeforløb, som passer til lige netop dig eller du kan læse om alle vores gruppetilbud.</p>
-    </section>
-    <div class="quote-container">
-      <QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="purple" />
     </div>
+      <div class="quote-container">
+        <QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="purple" />
+      </div>
+    </section>
+  </div>
     <div class="filters-container">
       <h2 class="secondary-header">Læs om vores fællesskaber</h2>
       <p class="label-text light-text">filtrér efter vores fællesskaber</p>
@@ -57,8 +61,17 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 </GirlsUniLayout>
 
 <style>
+
+  .header {
+    display: grid;
+    align-items: center;
+    max-width: 1000px;
+    margin-bottom: 90px;
+  }
+
+
   .color-section-components-container,
-  .filters-container {
+  .filters-container, .header-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -89,4 +102,13 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     color: var(--color-black-ish);
     opacity: var(--opacity-75);
   }
+
+  @media only screen and (min-width: 600px) {
+   .header {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    
+  }
+}
+
 </style>
