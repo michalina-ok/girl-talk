@@ -1,0 +1,245 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="FAQ">
+  <section class="layoutstyle">
+    <h1 class="primary-header">FAQ</h1>
+    <div class="faq-container">
+      <details>
+        <summary>
+          <span class="subheader">Hvem kan bruge GirlTalk?</span>
+        </summary>
+        <p>
+          GirlTalk blev skabt i 2004 ud fra visionen om at give piger et sted at
+          gå hen, når livet er svært. <br>
+          <br> At GirlTalk henvender sig til piger og ikke alle unge skyldes, at
+          der ofte knytter sig særlige udfordringer til piger og unge kvinders liv.
+          Dog er det vigtigt for os understrege, at det ikke spiller nogen rolle,
+          hvilket pronomen eller tildelt køn du har, hvis GirlTalks værdier og tilbud
+          taler til dig.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader">Hvilke tilbud har GirlTalk?</span>
+        </summary>
+        <p>
+          GirlTalk har mange forskellige tilbud og indsatser til forskellige
+          alders- og målgrupper.
+        </p>
+        <ul>
+          <li>Vi rådgiver unge på chat, sms og i vores brevkasse Pigetanker</li>
+          <li>Vi holder foredrag for både unge, forældre og fagpersoner.</li>
+          <li>
+            Vi faciliterer fysiske tilbud i form af vores gruppeforløb
+            Sisterhood og EmpowR.
+          </li>
+          <li>Herudover rådgiver vi også forældre i vores voksenrådgivning.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader">Hvem arbejder i Girltalk?</span>
+        </summary>
+        <p>
+          GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
+          København, Aalborg og Odense. GirlTalk har medarbejdere med flere
+          forskellige baggrunde og fagligheder, hvoraf mange er uddannet inden
+          for psykologi, pædagogik samt kommunikation og marketing. <br />
+          <br /> GirlTalk er drevet og skabt på et fundament af frivillighed og ville
+          ikke kunne eksistere uden vores frivillige.Samlet set er der omkring 300
+          frivillige i GirlTalk.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader"
+            >Er det muligt at få et interview med GirlTalk?</span
+          >
+        </summary>
+        <p>
+          Finder du ikke svaret på det, du søger, i vores FAQ, er du velkommen
+          til at kontakte os på info@girltalk.dk med henblik på mere info og et
+          eventuelt interview med en af vores medarbejdere. I særlige tilfælde
+          kan vi også være kontaktled imellem studerende og vores frivillige. <br
+          />
+          <br /> Vi kan desværre ikke tilbyde at være kontaktled imellem studerende
+          og de piger, som kontakter os.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader">Hvem kontakter GirlTalk?</span>
+        </summary>
+        <p>
+          GirlTalks målgruppe er piger og unge kvinder i alderen 12 til 24 år.
+          Hos GirlTalk er intet problem for stort eller for småt. <br />
+          <br /> Nogle kontakter os, fordi de har det svært i skolen, nogle har spørgsmål
+          til krop og pubertet, mens andre oplever psykiske udfordringer. Nogle kontakter
+          os enkelte eller få gange, mens andre har glæde af at tale med vores rådgivere
+          mere regelmæssigt over en periode.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader">Hvilke spørgsmål stiller pigerne?</span
+          >
+        </summary>
+        <p>
+          Det er meget forskelligt, hvilke problematikker piger og unge kvinder
+          skriver til os om. Det kan være emner som:
+        </p>
+        <ul>
+          <li>Trivsel, herunder ensomhed, lavt selvværd og selvskadetrang.</li>
+          <li>Forelskelse og parforhold.</li>
+          <li>Krop, køn og seksualitet.</li>
+        </ul>
+        <p>
+          Herudover fylder emner som venskaber, forældre og skole/uddannelse. <br
+          />
+          <br />
+          Hvis du ønsker at høre mere om nogle af disse emner, anbefaler vi dig at
+          lytte til vores ungepodcast GirlTalks. Her kan du finde afsnit, der tager
+          udgangspunkt i præcis det emne, du er interesseret i.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="subheader"
+            >Hvem kan blive frivillig hos GirlTalk?</span
+          >
+        </summary>
+        <p>
+          Hvilke forudsætninger, det kræver at blive frivillig i GirlTalk,
+          varierer fra indsats til indsats. Vi anbefaler derfor, at du læser
+          stilingsbeskrivelsen for den eller de indsatser, du kunne være
+          interesseret i. <br> <br> Du finder oversigten over alle vores
+          frivilligindsatser <a href="frivilig.html">her.</a>
+        </p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  h1 {
+    width: 10%;
+    text-align: center;
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  details {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 3px solid var(--color-black-ish);
+    padding-bottom: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  details summary span {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: var(--spacing-2xs);
+    padding-right: 25px;
+  }
+
+  details p {
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+  }
+
+  details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+  }
+
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary {
+    width: 100%;
+    position: relative;
+    font-size: 1.25rem;
+    list-style: none;
+  }
+
+  details summary:after {
+    content: "+";
+    color: var(--color-black-ish);
+    position: absolute;
+    font-size: 2.563rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+  }
+
+  details[open] summary:after {
+    transform: rotate(45deg);
+  }
+  details summary {
+    outline: 0;
+  }
+
+  details summary:focus-visible {
+    outline: 2px solid #4f4f4f;
+  }
+
+  ul {
+    padding-left: 5%;
+    font-family: var(--font-body);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: var(--spacing-2xs);
+  }
+
+  @media only screen and (min-width: 600px) {
+    details:first-child {
+      margin-top: var(--spacing-2xl);
+      margin-bottom: var(--spacing-2xl);
+    }
+    details {
+      width: 50%;
+      border-bottom: 5px solid var(--color-black-ish);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    details summary:after {
+      content: "+";
+      color: var(--color-black-ish);
+      position: absolute;
+      font-size: 3.563rem;
+      line-height: 0;
+      margin-top: 1.5rem;
+      right: 0;
+      font-weight: 200;
+      transform-origin: center;
+      transition: 200ms linear;
+    }
+
+    h1 {
+      width: 58%;
+      text-align: center;
+    }
+  }
+</style>

@@ -124,7 +124,7 @@ p {
 }
 
 .quote-light {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-light);
   font-family: var(--font-display);
 }
@@ -187,7 +187,7 @@ a {
   }
 
   .quote-light {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-large);
     font-weight: var(--font-weight-light);
   }
 
@@ -208,3 +208,10 @@ a {
   }
 
 }
+
+@media only screen and (max-width: 387px) {
+  .quote-light {
+    font-size: 0.73rem;
+  }
+}
+
