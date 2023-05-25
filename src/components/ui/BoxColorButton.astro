@@ -1,0 +1,57 @@
+---
+import Button from "../ui/Button.astro";
+const { color, subheader, text, title, link, size } = Astro.props;
+---
+
+<section class:list={["BoxColor", color]}>
+    <div class="text-container">
+  <h2 class="title secondary-header">{title}</h2>
+  <p class="text">{subheader}</p>
+</div>
+  <div class:list={["button-wrapper", color]}>
+    <Button {link} {text} {size} />
+  </div>
+</section>
+
+<style>
+  .BoxColor {
+    padding: var(--spacing-xs) var(--spacing-small);
+    border-radius: 15px;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p.title {
+    margin-bottom: var(--spacing-small);
+  }
+
+  p {
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .button-wrapper {
+    padding-bottom: var(--spacing-small);
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .BoxColor {
+        max-width: 70vw;
+    }
+    .button-wrapper {
+      justify-content: flex-end;
+    }
+
+    .text-container {
+        align-items: flex-start;
+    }
+  }
+</style>

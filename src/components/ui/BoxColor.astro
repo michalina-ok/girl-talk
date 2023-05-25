@@ -2,7 +2,7 @@
 const { color, text, title } = Astro.props;
 ---
 <section class:list={[ 'BoxColor', color]} >
-    <h2 class="title">{title}</h2>
+    <h2 class="title secondary-header">{title}</h2>
 <p class="text">{text}</p>
 </section>
 
@@ -24,7 +24,7 @@ const { color, text, title } = Astro.props;
 
     @media only screen and (min-width: 600px) {
         .BoxColor {
-            width: 90%;
-        }
+        max-width: 70vw;
+    }
 }
 </style>

@@ -1,11 +1,236 @@
 ---
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
 import ArticleCard from "../components/cards/ArticleCard.astro"
+import SearchBar from "../components/ui/SearchBar.astro"
+import Dropdown from "../components/ui/Dropdown.astro"
 ---
 <GirlsUniLayout title="Pigeunivers">
-	<section>
-		<p>Medier</p>
-		<ArticleCard header="Hvordan onnaner man?" category="Krop og sex" />
-
+<div class="medierlayout">
+	<h1 class="primary-header">Vidensunivers</h1>
+<div class="search-div">
+<SearchBar></SearchBar>	
+</div>
+<div class="filter-div">
+<Dropdown></Dropdown>
+</div>
+<div class="medier-first-section">
+	<section class="largearticlecard">
+		<a href="#">
+		<img src="images/articleimages/largearticleimage.png" alt="Hvordan vander vi venskabets blomst? Artikel">
+		<p class="subheader-firstarticle">Jagten på den perfekte buket
+			af venskaber kan være svær at sammensætte, men også fyldt af farverige glæder?</p></a>
 	</section>
+	<section class="doublearticlecard">
+	<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+		<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+</div>
+<div class="medier-podcast-section">
+	<img src="images/articleimages/podcastimage.jpg" alt="podcastimage">
+	</div>
+<div class="medier-second-section">
+	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+	<div class="medier-second-grid">
+	<section class="mediumarticlecard">
+		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+	</section>
+	<section class="double-articlecard-second">
+		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+	</div>
+</div>
+<div class="medier-podcast-section">
+<img src="images/articleimages/podcastimage.jpg" alt="podcastimage">
+</div>
+<div class="medier-fourth-section">
+	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+	<div class="medier-fourth-grid">
+	<section class="mediumarticlecard">
+		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+	</section>
+	<section class="double-articlecard-second">
+		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+	</div>
+</div>
+
+
+</div>
 	</GirlsUniLayout>
+
+	<style>
+/*GENERAL*/
+.medierlayout{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+	padding: 30px 20px;
+}
+
+.medierlayout h1{
+	text-align: center;
+}
+
+.search-div{
+	width: 300px;
+	align-self: center;
+}
+
+.filter-div{
+	padding-bottom: 40px;
+}
+/*FIRST SECTION*/ 		
+		.medier-first-section{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}
+
+.largearticlecard{
+	max-width: 300px;
+	display: flex;
+	gap: 10px;
+}
+
+.largearticlecard img{
+	max-height: 335px;
+
+}
+
+.subheader-firstarticle{
+	font-family: var(--font-display);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-semibold);
+}
+
+.doublearticlecard{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 20px;
+			width:auto;
+}
+
+/*SECOND SECTION*/ 
+.sub-header-underlined{
+font-family: var(--font-display);
+font-weight: var(--font-weight-semibold);
+font-size: var(font-size-large);
+align-self: flex-start;
+border-bottom: 2px solid var(--color-black-ish);
+width: 100%;
+margin-bottom: 20px;
+}
+.medier-second-grid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 20px;
+
+}		
+.double-articlecard-second{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}	
+
+.mediumarticlecard img{
+	max-height: 270px;
+}
+
+/*MEDIER PODCAST*/
+.medier-podcast-section{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.medier-podcast-section img {
+	max-width: 300px;
+}
+
+/*MEDIER FOURTH GRID*/
+
+.medier-fourth-grid{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+
+@media only screen and (min-width: 532px){
+	.largearticlecard{
+max-width: 500px;
+}
+
+.largearticlecard img{
+	max-height: 575px;
+
+}
+
+.mediumarticlecard img{
+	max-height: 400px;
+}
+
+.medierlayout{
+	padding: 30px 100px;
+}
+
+.medier-podcast-section img {
+	max-width: 500px;
+}
+
+
+		}
+
+
+@media only screen and (min-width: 900px){
+
+	.medier-podcast-section img {
+	max-width: 700px;
+}
+
+ .largearticlecard{
+max-width: 600px;
+}
+
+.largearticlecard img{
+	max-height: 700px;
+
+}
+
+.subheader-firstarticle{
+	font-size: var(--font-size-large);
+    }
+
+	.sub-header-underlined{
+font-family: var(--font-display);
+font-weight: var(--font-weight-semibold);
+font-size: var(font-size-large);
+align-self: flex-start;
+border-bottom: 2px solid var(--color-black-ish);
+width: 100%;
+margin-bottom: 20px;
+}
+
+
+
+}
+@media only screen and (min-width: 1100px){
+
+	.medier-podcast-section img {
+	max-width: 1000px;
+}
+
+.doublearticlecard{
+	flex-direction: column;
+ }}
+	</style>

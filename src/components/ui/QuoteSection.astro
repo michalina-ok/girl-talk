@@ -2,7 +2,7 @@
 const { color, firstLine, secondLine, thirdLine } = Astro.props;
 ---
 
-<section class="QuoteSection">
+<div class="QuoteSection">
   <div class:list={["line-one-container", color]}>
     <img src="/images/quote.svg" alt="" /><p class="highlighted-quote">{firstLine}</p>
   </div>
@@ -12,10 +12,15 @@ const { color, firstLine, secondLine, thirdLine } = Astro.props;
   <div class:list={["line-three-container", color]}>
     <p class="highlighted-quote">{thirdLine}</p>
   </div>
-</section>
+</div>
 
 <style>
-  div {
+
+  .QuoteSection {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .line-one-container, .line-two-container, .line-three-container {
     max-width: 300px;
     border-radius: 8px;
     padding: 5px 20px;
