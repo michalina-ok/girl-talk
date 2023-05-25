@@ -101,6 +101,7 @@ import ColorSection from "../components/ui/ColorSection.astro";
         </div>
       </div>
     </div>
+    <div class="color-section-component-container">
     <ColorSection
       color="pink"
       hex="#ffe4ee"
@@ -128,10 +129,18 @@ import ColorSection from "../components/ui/ColorSection.astro";
         </p>
       </div>
     </ColorSection>
+  </div>
   </section>
 </BaseLayout>
 
 <style>
+
+.color-section-component-container {
+    width: 100%;
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  }
   .layoutstyle {
     margin-top: var(--spacing-small);
     margin-bottom: var(--spacing-small);
