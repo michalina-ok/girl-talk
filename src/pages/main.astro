@@ -3,7 +3,27 @@ import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
 
 ---
 <GirlsUniLayout title="Pigeunivers">
-	<section>
-		<p>Pigeunivers</p>
+	<section class="gu-herosection">
+<img src="images/heroimages/girlsfrontpage.png" alt="Pigeunivers: billede og overskrift">
+
+
+
 	</section>
 	</GirlsUniLayout>
+	<style>
+		.gu-herosection{
+			width: auto;
+
+		}
+
+		.gu-herosection img{
+			width: 100%;
+		}
+
+		
+@media only screen and (min-width: 900px){
+.gu-herosection{
+	padding: 40px 140px;
+}
+    }
+	</style>
