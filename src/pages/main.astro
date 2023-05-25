@@ -2,19 +2,43 @@
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
 import QuoteSection from "../components/ui/QuoteSection.astro";
 import BoxColorButton from "../components/ui/BoxColorButton.astro"
+import ArticleCard from "../components/cards/ArticleCard.astro"
 
 ---
 <GirlsUniLayout title="Pigeunivers">
+<div class="girls-frontpage-layout">
 	<section class="gu-herosection">
 <img src="images/heroimages/girlsfrontpage.png" alt="Pigeunivers billede og overskrift">
 </section>
 
+<div class="medier-second-section">
+	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+	<div class="medier-second-grid">
+	<section class="mediumarticlecard">
+		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+	</section>
+	<section class="double-articlecard-second">
+		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+	</div>
+</div>
+
 <QuoteSection color="pink" firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde"></QuoteSection>
 
 <BoxColorButton color="purple" title="Du er aldrig alene med dine tanker" subheader="Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?" text="Skriv til brevkassen"></BoxColorButton>
-
+</div>
 	</GirlsUniLayout>
 	<style>
+
+/*GENERAL*/
+.girls-frontpage-layout{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*HEROSECTION*/
 		.gu-herosection{
 			width: auto;
 
@@ -24,10 +48,51 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro"
 			width: 100%;
 		}
 
-		
+
+
+		/*MEDIE GRID*/ 
+
+		.sub-header-underlined{
+font-family: var(--font-display);
+font-weight: var(--font-weight-semibold);
+font-size: var(font-size-large);
+align-self: flex-start;
+border-bottom: 2px solid var(--color-black-ish);
+width: 100%;
+margin-bottom: 20px;
+}
+
+		.medier-second-grid{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 20px;}
+
+	.double-articlecard-second{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}	
+
+
+	@media only screen and (min-width: 712px){
+		.medier-second-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}	
+
+	}
 @media only screen and (min-width: 900px){
-.gu-herosection{
+
+
+
+
+.girls-frontpage-layout{
 	padding: 40px 140px;
 }
     }
+
+
 	</style>
