@@ -30,11 +30,13 @@ import Button from "../components/ui/Button.astro";
 <div class="button-wrapper">
 <Button size="m-extra-small-d-medium" text="Gå til fællesskaber"></Button></div>
 </div>
-<div class="BoxColorButton Center">
+<div class="BoxColorButtonCenter">
 <BoxColorButton size="m-extra-small-d-medium" color="purple" title="Du er aldrig alene med dine tanker" subheader="Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?" text="Skriv til brevkassen"></BoxColorButton>
 </div>
 </div>
 	</GirlsUniLayout>
+
+
 	<style>
 
 /*GENERAL*/
@@ -97,12 +99,14 @@ width: 100%;
 	gap: 20px;
 }
 
+/*DIVERSE*/
+
 .button-wrapper{
 	display: flex;
 	align-self: flex-end;
 }
 
-.BoxColorButton{
+.BoxColorButtonCenter{
 	align-self: center;
 }
 
@@ -113,13 +117,7 @@ width: 100%;
 }	
 
 	}
-@media only screen and (min-width: 900px){
 
-
-
-
-
-    }
 
 	@media only screen and (min-width: 1100px){
 

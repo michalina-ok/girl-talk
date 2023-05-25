@@ -4,13 +4,200 @@ import Button from "../components/ui/Button.astro"
 import SearchBar from "../components/ui/SearchBar.astro"
 import BoxColor from "../components/ui/BoxColor.astro"
 import ColorSection from "../components/ui/ColorSection.astro"
+import ArticleCard from "../components/cards/ArticleCard.astro";
 import BoxColorButton from "../components/ui/BoxColorButton.astro"
 
 ---
 <BaseLayout title="GirlTalk">
-	<section>
+<div class="indexlayout">
+	<div class="indexherosection">
+	<section class="fp-1st-hero-section">
 		<h1 class="primary-header">Du er altid god nok</h1>
 		<h2 class="subheader">... men vi er her, når du bliver i tvivl</h2>
-		<BoxColorButton subheader="Vi sidder klar til at hjælpe dig" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat"/>
+		<img src="images/heroimages/girls-on-stairs-1.jpg" alt="Hero image of girls talking">
 	</section>
-	</BaseLayout>
+	<section class="fp-2nd-hero-section">
+		<img  src="images/heroimages/girls-on-stairs-2.jpg" alt="">
+	</section>
+</div>
+<div class="BoxColorButtonCenter">
+	<BoxColorButton size="m-extra-small-d-medium" subheader="Vi sidder klar til at hjælpe dig" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat"/>
+</div>	
+<div class="medier-second-section">
+	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+	<div class="medier-second-grid">
+	<section class="mediumarticlecard">
+		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+	</section>
+	<section class="double-articlecard-second">
+		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+	</section>
+	</div>
+</div>
+
+<div class="index-bottom-section">
+<section class="first-bottom-section">
+<h2 class="subheader">Lær os bedre at kende</h2>
+<p>Siden vores stiftelse i 2004 har vi haft tusindvis af samtaler med piger, der ikke tør dele deres tanker, og oplevelser med andre.
+	Vi står med en generation af piger, der stræber efter at være perfekte udadtil og som føler sig alene med alt det, der er svært.
+	I samarbejde med vores mange støtter og samarbejdspartnere arbejder vi for at bremse den udvikling og for at sikre, at alle piger har en at tale med.</p>
+<div class="button-wrapper">
+<Button size="m-extra-small-d-medium" text="Læs mere om os"></Button></div>
+</section>	
+<section class="bottom-section-image">
+	<img src="images/heroimages/girls-on-stairs-2.jpg" alt="Decorative image">
+	<div class="button-wrapper">
+		<Button text="Læs mere om os"></Button></div>
+</section>
+</div>
+</div>
+
+</BaseLayout>
+
+
+	<style>
+
+/*LAYOUT*/
+.indexlayout{
+	display: flex;
+	flex-direction: column;
+	gap:30px;
+	padding: 30px 20px;
+}
+
+/*HERO SECTION*/
+.indexherosection{
+	padding-bottom: 40px;
+}
+.fp-1st-hero-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fp-1st-hero-section img{
+	width: 100%;
+	border-radius: 8px;
+}
+
+.BoxColorButtonCenter{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.fp-2nd-hero-section{
+	display: none;
+}
+
+
+	/*MEDIE GRID*/ 
+
+	.sub-header-underlined{
+font-family: var(--font-display);
+font-weight: var(--font-weight-semibold);
+font-size: var(font-size-large);
+align-self: flex-start;
+border-bottom: 2px solid var(--color-black-ish);
+width: 100%;
+margin-bottom: 20px;
+}
+
+		.medier-second-grid{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 20px;}
+
+
+	.double-articlecard-second{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			gap: 20px;
+		}	
+
+		.mediumarticlecard img{
+width: 100%;
+}
+
+/*BOTTOM SECTION*/ 
+
+.index-bottom-section{
+display: grid;
+grid-template-rows: 1fr 1fr;
+gap: 20px;
+}
+.button-wrapper{
+	display: flex;
+	align-self: flex-end;
+}
+
+.bottom-section-image img{
+	width: 100%;
+	border-radius: 8px;
+}
+.bottom-section-image .button-wrapper{
+	display: none;
+}
+
+.first-bottom-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+
+@media only screen and (min-width: 712px){
+		.medier-second-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}	
+
+.index-bottom-section{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: none;
+gap: 20px;
+}
+
+
+.button-wrapper{
+	align-self: flex-start;
+}
+
+.indexlayout{
+	padding: 30px 70px;
+}
+
+
+	}
+
+
+@media only screen and (min-width: 900px){
+
+.indexherosection{
+			display: grid;
+			grid-template-columns: 1fr 1.5fr;
+			gap: 20px;
+		}
+
+.fp-2nd-hero-section{
+	display: block;
+}
+
+		.fp-2nd-hero-section img{
+	width: 100%;
+	border-radius: 8px;
+}
+
+
+.indexlayout{
+	padding: 30px 140px;
+}
+
+
+}
+	</style>
