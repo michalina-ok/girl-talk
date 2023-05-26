@@ -6,7 +6,9 @@ import ColorSection from "../components/ui/ColorSection.astro"
 ---
 <GirlsUniLayout title="Pigeunivers">
 <div class="chatlayout">
-<ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat" link="/">
+<!-- <div class="popup">
+	<span class="popuptext" id="myPopup">A Simple Popup!</span></div>	 -->
+<ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat">
 	<div slot="circle">
 		<span class="dot"></span>
 	</div>
@@ -22,6 +24,9 @@ import ColorSection from "../components/ui/ColorSection.astro"
 	<p slot="description" class="bold">Fredag: kl. 19.00-23.00</p>
 	<p slot="description" class="bold">Lørdag: kl. 19.00-21.00</p>
 	<p slot="description" class="bold">Søndag: kl. 18.30-22.30</p>
+	<div slot="description" class="popup">
+		<p class="popuptext" id="myPopup"> Chatten er lukket, men du kan altid sende os en sms på 49 49 18 18</p>
+	</div>
 
 </ColorSection>
 </div>
@@ -45,7 +50,7 @@ import ColorSection from "../components/ui/ColorSection.astro"
 			align-items: center;
 		}
 
-		.dot {
+.dot {
   height: 25px;
   width: 25px;
   background-color: var(--color-green);
@@ -54,5 +59,72 @@ import ColorSection from "../components/ui/ColorSection.astro"
   margin-right: 10px;
   margin-left: 10px;
 }
+/* Popup container - can be anything you want */
+.popup {
+height: 20px;
+width: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--color-green);
+  color: var(--color-black-ish);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 80%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-green) transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 	</style>
+
+<script>
+
+const button = document.querySelector("a.dark")
+	const popup = document.getElementById("myPopup");
+
+	button.addEventListener("click", () =>{
+		popup.classList.toggle("show");})
+
+ </script>
