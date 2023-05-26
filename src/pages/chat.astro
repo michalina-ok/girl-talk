@@ -8,7 +8,7 @@ import ColorSection from "../components/ui/ColorSection.astro"
 <div class="chatlayout">
 <ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat" link="/">
 	<div slot="circle">
-		<p>hello</p>
+		<span class="dot"></span>
 	</div>
 	<p slot="description">
 		Du kan chatte med os hver aften i åbningstiden.
@@ -44,4 +44,15 @@ import ColorSection from "../components/ui/ColorSection.astro"
 			flex-direction: row;
 			align-items: center;
 		}
+
+		.dot {
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 	</style>
