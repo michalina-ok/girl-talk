@@ -8,8 +8,10 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
   <section class:list={["ColorSection", "all", extraInfo]}>
     <div class="flex-container">
     <section class="headline">
+      <div class="titleclass">
         <h2 class="secondary-header">{title}</h2>
         <slot name="circle"></slot>
+      </div>
         <slot name="subheader"></slot>
       </section>
       <div class:list={[ 'color-background', color]}>
@@ -105,6 +107,11 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
   .headline{
    white-space: nowrap;
   }
+
+  .titleclass{
+    display: flex;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
