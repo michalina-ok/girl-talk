@@ -36,6 +36,7 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
       <BrevkasseCard category='Andet' filter="andet all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
     </div>
+    <div class="margintop"><Button text="Læs flere"></Button></div>
   </div>
 </GirlsUniLayout>
 
@@ -114,6 +115,10 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     flex-direction: column;
     margin-top: var(--spacing-small);
     margin-bottom: var(--spacing-small);
+  }
+
+  .margintop {
+    margin-top: var(--spacing-small);
   }
 
   @media only screen and (min-width: 600px) {
