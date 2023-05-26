@@ -1,10 +1,10 @@
 ---
 import Category from "./Category.astro"
-const { category, header  } = Astro.props;
+const { category, header, filter } = Astro.props;
 ---
 
-<div class="BrevkasseCard">
-    <p class="themeheader">● Brev</p>
+<div class:list={["BrevkasseCard", filter]}>
+    <p class="themeheader">● {category}</p>
     <p class="light-text">{header}</p>
     <p class="themeheader">Læs mere</p>
 </div>
@@ -13,8 +13,6 @@ const { category, header  } = Astro.props;
 
     .BrevkasseCard {
         width: 200px;
-        display: flex;
-        flex-direction: column;
         /* margin-top: var(--spacing-medium); */
         padding-left: var(--spacing-small);
         padding-right: var(--spacing-small);
