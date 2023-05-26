@@ -26,7 +26,7 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       <h2 class="secondary-header">Læs om vores fællesskaber</h2>
       <p class="label-text light-text">filtrér efter vores fællesskaber</p>
       <div class="filter-buttons-container">
-        <Button text="all" style="color" size="m-small-d-large" extraInfo="all" />
+        <Button text="alle" style="color" size="m-small-d-large" extraInfo="all" />
         <Button text="13-16 år" style="color" size="m-small-d-large" extraInfo="young" />
         <Button text="16-24 år" style="color" size="m-small-d-large" extraInfo="old" />
       </div>
@@ -71,30 +71,38 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
   const colorSections = document.querySelectorAll(".ColorSection");
 
   const buttonsArray = [...filterButtons];
-  const colorSectionArray = [...colorSections];
+  const filteredArray = [...colorSections];
 
-  buttonsArray.forEach((element) => {
-    element.addEventListener("click", () => {
+  buttonsArray.forEach((button) => {
+    button.addEventListener("click", () => {
       if (buttonsArray.length) {
-        buttonsArray.forEach((btn) => {
-          btn.classList.remove("selected");
+        buttonsArray.forEach((button) => {
+          button.classList.remove("selected");
         });
       }
 
-      if (colorSectionArray.length) {
-        colorSectionArray.forEach((colorSection) => {
-          if (colorSection.classList.contains("none")) {
-            colorSection.classList.remove("none");
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
           }
         });
       }
 
-      element.classList.toggle("selected");
+      button.classList.toggle("selected");
 
-      colorSectionArray.forEach((colorSection) => {
-        if (!colorSection.classList.contains(element.textContent.toLowerCase().replace(/\s/, "_"))) {
-          colorSection.classList.add("none");
+      filteredArray.forEach((filteredElement) => {
+        if (button.textContent.toLowerCase() === "alle") {
+          filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        })
+        } else {
+        if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
+          filteredElement.classList.add("none");
         }
+      }
       });
     });
   });

@@ -27,19 +27,66 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     </div>
     <p class="indicator">8 ud af 129</p>
     <div class="lettercontainer">
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-      <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Venskaber og familie' filter="venskaber_og_familie all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Krop og sex' filter="krop_og_sex all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Selvværd' filter="selvværd" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Trivsel' filter="trivsel all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
+      <BrevkasseCard category='Andet' filter="andet all" header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
     </div>
   </div>
 </GirlsUniLayout>
 
+<script>
+  const filterButtons = document.querySelectorAll("a.color");
+  const cardsSection = document.querySelectorAll(".BrevkasseCard");
+
+  const buttonsArray = [...filterButtons];
+  const filteredArray = [...cardsSection];
+
+  buttonsArray.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (buttonsArray.length) {
+        buttonsArray.forEach((button) => {
+          button.classList.remove("selected");
+        });
+      }
+
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        });
+      }
+
+      button.classList.toggle("selected");
+
+      filteredArray.forEach((filteredElement) => {
+        
+        if (button.textContent.toLowerCase() === "alle") {
+          filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        })
+        } else {
+        if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
+          filteredElement.classList.add("none");
+        }
+      }
+      });
+    });
+  });
+</script>
+
 <style>
+
+  .none {
+    display: none;
+  }
   .dropdowncontainer {
     width: 263px;
   }
