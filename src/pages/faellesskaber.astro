@@ -2,72 +2,184 @@
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
 import QuoteSection from "../components/ui/QuoteSection.astro";
 import Button from "../components/ui/Button.astro";
+import BoxColor from "../components/ui/BoxColor.astro";
 import ColorSection from "../components/ui/ColorSection.astro";
+import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 ---
 
-
-  <GirlsUniLayout title="Faellesskaber">
-    <div class="Faelleskaber">
-    <section class="header">
-      <h1 class="primary-header">Fællesskaber</h1>
-      <p class="subheader">Sammen, er vi stærkere</p>
-      <p>Vi giver dig et trygt rum med andre piger og unge kvinder, hvor vi taler om det, der fylder og styrker hinanden.</p>
-      <p>På denne her side kan du finde et gruppeforløb, som passer til lige netop dig eller du kan læse om alle vores gruppetilbud.</p>
-      <QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="pink" />
-      <h2 class="secondary-header">Læs om vores fællesskaber</h2>
-    </section>
-    <p class="light-text">filtrér efter vores fællesskaber</p>
-    <div class="filter-buttons-container">
-      <Button text="All" style="color" size="m-small-d-large" />
-      <Button text="13-16 år" style="color" size="m-small-d-large" />
-      <Button text="16-24 år" style="color" size="m-small-d-large" />
+<GirlsUniLayout title="Faellesskaber">
+  <div class="Faellesskaber">
+    <div class="header-container">
+      <section class="header">
+        <div>
+          <h1 class="primary-header">Fællesskaber</h1>
+          <p class="subheader">Sammen, er vi stærkere</p>
+          <p>Vi giver dig et trygt rum med andre piger og unge kvinder, hvor vi taler om det, der fylder og styrker hinanden.</p>
+          <p>På denne her side kan du finde et gruppeforløb, som passer til lige netop dig eller du kan læse om alle vores gruppetilbud.</p>
+        </div>
+        <div class="quote-container">
+          <QuoteSection firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" color="purple" />
+        </div>
+      </section>
     </div>
-    <ColorSection color="green" title="EmpowR" hex="#d1ff99" text="Timeld EmpowR" link="/">
-		<p slot="subheader">For dig mellem 13-16 år.</p>
-      <p slot="description">
-        I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
-        som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
-      </p>
-      <p>To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
-    </ColorSection>
-	<ColorSection color="pink" title="Sisterhood" hex="#ffe4ee" text="Timeld Sisterhood" link="/">
-		<p slot="subheader">For dig mellem 18-24, som er indskrevet på en uddannelse.</p>
-		<p slot="description">
-		  I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
-		  som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
-		</p>
-		<p slot="description">To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
-	  </ColorSection>
-	  <ColorSection color="purple" title="Velux" hex="#edcff8" text="Timeld Velux" link="/">
-		<p slot="subheader">For dig mellem 18-24, som ikke er indskrevet på en uddannelse.</p>
-		<p slot="description">
-		  I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
-		  som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
-		</p>
-		<p slot="description">To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
-	  </ColorSection>
-  </GirlsUniLayout>
-</div>
+    <div class="filters-container">
+      <h2 class="secondary-header">Læs om vores fællesskaber</h2>
+      <p class="label-text light-text">filtrér efter vores fællesskaber</p>
+      <div class="filter-buttons-container">
+        <Button text="all" style="color" size="m-small-d-large" extraInfo="all" />
+        <Button text="13-16 år" style="color" size="m-small-d-large" extraInfo="young" />
+        <Button text="16-24 år" style="color" size="m-small-d-large" extraInfo="old" />
+      </div>
+    </div>
+    <div class="color-section-components-container">
+      <ColorSection extraInfo="13-16_år" color="green" title="EmpowR" hex="#d1ff99" text="Timeld EmpowR" link="/">
+        <p slot="subheader" class="themeheader age-desc">For dig mellem 13-16 år</p>
+        <p slot="description">
+          I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+          som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+        </p>
+        <p>To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+      </ColorSection>
+      <ColorSection extraInfo="16-24_år" color="pink" title="Sisterhood" hex="#ffe4ee" text="Timeld Sisterhood" link="/">
+        <p slot="subheader" class="themeheader age-desc">For dig mellem 18-24, som er indskrevet på en uddannelse</p>
+        <p slot="description">
+          I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+          som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+        </p>
+        <p slot="description">To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+      </ColorSection>
+      <ColorSection extraInfo="16-24_år" color="purple" title="Velux" hex="#edcff8" text="Timeld Velux" link="/">
+        <p slot="subheader" class="themeheader age-desc">For dig mellem 18-24, som ikke er indskrevet på en uddannelse</p>
+        <p slot="description">
+          I EmpowR mødes du med en lille gruppe piger mellem 13 og 16 år én gang om ugen i 10 uger tæt på, hvor du bor. I taler om alt det, der fylder. Det kan være venskaber, ensomhed, kærlighed og andre emner. Her vil du opdage, at der er så meget,
+          som faktisk er helt normalt, at andre kan have det ligesom dig, og at det hjælper at tale om det.
+        </p>
+        <p slot="description">To frivillige unge kvinder leder EmpowR og sørger for at det er trygt og rart at være med.</p>
+      </ColorSection>
+    </div>
+
+    <div class="contact-container">
+      <h2 class="secondary-header">Har du ikke fundet en gruppe til dig selv?</h2>
+      <p>I øjeblikket har vi kun fællesskabsgrupper for piger mellem 13 og 24 år. Du er velkommen til at kontakte os, hvis du mener, at der er behov for andre fællesskabsgrupper.</p>
+      <a href="mailto:info@girltalk.dk" class="subheader">info@girltalk.dk</a>
+    </div>
+  </div>
+</GirlsUniLayout>
+
+<script>
+  const filterButtons = document.querySelectorAll("a.color");
+  const colorSections = document.querySelectorAll(".ColorSection");
+
+  const buttonsArray = [...filterButtons];
+  const colorSectionArray = [...colorSections];
+
+  buttonsArray.forEach((element) => {
+    element.addEventListener("click", () => {
+      if (buttonsArray.length) {
+        buttonsArray.forEach((btn) => {
+          btn.classList.remove("selected");
+        });
+      }
+
+      if (colorSectionArray.length) {
+        colorSectionArray.forEach((colorSection) => {
+          if (colorSection.classList.contains("none")) {
+            colorSection.classList.remove("none");
+          }
+        });
+      }
+
+      element.classList.toggle("selected");
+
+      colorSectionArray.forEach((colorSection) => {
+        if (!colorSection.classList.contains(element.textContent.toLowerCase().replace(/\s/, "_"))) {
+          colorSection.classList.add("none");
+        }
+      });
+    });
+  });
+</script>
 
 <style>
-  .Faelleskaber {
-    width: 100%;
-	display: flex;
-  flex-direction: column;
-	align-items: center;
+  .Faellesskaber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .header {
+    display: grid;
+    align-items: center;
+    max-width: 1000px;
+  }
+
+  .color-section-components-container,
+  .filters-container,
+  .header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .color-section-components-container {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    gap: 10px;
+  }
+
+  .quote-container {
+    justify-self: center;
+    margin-top: 20px;
+  }
+
+  .contact-container a {
+    align-self: center;
+  }
+
   .filter-buttons-container {
     display: flex;
+    gap: 10px;
   }
 
   p.subheader {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
+
+  h1,
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .age-desc {
+    padding: 5px;
+  }
+  .label-text {
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+    color: var(--color-black-ish);
+    opacity: var(--opacity-75);
+  }
+
   @media only screen and (min-width: 600px) {
-  .Faelleskaber {
+    .header {
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+    }
 
+    .quote-container {
+      order: -1;
+    }
+    .filters-container,
+    .header-container {
+      margin-bottom: 90px;
+    }
   }
-}
-
- 
 </style>

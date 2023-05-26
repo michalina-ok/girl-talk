@@ -2,22 +2,21 @@
 const { color, firstLine, secondLine, thirdLine } = Astro.props;
 ---
 
-<section class="QuoteSection">
+<div class="QuoteSection">
   <div class:list={["line-one-container", color]}>
-    <img src="/images/quote.svg" alt="" /><p class="highlighted-quote">{firstLine}</p>
+    <img src="/images/quote.svg" alt="" /><p class="quote-light">{firstLine}</p>
   </div>
   <div class:list={["line-two-container", color]}>
-    <p class="highlighted-quote">{secondLine}</p>
+    <p class="quote-light">{secondLine}</p>
   </div>
   <div class:list={["line-three-container", color]}>
-    <p class="highlighted-quote">{thirdLine}</p>
+    <p class="quote-light">{thirdLine}</p>
   </div>
-</section>
+</div>
 
 <style>
-  div {
-    max-width: 300px;
-    border-radius: 8px;
+
+  .line-one-container, .line-two-container, .line-three-container {
     padding: 5px 20px;
     width: fit-content;
   }
@@ -25,33 +24,16 @@ const { color, firstLine, secondLine, thirdLine } = Astro.props;
   .line-one-container {
     display: flex;
     gap: 20px;
-    margin-left: 20px;
-    border-radius: 8px 8px 0 8px;
+    border-radius: 8px 8px 8px 0;
   }
 
   .line-two-container {
-    margin-left: 60px;
-    border-radius: 0 8px 8px 0;
+    //margin-left: 40px;
+    border-radius: 0 0 8px 0;
   }
 
   .line-three-container {
-    margin-left: 60px;
+    //margin-left: 40px;
     border-radius: 0 0 8px 8px;
-  }
-
-  p {
-    font-size: 3vw !important;
-  }
-
-  .pink {
-    background-color: var(--color-pink);
-  }
-
-  .green {
-    background-color: var(--color-green);
-  }
-
-  .purple {
-    background-color: var(--color-purple);
   }
 </style>

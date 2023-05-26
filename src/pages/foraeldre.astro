@@ -1,9 +1,241 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BoxColorButton from "../components/ui/BoxColorButton.astro";
+import Button from "../components/ui/Button.astro";
+import SearchBar from "../components/ui/SearchBar.astro";
+import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
 ---
+
 <BaseLayout title="Parents">
-	<section>
-		<p>Parents</p>
-	</section>
-	</BaseLayout>
+  <section>
+    <div class="mobilehero">
+      <h1 class="primary-header">Forældre</h1>
+      <h2 class="subheader">Rådgivning for forældre og pårørende</h2>
+      <img src="images/heroimages/mom-girl-hug.jpg" alt="Mor og pige krammer" />
+      <p>
+        Hos vores rådgivning kan du få gode råd og inspiration til alt fra
+        opdragelse og grænsesætning, til hvordan du som forælder eller anden
+        pårørende tackler lavt selvværd, ensomhed, selvmordstanker, selvskade og
+        spiseforstyrrelser.
+        <br />
+        <br />
+        På denne side kan du søge hjælp via telefonrådgivning, eller læse og skrive
+        til forældrebrevkassen.
+      </p>
+    </div>
+    <div class="desktophero">
+      <div class="heroleft">
+        <h1 class="primary-header">Forældre</h1>
+        <h2 class="subheader">Rådgivning for forældre og pårørende</h2>
+        <p>
+          Hos vores rådgivning kan du få gode råd og inspiration til alt fra
+          opdragelse og grænsesætning, til hvordan du som forælder eller anden
+          pårørende tackler lavt selvværd, ensomhed, selvmordstanker, selvskade
+          og spiseforstyrrelser.
+          <br />
+          <br />
+          På denne side kan du søge hjælp via telefonrådgivning, eller læse og skrive
+          til forældrebrevkassen.
+        </p>
+      </div>
+      <div>
+        <img
+          src="images/heroimages/mom-girl-hug.jpg"
+          alt="Mor og pige krammer"
+        />
+      </div>
+    </div>
+    <div class="section-2">
+      <BoxColorButton
+        color="purple"
+        title="Telefonrådgivning"
+        text="book rådgivning"
+        style="dark"
+        size="m-small-d-large"
+        subheader="Hos vores rådgivning kan du få gode råd og inspiration til alt fra opdragelse og grænsesætning, til hvordan du som forælder eller anden pårørende tackler lavt selvværd, ensomhed, selvmordstanker, selvskade og spiseforstyrrelser. Book en samtale, så ringer vi dig op."
+      />
+    </div>
+    <div class="section-3">
+      <div class="section-3-top">
+        <div class="flex-gap">
+          <h2 class="subheader">Forældrebrevkassen</h2>
+          <p>
+            I brevkassen svarer vi på alle dine spørgsmål relateret til piger og
+            unge kvinder mellem 12 og 24 år. Skriv til vores brevkasse eller læs
+            andres spørgsmål.
+          </p>
+        </div>
+        <div class="button-container button-container-end">
+          <Button
+            text="Skriv til brevkassen"
+            style="dark"
+            size="m-small-d-large"
+          />
+        </div>
+      </div>
+      <div class="search-container">
+        <p class="light-text searchcopy">Søg efter breve</p>
+        <SearchBar />
+      </div>
+      <div>
+        <p class="indicator">8 ud af 129</p>
+        <div class="lettercontainer">
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+          <BrevkasseCard
+            header="Jeg har opdaget at min datter kaster op inden hun går i seng"
+          />
+        </div>
+        <div class="margintop button-container">
+          <Button text="Læs flere" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    gap: var(--spacing-medium);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mobilehero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  .mobilehero img {
+    width: 100%;
+    border-radius: var(--radius-cards);
+  }
+
+  .desktophero {
+    display: none;
+  }
+
+  .section-3-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+
+  .flex-gap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .searchcopy {
+    color: var(--color-black-ish);
+    opacity: var(--opacity-75);
+  }
+
+  .search-container {
+    margin-top: var(--spacing-xs);
+  }
+
+  .indicator {
+    color: var(--color-black-ish);
+    opacity: var(--opacity-50);
+    margin-bottom: var(--spacing-small);
+    margin-top: var(--spacing-small);
+    text-align: center;
+  }
+  .lettercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-small);
+    max-width: 1150px;
+  }
+
+  .margintop {
+    margin-top: var(--spacing-small);
+  }
+  @media only screen and (min-width: 800px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-xl);
+    }
+    .mobilehero {
+      display: none;
+    }
+
+    .desktophero {
+      display: flex;
+      align-items: center;
+      max-width: 1050px;
+      margin: auto;
+      gap: var(--spacing-large);
+    }
+
+    .desktophero img {
+      border-radius: var(--radius-cards);
+      max-width: 500px;
+    }
+    .heroleft {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-2 {
+      display: flex;
+      align-items: center;
+      max-width: 800px;
+      margin: auto;
+      gap: var(--spacing-large);
+    }
+
+    .section-3-top {
+      flex-direction: row;
+      gap: var(--spacing-small);
+      max-width: 1050px;
+    }
+    .section-3 {
+      max-width: 1050px;
+      gap: var(--spacing-xs);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-container {
+      max-width: 30%;
+    }
+
+    .button-container-end {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+  }
+</style>

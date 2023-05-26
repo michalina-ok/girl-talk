@@ -8,7 +8,7 @@ const navLinks = [{
     url: '/brevkasse',
 },
 {
-    name: 'Faelleskaber',
+    name: 'Fælleskaber',
     url: '/faellesskaber',
 },
 {
@@ -58,7 +58,7 @@ const navLinks = [{
             <ul class="nav-links">
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="brevkasse.html">Brevkasse</a></li>
-                <li><a href="faelleskaber.html">Faelleskaber</a></li>
+                <li><a href="faelleskaber.html">Fælleskaber</a></li>
                 <li><a href="medier.html">Medier</a></li>
         <li class="last-mobile-link"> <a href="index.html">GirlTalk</a></li>
         
@@ -204,14 +204,14 @@ margin-left: auto;
   Hamburger
 **/
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 5em;
   right: 5%;
   margin-left: -2em;
   margin-top: -45px;
   width: 2em;
   height: 45px;
-  z-index: 5;
+  z-index: 1000;
 }
 
 .hamburger div {
@@ -237,13 +237,17 @@ margin-left: auto;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   transform: scale(0);
+  z-index: 150;
 }
 .nav-wrapper {
   position: relative;
   overflow: hidden;
   overflow-y: auto;
   height: 100%;
+  z-index: 200;
 }
+
+
 .NavPrimaryMobile nav {
   text-align: left;
   margin-left: 25%;

@@ -13,8 +13,25 @@ const { category, header, link, alt  } = Astro.props;
 <style>
 div.ArticleCard {
     display: flex;
-    direction: column;
+    flex-direction: column;
     gap: var(--spacing-xs);
+    width: auto;
+    height:auto;
+}
+
+.ArticleCard img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 900px){
+    .ArticleCard {
+    width: 310px;
+}
+
+.ArticleCard img{
+    height: 300px;
+}
 }
 
 
