@@ -10,16 +10,9 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro"
 ---
 <BaseLayout title="GirlTalk">
 <div class="indexlayout">
-	<div class="indexherosection">
-	<section class="fp-1st-hero-section">
-		<h1 class="primary-header">Du er altid god nok</h1>
-		<h2 class="subheader">... men vi er her, når du bliver i tvivl</h2>
-		<img src="images/heroimages/girls-on-stairs-1.jpg" alt="Hero image of girls talking">
+	<section class="indexherosection">
+<img src="images/heroimages/fpimg.png" alt="Image with text.">
 	</section>
-	<section class="fp-2nd-hero-section">
-		<img  src="images/heroimages/girls-on-stairs-2.jpg" alt="">
-	</section>
-</div>
 <div class="BoxColorButtonCenter">
 	<BoxColorButton size="m-extra-small-d-medium" subheader="Vi sidder klar til at hjælpe dig" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat"/>
 </div>	
@@ -71,17 +64,10 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro"
 	padding-bottom: 40px;
 	text-align: center;
 }
-.fp-1st-hero-section{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 10px;
-}
-.fp-1st-hero-section img{
-	width: 100%;
-	border-radius: 8px;
-}
 
+.indexherosection img{
+	width: 100%;
+}
 .BoxColorButtonCenter{
 	display: flex;
 	justify-content: center;
@@ -180,32 +166,18 @@ gap: 20px;
 
 @media only screen and (min-width: 900px){
 
-.indexherosection{
-			display: grid;
-			grid-template-columns: 0.7fr 1fr;
-			gap: 20px;
-		}
-
-.fp-1st-hero-section{
-	text-align: left;
-}
-.fp-2nd-hero-section{
-	display: block;
-	width: 100%;
-	height: 100%
-}
-
-		.fp-2nd-hero-section img{
-	width: 100%;
-	object-fit: cover;
-	border-radius: 8px;
-}
 
 
 .indexlayout{
-	padding: 30px 140px;
+	padding: 30px 80px;
 }
 
 
+}
+
+@media only screen and (min-width: 1100px){
+	.indexlayout{
+	padding: 30px 140px;
+}
 }
 	</style>
