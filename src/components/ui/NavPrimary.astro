@@ -45,6 +45,7 @@ const navLinks = [{
 </nav>
 
 <div class="NavPrimaryMobile"> 
+  <div class="mobilelogo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
     <input id="toggle" type="checkbox"></input>
 
     <label for="toggle" class="hamburger">
@@ -176,6 +177,18 @@ margin:auto;
 
 /*BURGER MENU*/
 
+.mobilelogo{
+position: absolute;
+top: 2.7em;
+left: 2em;
+margin: auto;
+width: 200px;
+}
+
+.mobilelogo img{
+  width: 100%;
+}
+
 #toggle {
   display: none;
 }
@@ -230,7 +243,9 @@ margin:auto;
   text-align: left;
   margin-left: 25%;
 }
-
+.NavPrimary{
+  position: relative;
+}
 .NavPrimaryMobile nav ul{
     list-style: none;
     margin-top: 4rem;

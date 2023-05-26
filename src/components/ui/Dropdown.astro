@@ -6,6 +6,7 @@ import Button from "./Button.astro";
   
     <p class="label-text light-text hidetext">Filtrér efter tema</p>    
         <div class="desktopfilter">
+          <Button size="m-extra-small-d-medium" style="color" text="Alle" />
           <Button size="m-extra-small-d-medium" style="color" text="Venskaber og familie" />
           <Button size="m-extra-small-d-medium" style="color" text="Krop og sex" />
           <Button size="m-extra-small-d-medium" style="color" text="Selvværd" />
@@ -35,6 +36,10 @@ import Button from "./Button.astro";
 
 
     <style>
+
+.none {
+    display: none;
+  }
 
         .mobilefilter {
             display: flex;
