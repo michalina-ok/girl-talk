@@ -9,6 +9,7 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     <div class="flex-container">
     <section class="headline">
         <h2 class="secondary-header">{title}</h2>
+        <slot name="circle"></slot>
         <slot name="subheader"></slot>
       </section>
       <div class:list={[ 'color-background', color]}>
