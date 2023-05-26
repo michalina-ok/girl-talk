@@ -1,11 +1,11 @@
 ---
 import Button from "./Button.astro";
 const { color, hex, title } = Astro.props;
-const { link, text, size = "m-small-d-large" } = Astro.props;
+const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
 ---
 
 
-  <section class='ColorSection'>
+  <section class:list={["ColorSection", extraInfo]}>
     <div class="flex-container">
     <section class="headline">
         <h2 class="secondary-header">{title}</h2>

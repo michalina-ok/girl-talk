@@ -161,6 +161,14 @@ a {
   border-radius: 8px 8px 0 0;
 }
 
+.selected {
+  background-color: var(--color-green);
+}
+
+.none {
+  display: none;
+}
+
 /* COMPONENTS */
 
 
