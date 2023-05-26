@@ -1,14 +1,13 @@
 ---
 import Button from "../ui/Button.astro";
-const { color, subheader, text, title, link, size, subheader2, subheader3 } = Astro.props;
+const { color, subheader, text, title, link, size, } = Astro.props;
 ---
 
 <section class:list={["BoxColor", color]}>
     <div class="text-container">
   <h2 class="title secondary-header">{title}</h2>
   <p class="text">{subheader}</p>
-  <p class="text">{subheader2}</p>
-  <p class="text">{subheader3}</p>
+
 
 </div>
   <div class:list={["button-wrapper", color]}>
