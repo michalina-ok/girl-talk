@@ -1,9 +1,32 @@
 ---
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
+import ColorSection from "../components/ui/ColorSection.astro"
 
 
 ---
 <GirlsUniLayout title="Pigeunivers">
+<ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat" link="/">
+	<p slot="description">
+		Du kan chatte med os hver aften i åbningstiden.
+	</p>
+	<p slot="description" class="bold">Hvis chatten har lukket, kan du altid sende os en sms på 49 49 18 18 - så besvarer vi den i åbningstiden. Du er altid anonym. </p>
+	<p slot="description">Vi glæder os til at skrive med dig!.</p>
 
+	<p slot="description" class="pt-20">Se vores åbningstider her:</p>
+	<p slot="description" class="bold">Mandag til torsdag: kl. 18.30 - 24.00
+</p>
+	<p slot="description" class="bold">Fredag: kl. 19.00-23.00</p>
+	<p slot="description" class="bold">Lørdag: kl. 19.00-21.00</p>
+	<p slot="description" class="bold">Søndag: kl. 18.30-22.30</p>
+
+</ColorSection>
 
 	</GirlsUniLayout>
+
+	<style>
+		.bold{
+			font-weight: var(--font-weight-bold);
+		}
+		
+		.pt-20{padding-top: 20px;}
+	</style>
