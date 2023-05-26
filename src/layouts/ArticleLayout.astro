@@ -1,6 +1,6 @@
 ---
 import ArticleCard from "../components/cards/ArticleCard.astro"
-const { linkMain, linkMainAlt, link, alt, header } = Astro.props;
+const { linkMain, linkMainAlt, link1, link2, alt1, alt2, header } = Astro.props;
 import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro"
 ---
 
@@ -9,8 +9,8 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro"
     <UnderlinedHeader />
     <div class="cards-container">
     <img src={linkMain} alt={linkMainAlt}>
-    <ArticleCard {link} {alt} />
-    <ArticleCard {link} {alt} />
+    <ArticleCard {link1} {alt1} {header}/>
+    <ArticleCard {link2} {alt2} />
 </div>
 </div>
 

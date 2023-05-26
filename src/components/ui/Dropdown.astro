@@ -1,15 +1,21 @@
 ---
 import Button from "./Button.astro";
 ---
-    <div class="desktopfilter">
-      <Button size="medium" style="purple" text="Venskaber og familie" />
-      <Button size="medium" style="purple" text="Krop og sex" />
-      <Button size="medium" style="purple" text="Selvværd" />
-      <Button size="medium" style="purple" text="Kærlighed" />
-      <Button size="medium" style="purple" text="Trivsel" />
-      <Button size="medium" style="purple" text="Skole og uddannelse" />
-      <Button size="medium" style="purple" text="Andet" />
-    </div>
+
+<div class="desktop-filter-container">
+  
+    <p class="label-text light-text hidetext">Filtrér efter tema</p>    
+        <div class="desktopfilter">
+          <Button size="m-extra-small-d-medium" style="color" text="Venskaber og familie" />
+          <Button size="m-extra-small-d-medium" style="color" text="Krop og sex" />
+          <Button size="m-extra-small-d-medium" style="color" text="Selvværd" />
+          <Button size="m-extra-small-d-medium" style="color" text="Kærlighed" />
+          <Button size="m-extra-small-d-medium" style="color" text="Trivsel" />
+          <Button size="m-extra-small-d-medium" style="color" text="Skole og uddannelse" />
+          <Button size="m-extra-small-d-medium" style="color" text="Andet" />
+        </div>
+  
+</div>
 
     
     <div class="mobilefilter">
@@ -33,33 +39,61 @@ import Button from "./Button.astro";
         .mobilefilter {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            height: 35px;
+            padding-bottom: var(--spacing-small);
         }
+
         .select {
           width: 100%;
           border-radius: 8px;
-          padding: 5px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 5px;
+          padding-right: 5px;
+          background-color: var(--color-off-white);
+
+        }
+        option {
+          font-family: var(--font-display);
         }
 
         .label-text {
           margin-bottom: 10px;
+          font-family: var(--font-display);
+          color: var(--color-black-ish);
+          opacity: var(--opacity-75);
         }
 
         .desktopfilter {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            width: 1000px;
+            /* max-width: 1000px; */
             gap: 2rem;
-        }    
+            /* margin: auto; */
+        }   
+        
+        .hidetext {
+          padding-left: 5%;
+        }
 
          @media only screen and (min-width: 600px) {
             
             .mobilefilter{
             display: none;
             }
+
+            .desktop-filter-container {
+              max-width: 1000px;
+              margin: auto;
+            }
+            
          }
          @media only screen and (max-width: 600px) {
-            
+          .hidetext {
+              display: none;
+            }
             .desktopfilter{
             display: none;
             }
