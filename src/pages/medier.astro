@@ -6,7 +6,6 @@ import Dropdown from "../components/ui/Dropdown.astro";
 ---
 
 <GirlsUniLayout title="Pigeunivers">
-  <div class="scroll-up">↑</div>
   <div class="medierlayout">
     <h1 class="primary-header">Vidensunivers</h1>
     <div class="search-div">
@@ -146,7 +145,6 @@ import Dropdown from "../components/ui/Dropdown.astro";
 </GirlsUniLayout>
 
 <script>
-  const scrollUp = document.querySelector(".scroll-up");
   const filterButtons = document.querySelectorAll("a.color");
   const mediaSections = document.querySelectorAll(".medier-article-section");
   const dropdownOptions = document.querySelectorAll("select");
@@ -221,13 +219,6 @@ import Dropdown from "../components/ui/Dropdown.astro";
 </script>
 
 <style>
-  .scroll-up {
-    display: block;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    scale: 2;
-  }
   /*GENERAL*/
   .medierlayout {
     display: flex;
