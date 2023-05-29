@@ -35,6 +35,9 @@ import Button from "../components/ui/Button.astro";
 	<p slot="description">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
 </BoxColorButton>
 </div>
+<div class="chatshortcutcontainer">
+<a href="/chat.html"><img class="chatshortcut" src="images/chatshortcut.png" alt="Chat Shortcut Icon"></a>
+</div>
 </div>
 	</GirlsUniLayout>
 
@@ -48,6 +51,19 @@ import Button from "../components/ui/Button.astro";
 	justify-content: center;
 	gap: 40px ;
 }
+
+.chatshortcutcontainer{
+	position: relative;
+	width: 100%;
+}
+
+.chatshortcut{
+	position: fixed;
+	width: 70px;
+	top: 80%;
+	right: 10%;
+}
+
 
 /*HEROSECTION*/
 		.gu-herosection{
@@ -112,6 +128,11 @@ width: 100%;
 	align-self: center;
 }
 
+@media only screen and (min-width: 600px){
+	.chatshortcutcontainer{
+		display: none;
+	}
+}
 	@media only screen and (min-width: 712px){
 		.medier-second-grid{
 	display: grid;
