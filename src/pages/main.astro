@@ -4,140 +4,126 @@ import QuoteSection from "../components/ui/QuoteSection.astro";
 import BoxColorButton from "../components/ui/BoxColorButton.astro";
 import ArticleCard from "../components/cards/ArticleCard.astro";
 import Button from "../components/ui/Button.astro";
-
 ---
+
 <GirlsUniLayout title="Pigeunivers">
-<div class="girls-frontpage-layout">
-	<section class="gu-herosection">
-<img src="images/heroimages/girlsfrontpage.png" alt="Pigeunivers billede og overskrift">
-</section>
+  <div class="girls-frontpage-layout">
+    <section class="gu-herosection">
+      <img src="images/heroimages/girlsfrontpage.png" alt="Pigeunivers billede og overskrift" />
+    </section>
 
-<div class="medier-second-section">
-	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
-	<div class="medier-second-grid">
-	<section class="mediumarticlecard">
-		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
-	</section>
-	<section class="double-articlecard-second">
-		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
-			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
-	</section>
-	</div>
-</div>
+    <div class="medier-second-section">
+      <h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+      <div class="medier-second-grid">
+        <section class="mediumarticlecard">
+          <a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+    </div>
 
-<div class="fp-quote-section">
-<QuoteSection color="pink" firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde"></QuoteSection>
-<div class="button-wrapper">
-<Button size="m-extra-small-d-medium" text="Gå til fællesskaber"></Button></div>
-</div>
-<div class="BoxColorButtonCenter">
-<BoxColorButton size="m-extra-small-d-medium" color="purple" title="Du er aldrig alene med dine tanker"  text="Skriv til brevkassen">
-	<p slot="description">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
-</BoxColorButton>
-</div>
-</div>
-	</GirlsUniLayout>
+    <div class="fp-quote-section">
+      <QuoteSection color="pink" firstLine="Man føler sig ikke alene med de ting" secondLine="man kæmper med, når andre fortæller," thirdLine="de har det på samme måde" />
+      <div class="button-wrapper">
+        <Button size="m-extra-small-d-medium" text="Gå til fællesskaber" />
+      </div>
+    </div>
+    <div class="BoxColorButtonCenter">
+      <BoxColorButton size="m-extra-small-d-medium" color="purple" title="Du er aldrig alene med dine tanker" text="Skriv til brevkassen">
+        <p slot="description">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
+      </BoxColorButton>
+    </div>
+  </div>
+</GirlsUniLayout>
 
+<style>
+  /*GENERAL*/
+  .girls-frontpage-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
 
-	<style>
+  /*HEROSECTION*/
+  .gu-herosection {
+    width: auto;
+  }
 
-/*GENERAL*/
-.girls-frontpage-layout{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 40px ;
-}
+  .gu-herosection img {
+    width: 100%;
+  }
 
-/*HEROSECTION*/
-		.gu-herosection{
-			width: auto;
+  /*MEDIE GRID*/
 
-		}
+  .sub-header-underlined {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(font-size-large);
+    align-self: flex-start;
+    border-bottom: 2px solid var(--color-black-ish);
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-		.gu-herosection img{
-			width: 100%;
-		}
+  .medier-second-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
+  .double-articlecard-second {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
+  .mediumarticlecard img {
+    width: 100%;
+  }
 
-		/*MEDIE GRID*/ 
+  /*QUOTESECTION*/
+  .fp-quote-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-		.sub-header-underlined{
-font-family: var(--font-display);
-font-weight: var(--font-weight-semibold);
-font-size: var(font-size-large);
-align-self: flex-start;
-border-bottom: 2px solid var(--color-black-ish);
-width: 100%;
-margin-bottom: 20px;
-}
+  /*DIVERSE*/
 
-		.medier-second-grid{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 20px;}
+  .button-wrapper {
+    display: flex;
+    align-self: flex-end;
+  }
 
+  .BoxColorButtonCenter {
+    align-self: center;
+  }
 
-	.double-articlecard-second{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-evenly;
-			gap: 20px;
-		}	
+  @media only screen and (min-width: 712px) {
+    .medier-second-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
-		.mediumarticlecard img{
-width: 100%;
-}
-
-
-
-/*QUOTESECTION*/
-.fp-quote-section{
-	display:flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-/*DIVERSE*/
-
-.button-wrapper{
-	display: flex;
-	align-self: flex-end;
-}
-
-.BoxColorButtonCenter{
-	align-self: center;
-}
-
-	@media only screen and (min-width: 712px){
-		.medier-second-grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}	
-
-	}
-
-
-	@media only screen and (min-width: 1100px){
-
-.fp-quote-section{
-	padding: 0px 100px;
-}
-
-.button-wrapper{
-	padding-right: 50px;
-}
-
-.girls-frontpage-layout{
-	padding: 40px 140px;
-}
+  @media only screen and (min-width: 1100px) {
+    .fp-quote-section {
+      padding: 0px 100px;
     }
 
+    .button-wrapper {
+      padding-right: 50px;
+    }
 
-
-
-
-	</style>
+    .girls-frontpage-layout {
+      padding: 40px 140px;
+    }
+  }
+</style>

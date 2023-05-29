@@ -1,184 +1,172 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import Button from "../components/ui/Button.astro"
-import SearchBar from "../components/ui/SearchBar.astro"
-import BoxColor from "../components/ui/BoxColor.astro"
-import ColorSection from "../components/ui/ColorSection.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/ui/Button.astro";
+import SearchBar from "../components/ui/SearchBar.astro";
+import BoxColor from "../components/ui/BoxColor.astro";
+import ColorSection from "../components/ui/ColorSection.astro";
 import ArticleCard from "../components/cards/ArticleCard.astro";
-import BoxColorButton from "../components/ui/BoxColorButton.astro"
-
+import BoxColorButton from "../components/ui/BoxColorButton.astro";
 ---
+
 <BaseLayout title="GirlTalk">
-<div class="indexlayout">
-	<section class="indexherosection">
-<img src="images/heroimages/fpimg.png" alt="Image with text.">
-	</section>
-<div class="BoxColorButtonCenter">
-<BoxColorButton size="m-extra-small-d-medium"  title="Har du tanker, der fylder?" color="purple" text="Start anonym chat">
-	<p slot="description">Vi sidder klar til at hjælpe dig</p>
-</BoxColorButton>
-</div>	
-<div class="medier-second-section">
-	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
-	<div class="medier-second-grid">
-	<section class="mediumarticlecard">
-		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
-	</section>
-	<section class="double-articlecard-second">
-		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
-			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
-	</section>
-	</div>
-</div>
+  <div class="indexlayout">
+    <section class="indexherosection">
+      <img src="images/heroimages/fpimg.png" alt="Image with text." />
+    </section>
+    <div class="BoxColorButtonCenter">
+      <BoxColorButton size="m-extra-small-d-medium" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat">
+        <p slot="description">Vi sidder klar til at hjælpe dig</p>
+      </BoxColorButton>
+    </div>
+    <div class="medier-second-section">
+      <h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+      <div class="medier-second-grid">
+        <section class="mediumarticlecard">
+          <a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+    </div>
 
-<div class="index-bottom-section">
-<section class="first-bottom-section">
-<h2 class="subheader">Lær os bedre at kende</h2>
-<p>Siden vores stiftelse i 2004 har vi haft tusindvis af samtaler med piger, der ikke tør dele deres tanker, og oplevelser med andre.
-	Vi står med en generation af piger, der stræber efter at være perfekte udadtil og som føler sig alene med alt det, der er svært.
-	I samarbejde med vores mange støtter og samarbejdspartnere arbejder vi for at bremse den udvikling og for at sikre, at alle piger har en at tale med.</p>
-<div class="button-wrapper">
-<Button class="buttonpadding" size="m-extra-small-d-medium" text="Læs mere om os"></Button></div>
-</section>	
-<section class="bottom-section-image">
-	<img src="images/heroimages/girls-on-stairs-2.jpg" alt="Decorative image">
-	<div class="button-wrapper">
-		<Button text="Læs mere om os"></Button></div>
-</section>
-</div>
-</div>
-
+    <div class="index-bottom-section">
+      <section class="first-bottom-section">
+        <h2 class="subheader">Lær os bedre at kende</h2>
+        <p>
+          Siden vores stiftelse i 2004 har vi haft tusindvis af samtaler med piger, der ikke tør dele deres tanker, og oplevelser med andre. Vi står med en generation af piger, der stræber efter at være perfekte udadtil og som føler sig alene med alt
+          det, der er svært. I samarbejde med vores mange støtter og samarbejdspartnere arbejder vi for at bremse den udvikling og for at sikre, at alle piger har en at tale med.
+        </p>
+        <div class="button-wrapper">
+          <Button class="buttonpadding" size="m-extra-small-d-medium" text="Læs mere om os" />
+        </div>
+      </section>
+      <section class="bottom-section-image">
+        <img src="images/heroimages/girls-on-stairs-2.jpg" alt="Decorative image" />
+        <div class="button-wrapper">
+          <Button text="Læs mere om os" />
+        </div>
+      </section>
+    </div>
+  </div>
 </BaseLayout>
 
+<style>
+  /*LAYOUT*/
+  .indexlayout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
 
-	<style>
+  /*HERO SECTION*/
+  .indexherosection {
+    padding-bottom: 40px;
+    text-align: center;
+  }
 
-/*LAYOUT*/
-.indexlayout{
-	display: flex;
-	flex-direction: column;
-	gap:30px;
-	padding: 30px 20px;
-}
+  .indexherosection img {
+    width: 100%;
+  }
+  .BoxColorButtonCenter {
+    display: flex;
+    justify-content: center;
+  }
 
-/*HERO SECTION*/
-.indexherosection{
-	padding-bottom: 40px;
-	text-align: center;
-}
+  .fp-2nd-hero-section {
+    display: none;
+  }
 
-.indexherosection img{
-	width: 100%;
-}
-.BoxColorButtonCenter{
-	display: flex;
-	justify-content: center;
-}
+  /*MEDIE GRID*/
 
+  .sub-header-underlined {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(font-size-large);
+    align-self: flex-start;
+    border-bottom: 2px solid var(--color-black-ish);
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
+  .medier-second-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
-.fp-2nd-hero-section{
-	display: none;
-}
+  .double-articlecard-second {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
+  .mediumarticlecard img {
+    width: 100%;
+  }
 
-	/*MEDIE GRID*/ 
+  /*BOTTOM SECTION*/
 
-	.sub-header-underlined{
-font-family: var(--font-display);
-font-weight: var(--font-weight-semibold);
-font-size: var(font-size-large);
-align-self: flex-start;
-border-bottom: 2px solid var(--color-black-ish);
-width: 100%;
-margin-bottom: 20px;
-}
+  .index-bottom-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  .button-wrapper {
+    display: flex;
+    align-self: flex-end;
+  }
 
-		.medier-second-grid{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 20px;}
+  .bottom-section-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .bottom-section-image .button-wrapper {
+    display: none;
+  }
 
+  .first-bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
-	.double-articlecard-second{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-evenly;
-			gap: 20px;
-		}	
+  @media only screen and (min-width: 712px) {
+    .medier-second-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-		.mediumarticlecard img{
-width: 100%;
-}
+    .index-bottom-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: none;
+      gap: 20px;
+    }
 
-/*BOTTOM SECTION*/ 
+    .button-wrapper {
+      align-self: flex-start;
+    }
 
-.index-bottom-section{
-display: grid;
-grid-template-rows: 1fr 1fr;
-gap: 20px;
-}
-.button-wrapper{
-	display: flex;
-	align-self: flex-end;
-}
+    .indexlayout {
+      padding: 30px 70px;
+    }
+  }
 
-.bottom-section-image img{
-	width: 100%;
-	border-radius: 8px;
-}
-.bottom-section-image .button-wrapper{
-	display: none;
-}
+  @media only screen and (min-width: 900px) {
+    .indexlayout {
+      padding: 30px 80px;
+    }
+  }
 
-.first-bottom-section{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-
-
-@media only screen and (min-width: 712px){
-		.medier-second-grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}	
-
-.index-bottom-section{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: none;
-gap: 20px;
-}
-
-
-.button-wrapper{
-	align-self: flex-start;
-}
-
-.indexlayout{
-	padding: 30px 70px;
-}
-
-
-	}
-
-
-@media only screen and (min-width: 900px){
-
-
-.indexlayout{
-	padding: 30px 80px;
-}
-
-
-}
-
-@media only screen and (min-width: 1100px){
-	.indexlayout{
-	padding: 30px 140px;
-}
-}
-	</style>
+  @media only screen and (min-width: 1100px) {
+    .indexlayout {
+      padding: 30px 140px;
+    }
+  }
+</style>
