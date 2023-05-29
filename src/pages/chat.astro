@@ -84,7 +84,7 @@ width: 100%;
   position: absolute;
   z-index: 1;
   bottom: 0%;
-  left: 80%;
+  right: 5%;
   margin-left: -80px;
 }
 
@@ -116,6 +116,27 @@ width: 100%;
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+@media only screen and (max-width: 600px){
+  .popup .popuptext {
+    left:41%;
+  }
+}
+
+
+
+@media only screen and (max-width: 471px){
+  .popup .popuptext {
+    left:38%;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .popup .popuptext {
+    right:0%;
+    left:34%
+  }
 }
 	</style>
 
