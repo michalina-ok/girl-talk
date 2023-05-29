@@ -1,0 +1,39 @@
+---
+
+const { link, alt, name, email, title } = Astro.probs;
+
+---
+
+<div class="EmployeeCard">
+    <img src={link} alt={alt}>
+<p>{name}</p>
+<p>{title}</p>
+<p>{email}</p>
+</div>
+
+<style>
+div.EmployeeCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: auto;
+    height:auto;
+}
+
+.EmployeeCard img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 900px){
+    .EmployeeCard {
+    width: 310px;
+}
+
+.EmployeeCard img{
+    height: 300px;
+}
+}
+
+
+</style>
