@@ -32,7 +32,7 @@ import Dropdown from "../components/ui/Dropdown.astro"
 	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
 	<div class="medier-second-grid">
 	<section class="mediumarticlecard">
-		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+		<a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
 	</section>
 	<section class="double-articlecard-second">
 		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
@@ -47,7 +47,7 @@ import Dropdown from "../components/ui/Dropdown.astro"
 	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
 	<div class="medier-fourth-grid">
 	<section class="mediumarticlecard">
-		<a href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
+		<a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?"></a>
 	</section>
 	<section class="double-articlecard-second">
 		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
@@ -87,6 +87,9 @@ import Dropdown from "../components/ui/Dropdown.astro"
 	scale: 1.05;
 }
 
+.hoverstate:hover img{
+	scale: 1.05;
+}
 
 /*FIRST SECTION*/ 		
 		.medier-first-section{
