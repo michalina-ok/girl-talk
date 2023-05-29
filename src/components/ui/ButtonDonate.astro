@@ -1,0 +1,41 @@
+---
+const { extraInfo, link, text, style = "dark", size = "m-small-d-large" } = Astro.props;
+---
+
+<a class:list={["btn", "donate", style, size, extraInfo]} href={link}>{text}</a>
+
+<style>
+
+.btn {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-off-white);
+  border-radius: 8px 8px 0 0;
+}
+
+.btn:hover {
+    background-color: var(--color-purple);
+}
+
+.selected {
+    background-color: var(--color-purple);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 40px 90px 0px;
+}
+
+
+
+  /* STYLES */
+
+ 
+
+  @media only screen and (max-width: 340px) {
+    .btn {
+      padding: 15px;
+    }
+
+}
+</style>

@@ -1,9 +1,212 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/ui/Button.astro";
+import ButtonDonate from "../components/ui/ButtonDonate.astro";
 ---
+
 <BaseLayout title="Stot">
-	<section>
-		<p>Stot</p>
-	</section>
-	</BaseLayout>
+  <div class="Stot">
+    <div class="grid-container">
+      <div>
+        <h1 class="primary-header">Støt</h1>
+        <p class="subheader">Sammen viser vi alle piger, at de ikke står alene.</p>
+        <p>
+          Hvert år får vi mere end 8000 henvendelser piger og unge kvinder. Vores målgruppe er de 12 til 24-årige, og vi hjælper på flere måder - både via vores nationale chat- og sms-rådgivning, i vores fysiske samtalegrupper, hvor pigerne får et
+          fællesskab, gennem foredrag og workshops, og via vores fortalerarbejde, der sætter den stigende mistrivsel på den politiske dagsorden. Når du støtter GirlTalk, hjælper du os med at gribe de piger, der har det svært, og hjælpe dem ud af
+          mistrivslen.
+        </p>
+      </div>
+      <img src="/images/heroimages/girls-on-stairs-3.jpg" alt="" />
+    </div>
+
+    <div class="donate-section">
+      <div class="toggle-buttons-container">
+        <ButtonDonate extraInfo="selected" style="light" text="Støt månedligt" />
+        <ButtonDonate style="light" text="Enkeltbeløb" />
+      </div>
+
+      <div class="donate-form">
+        <form>
+          <p class="subheader">Hjælp os med at give alle piger en at tale med.</p>
+          <div class="donate-subsection">
+            <p class="light-text">Vælg hvor meget du vil støtte med</p>
+            <div class="button-container">
+              <Button extraInfo="amount" style="light" text="75kr" size="m-small-d-medium" />
+              <Button extraInfo="amount" style="light" text="150kr" size="m-small-d-medium" />
+              <Button extraInfo="amount" style="light" text="250kr" size="m-small-d-medium" />
+            </div>
+          </div>
+          <div class="donate-subsection">
+            <label for="donation" class="light-text">Eller støt med et andet beløb her</label>
+            <input type="number" id="donation" name="donation" min="0" />
+          </div>
+          <div class="button-wrapper">
+            <Button text="Donér" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="grid-container reversed">
+      <img src="/images/heroimages/girls-on-stairs-3.jpg" alt="" />
+
+      <div>
+        <h2 class="subheader">Hvordan hjælper din støtte?</h2>
+        <p>
+          Som Medsøster hos GirlTalk hjælper du der, hvor det gør den største forskel. Din faste støtte sikrer, at vi kan gøre det, der virker allerbedst: at forebygge, at piger ender i mistrivsel. Din støtte gør, at vi kan holde vores rådgivning
+          åben året rundt, så alle piger altid kan få hjælp, når de har brug for det. Din faste støtte giver os mulighed for at lytte til pigernes behov og sikre, at vi altid sætter ind, hvor behovet er størst. Din støtte giver os mulighed for at nå
+          alle dem, der har brug for os.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const filterButtons = document.querySelectorAll("a.donate");
+
+  const buttonsArray = [...filterButtons];
+
+  buttonsArray.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (buttonsArray.length) {
+        buttonsArray.forEach((button) => {
+          button.classList.remove("selected");
+        });
+      }
+
+      button.classList.toggle("selected");
+    });
+  });
+
+  const amountButtons = document.querySelectorAll("a.amount");
+
+  const amountArray = [...amountButtons];
+
+  amountArray.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (amountArray.length) {
+        amountArray.forEach((button) => {
+          button.classList.remove("selected");
+        });
+      }
+
+      button.classList.toggle("selected");
+    });
+  });
+</script>
+
+<style>
+  img {
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .donate-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .subheader,
+  .primary-header {
+    margin-bottom: 20px;
+  }
+
+  .donate-subsection {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .donate-subsection p {
+    align-self: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form p.subheader {
+    margin-bottom: 40px;
+  }
+
+  form .light-text {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 200px;
+    padding: 10px;
+    align-self: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .donate-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-purple);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    padding: var(--spacing-large);
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .button-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .toggle-buttons-container {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .grid-container {
+      gap: 40px;
+      grid-template-columns: 1fr 1.2fr;
+      margin-bottom: 90px;
+    }
+
+    .reversed {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .Stot {
+      margin: 0 140px;
+    }
+
+    .donate-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 90px;
+    }
+
+    .donate-subection {
+      margin-bottom: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .button-container {
+      flex-direction: column;
+    }
+  }
+</style>

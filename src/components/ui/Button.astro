@@ -48,6 +48,11 @@ const { extraInfo, link, text, style = "dark", size = "m-small-d-large" } = Astr
     padding: 10px 15px;
   }
 
+  .m-small-d-medium {
+    font-size: var(--font-size-small);
+    padding: 15px 30px;
+  }
+
   .m-small-d-large {
     font-size: var(--font-size-small);
     padding: 15px 30px;
@@ -58,27 +63,41 @@ const { extraInfo, link, text, style = "dark", size = "m-small-d-large" } = Astr
   .dark {
     color: var(--color-off-white);
     background-color: var(--color-black-ish);
+    border: 3px solid transparent;
   }
 
   .dark:hover {
     color: var(--color-black);
     background-color: var(--color-off-white);
     border: 3px solid var(--color-black-ish);
-
+    box-shadow: var(--shadow-hover);
+    transition: border 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
   }
 
   .light {
     color: var(--color-black-ish);
     background-color: var(--color-off-white);
+    border: 3px solid transparent;
+  }
+
+  .light:hover {
+    color: var(--color-black-ish);
+    background-color: var(--color-green);
+    box-shadow: var(--shadow-hover);
+    transition: border 0.2s ease-in;
   }
 
   .color {
     color: var(--color-black-ish);
     background-color: var(--color-purple);
+    border: 3px solid transparent;
   }
 
   .color:hover {
     background-color: var(--color-green);
+    box-shadow: var(--shadow-hover);
+    transition: border 0.2s ease-in;
   }
 
   .color:active {
@@ -91,6 +110,10 @@ const { extraInfo, link, text, style = "dark", size = "m-small-d-large" } = Astr
     padding: 20px 40px;
   }
 
+  .m-small-d-medium {
+    font-size: var(--font-size-medium);
+    padding: 20px 40px;
+  }
   .m-small-d-large {
     font-size: var(--font-size-large);
     padding: 25px 40px;

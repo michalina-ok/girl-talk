@@ -5,8 +5,17 @@ import ColorSection from "../components/ui/ColorSection.astro"
 ---
 <BaseLayout title="Bliv frivillig">
 	<div class="Frivillig">
+		<div class="grid-container">
+			<img src="/images/heroimages/three-girls-walking.png" alt="Three girl walking in a park">
+			<div>
+
 		<h1 class="primary-header">Bliv frivilig</h1>
 		<p class="subheader">Vi har brug for dig, fordi flere har brug for os</p>
+		<p>Frivillighed er hjertet i GirlTalk! Derfor har vi brug for flere frivillige, der har lyst til at skabe positive forandringer og hjælpe piger og unge kvinder, der mistrives. Som frivillig i GirlTalk bliver du en del af et stærkt fællesskab med andre unge kvinder, samtidig med at du får rig mulighed for at udvikle dine egne kompetencer, såvel personlige som faglige.
+			Du kan være frivillig på flere måder i GirlTalk, enten som rådgiver i vores ungerådgivning eller som gruppeleder i vores gruppeforløb.</p>
+		</div>
+
+	</div>
 	<section>
 		<ColorSection color="green" title="Gruppeleder" hex="#d1ff99" text="Ansøg som gruppeleder" link="/">
 		  <p slot="description">
@@ -38,10 +47,44 @@ import ColorSection from "../components/ui/ColorSection.astro"
 	<style>
 
 .Frivillig {
-    width: 100%;
 	display: flex;
   flex-direction: column;
 	align-items: center;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  img {
+	  display: none;
+  }
+
+
+
+  @media only screen and (min-width: 750px) {
+
+	img {
+		display: inline;
+		max-width: 100%;
+	}
+    .grid-container {
+      gap: 40px;
+      grid-template-columns: 1.2fr 1fr;
+	  margin-bottom: 90px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .Frivillig {
+      margin: 0 140px;
+    }
+}
+
+
 
 	</style>
