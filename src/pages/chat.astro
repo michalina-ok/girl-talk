@@ -61,7 +61,7 @@ import ColorSection from "../components/ui/ColorSection.astro"
 }
 /* Popup container - can be anything you want */
 .popup {
-height: 20px;
+height: 10px;
 width: 100%;
   position: relative;
   display: inline-block;
@@ -83,7 +83,7 @@ width: 100%;
   padding: 10px 10px;
   position: absolute;
   z-index: 1;
-  bottom: 0%;
+  bottom: -350%;
   right: 5%;
   margin-left: -80px;
 }
@@ -120,7 +120,8 @@ width: 100%;
 
 @media only screen and (max-width: 600px){
   .popup .popuptext {
-    left:41%;
+    width: 150px;
+    left:44%;
   }
 }
 
@@ -128,7 +129,8 @@ width: 100%;
 
 @media only screen and (max-width: 471px){
   .popup .popuptext {
-    left:38%;
+    width: 150px;
+    left:42%;
   }
 }
 
