@@ -8,7 +8,10 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
   <section class:list={["ColorSection", "all", extraInfo]}>
     <div class="flex-container">
     <section class="headline">
+      <div class="titleclass">
         <h2 class="secondary-header">{title}</h2>
+        <slot name="circle"></slot>
+      </div>
         <slot name="subheader"></slot>
       </section>
       <div class:list={[ 'color-background', color]}>
@@ -45,6 +48,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     display: flex;
   }
 
+  .headline{
+   white-space: nowrap;
+  }
   h2 {
     padding: 5px;
   }
@@ -82,6 +88,7 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
 
 
 
+
   @media only screen and (min-width: 600px) {
     .ColorSection {
   margin-bottom: var(--spacing-2xl);
@@ -99,6 +106,14 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     max-width: 1000px;
     justify-content: flex-end;
   }
+
+
+
+  .titleclass{
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {

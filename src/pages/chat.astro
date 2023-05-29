@@ -1,9 +1,153 @@
 ---
 import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
+import ColorSection from "../components/ui/ColorSection.astro"
+
 
 ---
 <GirlsUniLayout title="Pigeunivers">
-	<section>
-		<p>Pigeunivers</p>
-	</section>
+<div class="chatlayout">
+<!-- <div class="popup">
+	<span class="popuptext" id="myPopup">A Simple Popup!</span></div>	 -->
+<ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat">
+	<div slot="circle">
+		<span class="dot"></span>
+	</div>
+	<p slot="description">
+		Du kan chatte med os hver aften i åbningstiden.
+	</p>
+	<p slot="description" class="bold">Hvis chatten har lukket, kan du altid sende os en sms på 49 49 18 18 - så besvarer vi den i åbningstiden. Du er altid anonym. </p>
+	<p slot="description">Vi glæder os til at skrive med dig!.</p>
+
+	<p slot="description" class="pt-20">Se vores åbningstider her:</p>
+	<p slot="description" class="bold">Mandag til torsdag: kl. 18.30 - 24.00
+</p>
+	<p slot="description" class="bold">Fredag: kl. 19.00-23.00</p>
+	<p slot="description" class="bold">Lørdag: kl. 19.00-21.00</p>
+	<p slot="description" class="bold">Søndag: kl. 18.30-22.30</p>
+	<div slot="description" class="popup">
+		<p class="popuptext" id="myPopup"> Chatten er lukket, men du kan altid sende os en sms på 49 49 18 18</p>
+	</div>
+
+</ColorSection>
+</div>
 	</GirlsUniLayout>
+
+	<style>
+		.bold{
+			font-weight: var(--font-weight-bold);
+		}
+		
+		.pt-20{padding-top: 20px;}
+
+		.chatlayout{
+			display: flex;
+			justify-content: center;
+		}
+
+		.headline{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* Popup container - can be anything you want */
+.popup {
+height: 10px;
+width: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--color-green);
+  color: var(--color-black-ish);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -350%;
+  right: 5%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-green) transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@media only screen and (max-width: 600px){
+  .popup .popuptext {
+    width: 150px;
+    left:44%;
+  }
+}
+
+
+
+@media only screen and (max-width: 471px){
+  .popup .popuptext {
+    width: 150px;
+    left:42%;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .popup .popuptext {
+    right:0%;
+    left:34%
+  }
+}
+	</style>
+
+<script>
+
+const button = document.querySelector("a.dark")
+	const popup = document.getElementById("myPopup");
+
+	button.addEventListener("click", () =>{
+		popup.classList.toggle("show");})
+
+ </script>
