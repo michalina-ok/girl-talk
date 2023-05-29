@@ -1,11 +1,11 @@
 ---
 
-const { link, alt, name, email, title } = Astro.probs;
+const { link, alt, name, email, title } = Astro.props;
 
 ---
 
 <div class="EmployeeCard">
-    <img src={link} alt={alt}>
+<img src={link} alt={alt}>
 <p>{name}</p>
 <p>{title}</p>
 <p>{email}</p>
