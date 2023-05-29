@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BoxColor from "../components/ui/BoxColor.astro";
-import ColorSection from "../components/ui/ColorSection.astro";
+import BoxColorButton from "../components/ui/BoxColorButton.astro";
 import Button from "../components/ui/Button.astro";
 ---
 
@@ -105,14 +105,30 @@ import Button from "../components/ui/Button.astro";
       </div>
     </div>
     <div class="color-section-component-container">
-    <ColorSection
+      <BoxColorButton
       color="pink"
       hex="#ffe4ee"
       title="Hvem arbejder i GirlTalk?"
       text="Mød teamet her"
       link="/"
     >
-      <div slot="description" class="text-in-component">
+      <p slot="description">
+          GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
+          København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig
+          uddannet, med ekspertise på området. Derudover har GirlTalk
+          medarbejdere med flere forskellige baggrunde og fagligheder, hvoraf
+          mange er uddannet inden for psykologi, pædagogik samt kommunikation og
+          marketing. <br> <br> En stor del af arbejdskraften hos GirlTalk ligger dog vores
+          frivillige. GirlTalk er drevet og skabt på et fundament af
+          frivillighed og ville ikke kunne eksistere uden vores frivillige.
+          Samlet set er der omkring 300 frivillige i GirlTalk. Hovedparten af
+          vores frivillige er engageret i vores indsatser målrettet unge, og
+          alle frivillige i ungeindsatserne er kvinder i alderen 20-35.
+          Uddannelse og rammesætning er helt afgørende i vores arbejde med
+          frivillige, og vi lægger stor vægt på at have et omfattende
+          sikkerhedsnet for vores frivillige i form af sparring, fællesskab,
+          introforløb, uddannelse, supervision og trivselssamtaler.
+        </p>
         <p slot="description">
           GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
           København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig
@@ -130,8 +146,8 @@ import Button from "../components/ui/Button.astro";
           sikkerhedsnet for vores frivillige i form af sparring, fællesskab,
           introforløb, uddannelse, supervision og trivselssamtaler.
         </p>
-      </div>
-    </ColorSection>
+
+    </BoxColorButton>
   </div>
   </section>
 </BaseLayout>
@@ -139,10 +155,10 @@ import Button from "../components/ui/Button.astro";
 <style>
 
 .color-section-component-container {
-    width: 100%;
 	display: flex;
   flex-direction: column;
 	align-items: center;
+  margin:20px;
   }
   .layoutstyle {
     margin-top: var(--spacing-small);

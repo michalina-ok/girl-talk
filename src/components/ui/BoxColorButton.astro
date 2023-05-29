@@ -6,7 +6,7 @@ const { color, subheader, text, title, link, size, } = Astro.props;
 <section class:list={["BoxColor", color]}>
     <div class="text-container">
   <h2 class="title secondary-header">{title}</h2>
-  <slot class="description"></slot>
+  <slot name="description"></slot>
 
 
 </div>
