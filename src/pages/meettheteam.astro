@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Mød Teamet">
+
+    <section class="BreadCrumbSection">
+        <ul class="breadcrumblinks"> 
+            <li><a href="main.html">Pigeunivers</a></li>
+            <span>/</span>
+           <li> <a href="">Brevkassen </a></li>
+           <span>/</span>
+          <li>  <a href="">Brev</a></li>
+        </ul>
+     
+     <a class="tilbagesection" href="">
+         <img src="images/gobackarrow.svg" alt="arrow">
+         Tilbage
+     </a>
+     
+     </section>
+     <div class="moedteametlayout">
+</div>
+
+</BaseLayout>
+
+<style>
+        .BreadCrumbSection{
+display: flex;
+gap: 5px;
+flex-direction: column;
+align-self: flex-start;
+padding-top: 30px;
+    }
+
+    .BreadCrumbSection a{
+        font-family:var(--font-display);
+        font-size: var(--font-size-small);
+    }
+
+    .tilbagesection{
+        display: flex;
+    }
+
+    .breadcrumblinks {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .moedteametlayout{
+        display: flex;
+        justify-content: center;
+    }
+</style>
