@@ -71,6 +71,12 @@
   --z-index--1: -1;
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-display);
   background-color: var(--color-off-white);
@@ -162,8 +168,9 @@ a {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
+
 
 .color-background {
   position: relative;
@@ -173,10 +180,12 @@ a {
   border-radius: 8px 8px 0 0;
 }
 
-/* IMAGES */
+/* NEWSLETTER BUTTON */
 
-img {
-  border-radius: 15px;
+.disabled-button:hover {
+  background-color: var(--color-black-ish);
+  color: var(--color-off-white);
+  box-shadow: none;
 }
 
 
@@ -223,11 +232,16 @@ img {
   opacity: var(--opacity-50);
   }
 
+  p {
+    max-width: 650px;
+  }
+
 }
 
 @media only screen and (max-width: 387px) {
   .quote-light {
     font-size: 0.73rem;
   }
+
 }
 

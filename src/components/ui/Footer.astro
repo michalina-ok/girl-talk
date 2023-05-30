@@ -1,72 +1,82 @@
 ---
 import Button from "./Button.astro";
 ---
+
 <footer>
   <section class="footer_newsletter">
-  <div class="first_footer_div">
-  <h3 class="secondary-header">Nyhedsbrev</h3>
-  <p class="themeheader">Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
-  <p class="">Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
-</div>
-  <div>
-  <form>
-    <div class="footer_newsletter_form">
-      <label class="themeheader" for="email">Din E-mail</label>
-      <input type="email" id="email" name="email" class="dark" />
+    <div class="first_footer_div">
+      <h3 class="secondary-header">Nyhedsbrev</h3>
+      <p class="themeheader">Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
+      <p class="">Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
     </div>
-    <div class="button-wrapper">
-    <Button size="extra-small" text="Tilmeld dig" extraInfo="the-button"  />
-  </div>
-  </form>
-</div> 
-</section> 
- <section class="bottom_section">
-  <div class="footer-links-container footer_links">
- <ul>
-  <li> <a href="index.html">Forside</a></li>
-  <li> <a href="om-os.html">Om os</a></li>
-  <li> <a href="frivillig.html">Frivillig</a></li>
-  <li> <a href="foraeldre.html">Forældre</a></li>
-  <li> <a href="main.html">Pigeunivers</a></li>
-  <li> <a href="faq.html">FAQ</a></li>
- </ul>
- <ul>
-  <li> <a href="main.html">Pigeunivers</a></li>
-  <li> <a href="chat.html">Chat</a></li>
-  <li> <a href="brevkasse.html">Brevkasse</a></li>
-  <li> <a href="faellesskaber.html">Fællesskaber</a></li>
-  <li> <a href="medier.html">Medier</a></li>
- </ul>
-  </div>
-  
-  <section class="footer_contact">
-  <div>
-  <h5 class="subheader">GirlTalk</h5>
-  <p>Martinsvej 7, 1</p>
-  <p>1926 Frederiksberg C</p>
-  <p>CVR 30 14 53 48</p>
-</div>
-  <div class="pl20">
-  <h5 class="subheader">Kontakt os</h5>
-  <p>51 91 33 77</p>
-  <p>info@girltalk.dk</p></div>
-</section>
+    <div>
+      <form>
+        <div class="footer_newsletter_form">
+          <label class="themeheader" for="email">Din E-mail</label>
+          <input type="email" id="email" name="email" class="dark" class="email-input" />
+        </div>
+        <div class="button-wrapper">
+          <Button text="Timeld dig" size="extra-small" extraInfo="newsletterButton" />
+        </div>
+      </form>
+    </div>
   </section>
-  <section class="socialmedia">
-<a href="https://www.facebook.com/GirlTalkdk"> <img src="/facebook.svg" alt="facebook"> </a>
-<a href="https://www.instagram.com/girltalkdk/"> <img src="/instagram.svg" alt="instagram"> </a>
-<a href="https://www.tiktok.com/@girltalkdk"> <img src="/tiktok.svg" alt="tiktok"> </a>
-<a href="https://www.youtube.com/channel/UCYMPMeYqeojUzmiplzk78sg"> <img src="youtube.svg" alt="youtube"> </a>
-<a href="https://www.linkedin.com/company/girltalk.dk/mycompany/"> <img src="linkedin.svg" alt="linkedin"> </a>
+  <section class="bottom_section">
+    <div class="footer-links-container footer_links">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="om-os.html">Om os</a></li>
+        <li><a href="frivillig.html">Frivillig</a></li>
+        <li><a href="foraeldre.html">Forældre</a></li>
+        <li><a href="main.html">Pigeunivers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <ul>
+        <li><a href="main.html">Pigeunivers</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="brevkasse.html">Brevkasse</a></li>
+        <li><a href="faellesskaber.html">Fællesskaber</a></li>
+        <li><a href="medier.html">Medier</a></li>
+      </ul>
+    </div>
+
+    <section class="footer_contact">
+      <div>
+        <h5 class="subheader">GirlTalk</h5>
+        <p>Martinsvej 7, 1</p>
+        <p>1926 Frederiksberg C</p>
+        <p>CVR 30 14 53 48</p>
+      </div>
+      <div class="pl20">
+        <h5 class="subheader">Kontakt os</h5>
+        <p>51 91 33 77</p>
+        <p>info@girltalk.dk</p>
+      </div>
+    </section>
+  </section>
+  <section class="socialmedia" id="socialmedia">
+    <a href="https://www.facebook.com/GirlTalkdk"> <img src="/facebook.svg" alt="facebook" /></a>
+    <a href="https://www.instagram.com/girltalkdk/"> <img src="/instagram.svg" alt="instagram" /></a>
+    <a href="https://www.tiktok.com/@girltalkdk"> <img src="/tiktok.svg" alt="tiktok" /></a>
+    <a href="https://www.youtube.com/channel/UCYMPMeYqeojUzmiplzk78sg"> <img src="youtube.svg" alt="youtube" /></a>
+    <a href="https://www.linkedin.com/company/girltalk.dk/mycompany/"> <img src="linkedin.svg" alt="linkedin" /></a>
   </section>
 </footer>
 
-<style>
+<script>
+  const newsletterButton = document.querySelector(".newsletterButton");
+  newsletterButton.addEventListener("click", () => {
+    newsletterButton.textContent = "✓ Tak for din tilmelding";
+    newsletterButton.classList.add("disabled-button");
+  });
+</script>
 
-footer {
-  background-color: rgb(255, 228, 238, 0.50);
-  color: var(--color-black-ish); 
-padding: 30px;}
+<style>
+  footer {
+    background-color: rgb(255, 228, 238, 0.5);
+    color: var(--color-black-ish);
+    padding: 30px;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -77,7 +87,7 @@ padding: 30px;}
     padding: 10px;
     border-radius: 8px;
     border: 1px var(--color-black-ish) solid;
-    background-color: rgb(255, 228, 238, 0.50);
+    background-color: rgb(255, 228, 238, 0.5);
   }
 
   input[type="submit"] {
@@ -85,73 +95,70 @@ padding: 30px;}
     align-self: center;
   }
 
-.socialmedia{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.socialmedia a{
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.footer_newsletter{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-bottom: 2px solid black;
-  padding-bottom: 20px;
+  .socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-.first_footer_div{
-  width: 50%;
-}
-.footer_newsletter_form{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
-}
+  .socialmedia a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer_newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+  }
 
-.footer-links-container{
-display: flex;
-flex-direction: row;
-}
-
-.footer-links-container ul{
-list-style: none;
-padding-right: 1rem;
-}
-
-.footer_contact{
-  display: flex;
-  flex-direction: row;
-}
-
-.bottom_section{
-  display: flex;
-  flex-wrap: wrap;
-justify-content: space-between;
-}
-
-.pl20{
-  padding-left: 20px;
-}
-
-.button-wrapper{
-  display:flex;
-}
-
-footer div{
-  padding-top: 10px;
-}
-
-@media only screen and (max-width: 600px){
-  .first_footer_div{
+  .first_footer_div {
+    width: 50%;
+  }
+  .footer_newsletter_form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-  
-}
+  .footer-links-container {
+    display: flex;
+    flex-direction: row;
+  }
 
+  .footer-links-container ul {
+    list-style: none;
+    padding-right: 1rem;
+  }
+
+  .footer_contact {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bottom_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pl20 {
+    padding-left: 20px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer div {
+    padding-top: 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .first_footer_div {
+      width: 100%;
+    }
+  }
 </style>

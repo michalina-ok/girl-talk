@@ -23,7 +23,7 @@ const res = await fetch(supabaseUrl, {
 
 <GirlsUniLayout title="Brevkasse">
   <div class="brevkasselayout">
-    <ColorSection color="pink" hex="#ffe4ee" title="GirlTalk's brevkasse" text="Skriv et brev" link="https://jpmpz0xim6i.typeform.com/to/pFHo1ZT6">
+    <ColorSection color="pink" hex="#ffe4ee" title="GirlTalk's brevkasse" text="Skriv et brev" link="https://jpmpz0xim6i.typeform.com/to/pFHo1ZT6" size="m-extra-small-d-medium">
       <div slot="description" class="text-in-component">
       <p slot="description" class="themeheader">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
       <p slot="description">Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
@@ -51,9 +51,40 @@ const res = await fetch(supabaseUrl, {
 
   const filterButtons = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
+  const dropdownOptions = document.querySelectorAll("select")
+
 
   const buttonsArray = [...filterButtons];
   const filteredArray = [...cardsSection];
+  const optionsArray = [...dropdownOptions]
+
+  optionsArray.forEach((button) => {
+    button.addEventListener("change", () => {
+
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        });
+      }
+
+      filteredArray.forEach((filteredElement) => {
+        
+        if (button.value === "alle") {
+          filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        })
+        } else {
+        if (!filteredElement.classList.contains(button.value)) {
+          filteredElement.classList.add("none");
+        }
+      }
+      });
+    });
+  });
 
   buttonsArray.forEach((button) => {
     button.addEventListener("click", () => {
