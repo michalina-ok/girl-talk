@@ -4,6 +4,18 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
 import Button from "../components/ui/Button.astro";
 import SearchBar from "../components/ui/SearchBar.astro";
 import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
+const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co/rest/v1/brevkasse-parents'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZybnZqcmxtdW1nYXl3Ynh2YXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzODcwNDIsImV4cCI6MjAwMDk2MzA0Mn0.zWbD-YJqJP0ZuJDFHvhqG6JoxRoqVR79RP2mTmp71BQ'
+const res = await fetch(supabaseUrl, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          Prefer: 'return=representation'
+        }
+      });
+    const data = await res.json();
 ---
 
 <BaseLayout title="Parents">
@@ -57,17 +69,11 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
         <SearchBar />
       </div>
       <div>
-        <p class="indicator">8 ud af 129</p>
+        <p class="indicator">{data.length} af {data.length}</p>
         <div class="lettercontainer">
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-          <BrevkasseCard header="Jeg har opdaget at min datter kaster op inden hun går i seng" />
-        </div>
+          {data.map((letter) => 
+          <BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} />)}
+              </div>
         <div class="margintop button-container">
           <Button text="Læs flere" />
         </div>
