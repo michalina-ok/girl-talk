@@ -4,122 +4,190 @@ import EmployeeCard from "../components/cards/EmployeeCard.astro";
 ---
 
 <BaseLayout title="Mød Teamet">
+  <section class="BreadCrumbSection">
+    <ul class="breadcrumblinks">
+      <li><a href="main.html">Om Os</a></li>
+      <span>/</span>
+      <li><a href="/meettheteam.html">Teamet bag Girltalk</a></li>
+    </ul>
 
-    <section class="BreadCrumbSection">
-        <ul class="breadcrumblinks"> 
-            <li><a href="main.html">Om Os</a></li>
-            <span>/</span>
-           <li> <a href="/meettheteam.html">Teamet bag Girltalk</a></li>
-        </ul>
-     
-     <a class="tilbagesection" href="/om-os.html">
-         <img src="images/gobackarrow.svg" alt="arrow">
-         Tilbage
-     </a>
-     
-     </section>
-     <div class="moedteametlayout">
+    <a class="tilbagesection" href="/om-os.html">
+      <img src="/images/gobackarrow.svg" alt="arrow" />
+      Tilbage
+    </a>
+  </section>
+  <div class="moedteametlayout">
+    <h2 class="sub-header-underlined">Ledelse</h2>
+    <div class="employeesection">
+      <EmployeeCard
+        link="/images/meettheteam/AnnaBjerre.webp"
+        name="Anna Bjerre"
+        title="Direktør"
+        email="Anna@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/MajbritBay.webp"
+        name="Majbritt Bay"
+        title="Souschef"
+        email="Majbritt@Girltalk.dk"
+      />
+    </div>
 
-    	<h2 class="sub-header-underlined">Ledelse</h2>
-<div class="employeesection">
-<EmployeeCard link="images/meettheteam/AnnaBjerre.jpg" name="Anna Bjerre" title="Direktør" email="Anna@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/MajbritBay.jpg" name="Majbritt Bay" title="Souschef" email="Majbritt@Girltalk.dk"></EmployeeCard>
-</div>
+    <h2 class="sub-header-underlined">Teamledere - Udvidet ledelse</h2>
+    <div class="employeesection">
+      <EmployeeCard
+        link="/images/meettheteam/NannaBohmann.webp"
+        name="Nanna Bohmann"
+        title="Teamleder, Kommunikation og Engagement"
+        email="Nanna@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/MarianneObed.webp"
+        name="Marianne Obed Madsen"
+        title="Teamleder, Rådgivningen"
+        email="Marianne@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/DitteWagner.webp"
+        name="Ditte Wagner"
+        title="Teamleder, Lokale Indsatser"
+        email="Ditte@Girltalk.dk"
+      />
+    </div>
 
-<h2 class="sub-header-underlined">Teamledere - Udvidet ledelse</h2>
-<div class="employeesection">
-<EmployeeCard link="images/meettheteam/NannaBohmann.webp" name="Nanna Bohmann" title="Teamleder, Kommunikation og Engagement" email="Nanna@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/MarianneObed.webp" name="Marianne Obed Madsen" title="Teamleder, Rådgivningen" email="Marianne@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/DitteWagner.webp" name="Ditte Wagner" title="Teamleder, Lokale Indsatser" email="Ditte@Girltalk.dk"></EmployeeCard>
+    <h2 class="sub-header-underlined">Sekretariat København</h2>
+    <div class="employeesection">
+      <EmployeeCard
+        link="/images/meettheteam/randomemployee1.webp"
+        name="Dorte Sørensen"
+        title="Administrativ Koordinator"
+        email="Dorte@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/randomemployee4.webp"
+        name="Gitte Solberg Perregaard"
+        title="Økonomi- og Administrationskonsulent"
+        email="Gitte@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/randomemployee3.webp"
+        name="Siri Madsen"
+        title="Rådgivningskorrdinator"
+        email="Siri@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/randomemployee5.webp"
+        name="Katrine Bjerre"
+        title="Rådgivnings- og frivilligkoordinator"
+        email="Katrine.Bjerre@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/AmalieStender.webp"
+        name="Amalie Stender"
+        title="Kommunikation og engagement"
+        email="Amalie@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/MathildeMGraulund.webp"
+        name="Mathilde Magrethe Graulund"
+        title="Kommunikation og engagement"
+        email="Mathilde@Girltalk.dk"
+      />
+    </div>
+    <h2 class="sub-header-underlined">Sekretariat Odense</h2>
+    <div class="employeesection">
+      <EmployeeCard
+        link="/images/meettheteam/MetteRafn.webp"
+        name="Mette Rafn"
+        title="kommunikation og Engagement"
+        email="Anna@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/AnetteBreinholt.webp"
+        name="Anette Breinholt"
+        title="Projektkonsulent, Rådgivningerne"
+        email="Majbritt@Girltalk.dk"
+      />
+    </div>
+    <h2 class="sub-header-underlined">Sekretariat Aalborg</h2>
+    <div class="employeesection">
+      <EmployeeCard
+        link="/images/meettheteam/MaikeRitter.webp"
+        name="Maike Ritter"
+        title="Studentermedarbejder, Rådgivningerne"
+        email="Anna@Girltalk.dk"
+      />
+      <EmployeeCard
+        link="/images/meettheteam/randomemployee2.webp"
+        name="Emilie Espholm"
+        title="Projektkoordinator, Lokale Indsatser"
+        email="Emilie@Girltalk.dk"
+      />
+    </div>
+  </div>
 
-</div>
-
-<h2 class="sub-header-underlined">Sekretariat København</h2>
-<div class="employeesection">
-<EmployeeCard link="images/meettheteam/randomemployee1.jpg" name="Dorte Sørensen" title="Administrativ Koordinator" email="Dorte@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/randomemployee4.jpg" name="Gitte Solberg Perregaard" title="Økonomi- og Administrationskonsulent" email="Gitte@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/randomemployee3.jpg" name="Siri Madsen" title="Rådgivningskorrdinator" email="Siri@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/randomemployee5.jpg" name="Katrine Bjerre" title="Rådgivnings- og frivilligkoordinator" email="Katrine.Bjerre@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/AmalieStender.jpg" name="Amalie Stender" title="Kommunikation og engagement" email="Amalie@Girltalk.dk"></EmployeeCard>
-<EmployeeCard link="images/meettheteam/MathildeMGraulund.jpg" name="Mathilde Magrethe Graulund" title="Kommunikation og engagement" email="Mathilde@Girltalk.dk"></EmployeeCard>
-</div>
-<h2 class="sub-header-underlined">Sekretariat Odense</h2>
-<div class="employeesection">
-    <EmployeeCard link="images/meettheteam/MetteRafn.jpg" name="Mette Rafn" title="kommunikation og Engagement" email="Anna@Girltalk.dk"></EmployeeCard>
-    <EmployeeCard link="images/meettheteam/AnetteBreinholt.jpg" name="Anette Breinholt" title="Projektkonsulent, Rådgivningerne" email="Majbritt@Girltalk.dk"></EmployeeCard>
-</div>
-<h2 class="sub-header-underlined">Sekretariat Aalborg</h2>
-<div class="employeesection">
-    <EmployeeCard link="images/meettheteam/MaikeRitter.jpg" name="Maike Ritter" title="Studentermedarbejder, Rådgivningerne" email="Anna@Girltalk.dk"></EmployeeCard>
-    <EmployeeCard link="images/meettheteam/randomemployee2.jpg" name="Emilie Espholm" title="Projektkoordinator, Lokale Indsatser" email="Emilie@Girltalk.dk"></EmployeeCard>
-
-</div>
-
-
-</BaseLayout>
-
-<style>
-
- /*BREADCRUMBS*/    
-        .BreadCrumbSection{
-display: flex;
-gap: 5px;
-flex-direction: column;
-align-self: flex-start;
-padding-top: 30px;
-margin-left: 20px;
+  <style>
+    /*BREADCRUMBS*/
+    .BreadCrumbSection {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      align-self: flex-start;
+      padding-top: 30px;
+      margin-left: 20px;
     }
 
-    .BreadCrumbSection a{
-        font-family:var(--font-display);
-        font-size: var(--font-size-small);
+    .BreadCrumbSection a {
+      font-family: var(--font-display);
+      font-size: var(--font-size-small);
     }
 
-    .tilbagesection{
-        display: flex;
+    .tilbagesection {
+      display: flex;
     }
 
     .breadcrumblinks {
-        display: flex;
-        list-style: none;
-        gap: 10px;
+      display: flex;
+      list-style: none;
+      gap: 10px;
     }
 
-    /*GENERAL*/ 
-    .moedteametlayout{
-        display: flex;
-        margin: 30px 50px;
-        gap: 40px;
-        flex-direction: column;
-        justify-content: center;
+    /*GENERAL*/
+    .moedteametlayout {
+      display: flex;
+      margin: 30px 50px;
+      gap: 40px;
+      flex-direction: column;
+      justify-content: center;
     }
- 
-    /*SECTIONS*/ 
-    .sub-header-underlined{
-font-family: var(--font-display);
-font-weight: var(--font-weight-semibold);
-font-size: var(font-size-large);
-align-self: flex-start;
-border-bottom: 2px solid var(--color-black-ish);
-width: 100%;
-margin-bottom: 20px;
-}
 
-   .employeesection{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-   }
+    /*SECTIONS*/
+    .sub-header-underlined {
+      font-family: var(--font-display);
+      font-weight: var(--font-weight-semibold);
+      font-size: var(font-size-large);
+      align-self: flex-start;
+      border-bottom: 2px solid var(--color-black-ish);
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
-   @media only screen and (min-width: 400px){
-.moedteametlayout{
-    margin: 40px 80px;
-}
-   }
+    .employeesection {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-   @media only screen and (min-width: 900px){
-.moedteametlayout{
-    margin: 40px 140px;
-}
-   }
-</style>
+    @media only screen and (min-width: 400px) {
+      .moedteametlayout {
+        margin: 40px 80px;
+      }
+    }
+
+    @media only screen and (min-width: 900px) {
+      .moedteametlayout {
+        margin: 40px 140px;
+      }
+    }
+  </style>
+</BaseLayout>
