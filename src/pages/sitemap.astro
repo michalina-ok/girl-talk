@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Sitemap">
+  <section>
+    <h1 class="primary-header">Sitemap</h1>
+    <div class="sitemap-list">
+      <ul>
+        <li>
+          <h2 class="subheader">Main</h2>
+        </li>
+        <ul class="priority light-text">
+          <li><a href="/index.html">Main Frontpage</a></li>
+          <li><a href="/stot.html">Støt</a></li>
+          <li><a href="/om-os.html">Om os</a></li>
+          <ul class="priority themeheader">
+            <li><a href="/faq.html">FAQ page</a></li>
+            <li>
+              <a href="/meettheteam.html">Meet the team page</a>
+            </li>
+          </ul>
+          <li><a href="/frivillig.html">Bliv frivillig</a></li>
+          <li><a href="/foraeldre.html">Forældre</a></li>
+        </ul>
+        <li>
+          <h2 class="subheader">Pigeunivers</h2>
+        </li>
+        <ul class="priority light-text">
+          <li><a href="/main.html">Pigeunivers Landing page</a></li>
+          <li><a href="/chat.html">Chat</a></li>
+          <li><a href="/brevkasse.html">Brevkasse</a></li>
+          <ul class="priority themeheader">
+            <li><a href="/specificletter.html">Brev</a></li>
+          </ul>
+          <li><a href="/faellesskaber.html">Fællesskaber</a></li>
+          <li><a href="/medier.html">Medier</a></li>
+          <ul class="priority themeheader">
+            <li><a href="/specificarticle.html">Artikel</a></li>
+          </ul>
+        </ul>
+        <li>
+          <h2 class="subheader">Formaliteter</h2>
+        </li>
+
+        <ul class="priority light-text">
+          <li>
+            <a class="link" href="sitemap.html"><span>Sitemap</span></a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  ul li {
+    list-style-type: none;
+  }
+
+  ul li a {
+    text-decoration: underline;
+  }
+  .sitemap-list {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .priority {
+    padding-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .priority li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>

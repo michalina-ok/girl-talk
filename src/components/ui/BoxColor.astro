@@ -2,8 +2,10 @@
 const { color, text, title } = Astro.props;
 ---
 <section class:list={[ 'BoxColor', color]} >
-    <h2 class="title secondary-header">{title}</h2>
+    <div>
+    <h2 class="title subheader">{title}</h2>
 <p class="text">{text}</p>
+</div>
 </section>
 
 
@@ -11,6 +13,9 @@ const { color, text, title } = Astro.props;
     .BoxColor {
         padding: var(--spacing-xs) var(--spacing-small);
         border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     p.title {

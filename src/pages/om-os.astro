@@ -7,69 +7,40 @@ import Button from "../components/ui/Button.astro";
 
 <BaseLayout title="Om os">
   <section class="layoutstyle">
-    <div class="section">
-      <div class="image-container-desktop hide-mobile">
-        <img
-          class="image-desktop"
-          src="/images/heroimages/girl-sitting-alone.webp"
-          alt="Pige sidder med hoved lænende på hænder"
-        />
-      </div>
-      <div class="text-section">
-        <h1 class="primary-header">Om GirlTalk</h1>
-        <h2 class="subheader">Ingen piger skal mistrives</h2>
-        <p>
-          GirlTalk blev skabt i 2004 ud fra visionen om at give piger et sted at
-          gå hen, når livet er svært. <br /> Det er desværre et trist faktum, at
-          mistrivslen blandt unge i Danmark stiger, og at pigerne er hårdest ramt.
-          <br /> I samarbejde med vores mange støtter og samarbejdspartnere arbejder
-          vi for at bremse den udvikling og for at sikre, at alle piger har en at
-          tale med.
-        </p>
-      </div>
-      <div class="image-container-mobile hide-desktop">
-        <img
-          class="image-mobile"
-          src="/images/heroimages/girl-sitting-alone-small.webp"
-          alt="Pige sidder med hoved lænende på hænder"
-        />
-      </div>
-    </div>
+<div class="section">
+<img src="/images/heroimages/girl-sitting-alone.webp" alt="Pige med hænderne på knæene">
+<div class="text-section">
+  <h1 class="primary-header">Om GirlTalk</h1>
+  <h3 class="subheader">Ingen piger skal mistrives</h3>
+  <p>GirlTalk blev skabt i 2004 ud fra visionen om at give piger et sted at gå hen, når livet er svært.
+    Det er desværre et trist faktum, at mistrivslen blandt unge i Danmark stiger, og at pigerne er hårdest ramt.I samarbejde med vores mange støtter og samarbejdspartnere arbejder vi for at bremse den udvikling og for at sikre, at alle piger har en at tale med.</p>
+</div>
+</div>
 
     <div class="section-2">
-      <div class="image-container-desktop hide-mobile">
-        <img
-          class="image-desktop"
-          src="/images/heroimages/girls-piggyride.webp"
-          alt="Pige sidder med hoved lænende på hænder"
-        />
-      </div>
-      <div class="text-section">
-        <h2 class="secondary-header">Hvem kontakter GirlTalk?</h2>
-        <p>
-          GirlTalks målgruppe er piger og unge kvinder i alderen 12 til 24 år.
+      <BoxColorButton
+      color="purple"
+      hex="#ffe4ee"
+      title="Hvem kontakter GirlTalk?"
+      text="Gå til FAQ"
+      link="/faq.html"
+      size="m-extra-small-d-medium">
+      <p class="pb10px" slot="description">
+        GirlTalks målgruppe er piger og unge kvinder i alderen 12 til 24 år.
           Hos GirlTalk er intet problem for stort eller for småt. <br /> Nogle kontakter
           os, fordi de har det svært i skolen, nogle har spørgsmål til krop og pubertet,
           mens andre oplever psykiske udfordringer. Nogle kontakter os enkelte eller
           få gange, mens andre har glæde af at tale med vores rådgivere mere regelmæssigt
-          over en periode.
-          <br><br> Find andre svar på spørgsmål på vores FAQ side.
-        </p>
-        <Button link="faq.html" text="Gå til FAQ" style="dark" size="m-extra-small-d-medium"></Button>
-      </div>
-      <div class="image-container-mobile hide-desktop">
-        <img
-          class="image-mobile"
-          src="/images/heroimages/girls-piggyride-small.webp"
-          alt="Pige sidder med hoved lænende på hænder"
-        />
-      </div>
+          over en periode.</p>
+          <p class="pb10px" slot="description">
+            Find andre svar på spørgsmål på vores FAQ side.
+          </p>
+      </BoxColorButton>
+     
     </div>
 
     <div class="section-3">
-      <div class="akkrediteringsbillede">
-<img src="/images/akkreditering-omos.webp" alt="Akkrediteringsmarkat fra Rådgivning Danmark">
-      </div>
+<BoxColor color="green" title="Kvalitetsmærke på GirlTalks rådgivning" text="GirlTalk er i 2021 blevet genakkrediteret af RådgivningsDanmark, som er brancheforening for sociale rådgivningstilbud i Danmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningen."></BoxColor>
       <div class="text-section-3">
         <h2 class="secondary-header">Hvilke tilbud har GirlTalk?</h2>
         <div class="body-text-section-3">
@@ -135,14 +106,6 @@ import Button from "../components/ui/Button.astro";
 </BaseLayout>
 
 <style>
-.akkrediteringsbillede{
-  max-width: 50%;
-}
-
-.akkrediteringsbillede img{
-  width: 100%;
-  border-radius: 15px;
-}
 .color-section-component-container {
 	display: flex;
   flex-direction: column;
@@ -163,16 +126,19 @@ import Button from "../components/ui/Button.astro";
   }
   .section {
     margin-top: var(--spacing-medium);
-    display: flex;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
     gap: var(--spacing-small);
-    flex-direction: column;
+  }
+
+  .section img{
+    width: 100%;
   }
 
   .section-2 {
     margin-top: var(--spacing-medium);
     display: flex;
     gap: var(--spacing-small);
-    flex-direction: column;
   }
 
   .section-3 {
@@ -213,10 +179,19 @@ import Button from "../components/ui/Button.astro";
     height: 100%;
     margin: auto;
   }
+
+  .button-wrapper{
+    display:flex;
+  }
   @media only screen and (min-width: 900px){
     .layoutstyle{
-      gap: 80px;
+      gap: 80px;}
+
+    .section-3{
+      flex-direction: row;
+      gap: 40px;
     }
+    
   }
   @media only screen and (min-width: 1000px) {
     .hide-desktop {
@@ -228,25 +203,16 @@ import Button from "../components/ui/Button.astro";
       margin-right: var(--spacing-3xl);
     }
 
-    .image-container-desktop {
-      width: 70%;
-    }
-    .image-desktop {
-      width: 100%;
-      height: 100%;
-    }
-
-    .text-section {
-      max-width: 40%;
-    }
 
     .section {
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-rows: none;
+      grid-template-columns: 1fr 1fr;
       gap: var(--spacing-large);
-      align-items: center;
     }
-
+    .section img{
+      width:100%
+    }
     .section-2 {
       display: flex;
       flex-direction: row-reverse;
