@@ -47,9 +47,40 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 <script>
   const filterButtons = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
+  const dropdownOptions = document.querySelectorAll("select")
+
 
   const buttonsArray = [...filterButtons];
   const filteredArray = [...cardsSection];
+  const optionsArray = [...dropdownOptions]
+
+  optionsArray.forEach((button) => {
+    button.addEventListener("change", () => {
+
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        });
+      }
+
+      filteredArray.forEach((filteredElement) => {
+        
+        if (button.value === "alle") {
+          filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        })
+        } else {
+        if (!filteredElement.classList.contains(button.value)) {
+          filteredElement.classList.add("none");
+        }
+      }
+      });
+    });
+  });
 
   buttonsArray.forEach((button) => {
     button.addEventListener("click", () => {

@@ -1,230 +1,386 @@
 ---
-import GirlsUniLayout from "../layouts/GirlsUniLayout.astro"
-import ArticleCard from "../components/cards/ArticleCard.astro"
-import SearchBar from "../components/ui/SearchBar.astro"
-import Dropdown from "../components/ui/Dropdown.astro"
+import GirlsUniLayout from "../layouts/GirlsUniLayout.astro";
+import ArticleCard from "../components/cards/ArticleCard.astro";
+import SearchBar from "../components/ui/SearchBar.astro";
+import Dropdown from "../components/ui/Dropdown.astro";
 ---
+
 <GirlsUniLayout title="Pigeunivers">
-<div class="medierlayout">
-	<h1 class="primary-header">Vidensunivers</h1>
-<div class="search-div">
-<SearchBar></SearchBar>	
-</div>
-<div class="filter-div">
-<Dropdown></Dropdown>
-</div>
-<div class="medier-first-section">
-	<section class="largearticlecard">
-		<a href="#">
-		<img src="/images/articleimages/largearticleimage.webp" alt="Hvordan vander vi venskabets blomst? Artikel">
-		<p class="subheader-firstarticle">Jagten på den perfekte buket
-			af venskaber kan være svær at sammensætte, men også fyldt af farverige glæder?</p></a>
-	</section>
-	<section class="doublearticlecard">
-	<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.webp" /></a>
-		<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.webp" /></a>
-	</section>
-</div>
-<div class="medier-podcast-section">
-	<a href="#"><img src="/images/articleimages/podcastimage.webp" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber"></a>
-	</div>
-<div class="medier-second-section">
-	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
-	<div class="medier-second-grid">
-	<section class="mediumarticlecard">
-		<a class="hoverstate" href="#"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?"></a>
-	</section>
-	<section class="double-articlecard-second">
-		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="/images/articleimages/redbluegirlarticle.webp" /></a>
-			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="/images/articleimages/banana.webp" /></a>
-	</section>
-	</div>
-</div>
-<div class="medier-podcast-section">
-<a href="#"><img src="/images/articleimages/podcastimage.webp" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber"></a>
-</div>
-<div class="medier-fourth-section">
-	<h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
-	<div class="medier-fourth-grid">
-	<section class="mediumarticlecard">
-		<a class="hoverstate" href="#"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?"></a>
-	</section>
-	<section class="double-articlecard-second">
-		<a href="#">	<ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="/images/articleimages/redbluegirlarticle.webp" /></a>
-			<a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="/images/articleimages/banana.webp" /></a>
-	</section>
-	</div>
-</div>
+  <div class="medierlayout">
+    <h1 class="primary-header">Vidensunivers</h1>
+    <div class="search-div">
+      <SearchBar />
+    </div>
+    <div class="filter-div">
+      <Dropdown />
+    </div>
+    <div class="medier-first-section">
+      <section class="largearticlecard">
+        <a href="#">
+          <img src="images/articleimages/largearticleimage.png" alt="Hvordan vander vi venskabets blomst? Artikel" />
+          <p class="subheader-firstarticle">Jagten på den perfekte buket af venskaber kan være svær at sammensætte, men også fyldt af farverige glæder?</p></a
+        >
+      </section>
+      <section class="doublearticlecard">
+        <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+        <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+      </section>
+      <div class="medier-podcast-section">
+        <a href="#"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
+    <div class="medier-article-section venskaber_og_familie">
+      <h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
+      <div class="medier-second-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="#"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-</div>
-	</GirlsUniLayout>
+    <div class="medier-article-section krop_og_sex">
+      <h2 class="sub-header-underlined">Tema: Krop og Sex</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-	<style>
-/*GENERAL*/
-.medierlayout{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 30px;
-	padding: 30px 20px;
-}
+    <div class="medier-article-section selvværd">
+      <h2 class="sub-header-underlined">Tema: Selvværd</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-.medierlayout h1{
-	text-align: center;
-}
+    <div class="medier-article-section kærlighed">
+      <h2 class="sub-header-underlined">Tema: Kærlighed</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-.search-div{
-	width: 300px;
-	align-self: center;
-}
+    <div class="medier-article-section trivsel">
+      <h2 class="sub-header-underlined">Tema: Trivsel</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-.filter-div{
-	padding-bottom: 40px;
-}
+    <div class="medier-article-section skole_og_uddannelse">
+      <h2 class="sub-header-underlined">Tema: Skole og uddannelse</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
 
-.medierlayout a:hover {
-	scale: 1.05;
-}
+    <div class="medier-article-section andet">
+      <h2 class="sub-header-underlined">Tema: Andet</h2>
+      <div class="medier-fourth-grid">
+        <section class="mediumarticlecard">
+          <a class="hoverstate" href="#"><img src="images/articleimages/bananaarticle.png" alt="Artikel hvordan onanerer man?" /></a>
+        </section>
+        <section class="double-articlecard-second">
+          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.jpg" /></a>
+          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.jpg" /></a>
+        </section>
+      </div>
+      <div class="medier-podcast-section">
+        <a href="/specificartclepage.astro"><img src="images/articleimages/podcastimage.jpg" alt="Lyt til den nyeste podcast med Mathilde. Emnet er venskaber" /></a>
+      </div>
+    </div>
+  </div>
+</GirlsUniLayout>
 
-.hoverstate:hover img{
-	scale: 1.05;
-}
+<script>
+  const filterButtons = document.querySelectorAll("a.color");
+  const mediaSections = document.querySelectorAll(".medier-article-section");
+  const dropdownOptions = document.querySelectorAll("select");
+  const firstSection = document.querySelector(".medier-first-section");
 
-/*FIRST SECTION*/ 		
-		.medier-first-section{
-			display: grid
-grid-template-rows: 7fr 3fr;
-			gap: 20px;
-		}
+  const buttonsArray = [...filterButtons];
+  const filteredArray = [...mediaSections];
+  const optionsArray = [...dropdownOptions];
 
-.largearticlecard{
-	max-width: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 10px;
-}
+  optionsArray.forEach((button) => {
+    button.addEventListener("change", () => {
+      firstSection.classList.add("none");
 
-.largearticlecard img{
-	max-width: 100%;
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        });
+      }
 
-}
+      filteredArray.forEach((filteredElement) => {
+        if (button.value === "alle") {
+          filteredArray.forEach((filteredElement) => {
+            if (filteredElement.classList.contains("none")) {
+              filteredElement.classList.remove("none");
+            }
+          });
+        } else {
+          if (!filteredElement.classList.contains(button.value)) {
+            filteredElement.classList.add("none");
+          }
+        }
+      });
+    });
+  });
 
-.subheader-firstarticle{
-	font-family: var(--font-display);
-	font-size: var(--font-size-small);
-	font-weight: var(--font-weight-semibold);
-	max-width: 650px;
-}
+  buttonsArray.forEach((button) => {
+    button.addEventListener("click", () => {
+      firstSection.classList.add("none");
+      if (buttonsArray.length) {
+        buttonsArray.forEach((button) => {
+          button.classList.remove("selected");
+        });
+      }
 
-.doublearticlecard{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-evenly;
-			gap: 20px;
-}
+      if (filteredArray.length) {
+        filteredArray.forEach((filteredElement) => {
+          if (filteredElement.classList.contains("none")) {
+            filteredElement.classList.remove("none");
+          }
+        });
+      }
 
-/*SECOND SECTION*/ 
-.sub-header-underlined{
-font-family: var(--font-display);
-font-weight: var(--font-weight-semibold);
-font-size: var(font-size-large);
-align-self: flex-start;
-border-bottom: 2px solid var(--color-black-ish);
-width: 100%;
-margin-bottom: 20px;
-}
+      button.classList.toggle("selected");
 
-.medier-second-grid{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 20px;
-}		
-.double-articlecard-second{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-evenly;
-			gap: 20px;
-		}	
+      filteredArray.forEach((filteredElement) => {
+        if (button.textContent.toLowerCase() === "alle") {
+          filteredArray.forEach((filteredElement) => {
+            if (filteredElement.classList.contains("none")) {
+              filteredElement.classList.remove("none");
+            }
+          });
+        } else {
+          if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
+            filteredElement.classList.add("none");
+          }
+        }
+      });
+    });
+  });
+</script>
 
-.mediumarticlecard img{
-width: 100%;
-}
+<style>
+  /*GENERAL*/
+  .medierlayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
 
-/*MEDIER PODCAST*/
-.medier-podcast-section{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-.medier-podcast-section img {
-	max-width: 100%;
-}
+  .medierlayout h1 {
+    text-align: center;
+  }
 
-/*MEDIER FOURTH GRID*/
+  .search-div {
+    width: 300px;
+    align-self: center;
+  }
 
-.medier-fourth-grid{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 20px;
-}
+  .filter-div {
+    padding-bottom: 40px;
+  }
 
+  a {
+    transition: 0.1s ease-in;
+  }
 
+  .hoverstate img {
+    transition: 0.1s ease-in;
+  }
 
-@media only screen and (min-width: 712px){
-	.medier-first-section{
-			display: grid;
-grid-template-columns: 80% 20%;
-grid-template-rows: none;
-}
+  .medierlayout a:hover {
+    transform: scale(1.04);
+  }
 
-.doublearticlecard{
-	flex-wrap: wrap;
-}
+  .hoverstate:hover img {
+    transform: scale(1.04);
+  }
 
-.medierlayout{
-	padding: 40px 40px;
-}
+  /*FIRST SECTION*/
+  .medier-first-section {
+    display: grid;
 
-.medier-second-grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}	
+    gap: 20px;
+  }
 
-.medier-fourth-grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-}
+  .largearticlecard {
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
 
+  .largearticlecard img {
+    max-width: 100%;
+  }
 
-@media only screen and (min-width: 900px){
+  .subheader-firstarticle {
+    font-family: var(--font-display);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    max-width: 650px;
+  }
 
-	.medier-first-section{
-			display: grid;
-grid-template-columns: 2fr 1fr;
-grid-template-rows: none;
-}
+  .doublearticlecard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
+  /*SECOND SECTION*/
+  .sub-header-underlined {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(font-size-large);
+    align-self: flex-start;
+    border-bottom: 2px solid var(--color-black-ish);
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-.subheader-firstarticle{
-	font-size: var(--font-size-large);
+  .medier-second-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .double-articlecard-second {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  .mediumarticlecard img {
+    width: 100%;
+  }
+
+  /*MEDIER PODCAST*/
+  .medier-podcast-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .medier-podcast-section img {
+    max-width: 100%;
+  }
+
+  /*MEDIER FOURTH GRID*/
+
+  .medier-fourth-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  @media only screen and (min-width: 712px) {
+    .medier-first-section {
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: none;
     }
 
+    .doublearticlecard {
+      flex-wrap: wrap;
+    }
 
-}
+    .medierlayout {
+      padding: 40px 40px;
+    }
 
-@media only screen and (min-width: 1100px){
+    .medier-second-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-.medierlayout{
-	padding: 40px 140px;
-}
-}
+    .medier-fourth-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
+  @media only screen and (min-width: 900px) {
+    .medier-first-section {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: none;
+    }
 
-	</style>
+    .subheader-firstarticle {
+      font-size: var(--font-size-large);
+    }
+  }
+
+  @media only screen and (min-width: 1100px) {
+    .medierlayout {
+      padding: 40px 140px;
+    }
+  }
+</style>
