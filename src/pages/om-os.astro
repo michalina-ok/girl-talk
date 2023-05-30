@@ -55,7 +55,7 @@ import Button from "../components/ui/Button.astro";
           over en periode.
           <br><br> Find andre svar på spørgsmål på vores FAQ side.
         </p>
-        <Button link="faq.html" text="Gå til FAQ" style="dark" class="m-small-d-large"></Button>
+        <Button link="faq.html" text="Gå til FAQ" style="dark" size="m-extra-small-d-medium"></Button>
       </div>
       <div class="image-container-mobile hide-desktop">
         <img
@@ -67,15 +67,11 @@ import Button from "../components/ui/Button.astro";
     </div>
 
     <div class="section-3">
-      <div class="width-box">
-        <BoxColor
-          color="green"
-          title="Kvalitetsmærke på GirlTalks rådgivning"
-          text="GirlTalk er i 2021 blevet genakkrediteret af RådgivningsDanmark, som er brancheforening for sociale rådgivningstilbud i Danmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningen."
-        />
+      <div class="akkrediteringsbillede">
+<img src="/images/akkreditering-omos.webp" alt="Akkrediteringsmarkat fra Rådgivning Danmark">
       </div>
       <div class="text-section-3">
-        <h2>Hvilke tilbud har GirlTalk?</h2>
+        <h2 class="secondary-header">Hvilke tilbud har GirlTalk?</h2>
         <div class="body-text-section-3">
           <p>
             GirlTalk har mange forskellige tilbud og indsatser til forskellige
@@ -111,14 +107,17 @@ import Button from "../components/ui/Button.astro";
       title="Hvem arbejder i GirlTalk?"
       text="Mød teamet her"
       link="/meettheteam.html"
+      size="m-extra-small-d-medium"
     >
-      <p slot="description">
+      <p class="pb10px" slot="description">
           GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
           København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig
           uddannet, med ekspertise på området. Derudover har GirlTalk
           medarbejdere med flere forskellige baggrunde og fagligheder, hvoraf
           mange er uddannet inden for psykologi, pædagogik samt kommunikation og
-          marketing. <br> <br> En stor del af arbejdskraften hos GirlTalk ligger dog vores
+          marketing.</p> 
+
+          <p class="pb10px" slot="description"> En stor del af arbejdskraften hos GirlTalk ligger dog vores
           frivillige. GirlTalk er drevet og skabt på et fundament af
           frivillighed og ville ikke kunne eksistere uden vores frivillige.
           Samlet set er der omkring 300 frivillige i GirlTalk. Hovedparten af
@@ -127,25 +126,8 @@ import Button from "../components/ui/Button.astro";
           Uddannelse og rammesætning er helt afgørende i vores arbejde med
           frivillige, og vi lægger stor vægt på at have et omfattende
           sikkerhedsnet for vores frivillige i form af sparring, fællesskab,
-          introforløb, uddannelse, supervision og trivselssamtaler.
-        </p>
-        <p slot="description">
-          GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
-          København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig
-          uddannet, med ekspertise på området. Derudover har GirlTalk
-          medarbejdere med flere forskellige baggrunde og fagligheder, hvoraf
-          mange er uddannet inden for psykologi, pædagogik samt kommunikation og
-          marketing. <br> <br> En stor del af arbejdskraften hos GirlTalk ligger dog vores
-          frivillige. GirlTalk er drevet og skabt på et fundament af
-          frivillighed og ville ikke kunne eksistere uden vores frivillige.
-          Samlet set er der omkring 300 frivillige i GirlTalk. Hovedparten af
-          vores frivillige er engageret i vores indsatser målrettet unge, og
-          alle frivillige i ungeindsatserne er kvinder i alderen 20-35.
-          Uddannelse og rammesætning er helt afgørende i vores arbejde med
-          frivillige, og vi lægger stor vægt på at have et omfattende
-          sikkerhedsnet for vores frivillige i form af sparring, fællesskab,
-          introforløb, uddannelse, supervision og trivselssamtaler.
-        </p>
+          introforløb, uddannelse, supervision og trivselssamtaler.</p>
+        
 
     </BoxColorButton>
   </div>
@@ -153,7 +135,14 @@ import Button from "../components/ui/Button.astro";
 </BaseLayout>
 
 <style>
+.akkrediteringsbillede{
+  max-width: 50%;
+}
 
+.akkrediteringsbillede img{
+  width: 100%;
+  border-radius: 15px;
+}
 .color-section-component-container {
 	display: flex;
   flex-direction: column;
@@ -163,8 +152,15 @@ import Button from "../components/ui/Button.astro";
   .layoutstyle {
     margin-top: var(--spacing-small);
     margin-bottom: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
   }
 
+  .pb10px{
+    padding-top: 10px;
+  }
   .section {
     margin-top: var(--spacing-medium);
     display: flex;
@@ -217,7 +213,11 @@ import Button from "../components/ui/Button.astro";
     height: 100%;
     margin: auto;
   }
-
+  @media only screen and (min-width: 900px){
+    .layoutstyle{
+      gap: 80px;
+    }
+  }
   @media only screen and (min-width: 1000px) {
     .hide-desktop {
       display: none;

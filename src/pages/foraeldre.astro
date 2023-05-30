@@ -54,8 +54,8 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
         title="Telefonrådgivning"
         text="book rådgivning"
         style="dark"
-        size="m-small-d-large"
-      >
+        size="m-small-d-large">
+        <span class="width"></span>
         <p slot="description">
           Hos vores rådgivning kan du få gode råd og inspiration til alt fra
           opdragelse og grænsesætning, til hvordan du som forælder eller anden
@@ -161,6 +161,7 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
 
   .desktophero {
     display: none;
+    padding-bottom:40px;
   }
 
   .section-3-top {
@@ -168,7 +169,7 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
     flex-direction: column;
     gap: var(--spacing-small);
   }
-
+ 
   .flex-gap {
     display: flex;
     flex-direction: column;
@@ -190,6 +191,7 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
     margin-bottom: var(--spacing-small);
     margin-top: var(--spacing-small);
     text-align: center;
+    max-width:100%;
   }
   .lettercontainer {
     display: flex;
@@ -259,6 +261,14 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
       display: flex;
       align-items: center;
       justify-content: end;
+    }
+  }
+
+
+  @media only screen and (min-width: 900px) {
+   
+    .section-2{
+      padding-bottom: 40px;
     }
   }
 </style>
