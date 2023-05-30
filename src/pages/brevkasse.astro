@@ -6,6 +6,19 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
 import SearchBar from "../components/ui/SearchBar.astro";
 import Dropdown from "../components/ui/Dropdown.astro";
 import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
+const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co/rest/v1/brevkasse'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZybnZqcmxtdW1nYXl3Ynh2YXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzODcwNDIsImV4cCI6MjAwMDk2MzA0Mn0.zWbD-YJqJP0ZuJDFHvhqG6JoxRoqVR79RP2mTmp71BQ'
+const res = await fetch(supabaseUrl, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          Prefer: 'return=representation'
+        }
+      });
+    const data = await res.json();
+
 ---
 
 <GirlsUniLayout title="Brevkasse">
@@ -25,26 +38,17 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     <div class="dropdowncontainer">
       <Dropdown />
     </div>
-    <p class="indicator">12 ud af 129</p>
+    <p class="indicator">{data.length} af {data.length}</p>
     <div class="lettercontainer">
-      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Venskaber og familie' filter="venskaber_og_familie all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Krop og sex' filter="krop_og_sex all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Selvværd' filter="selvværd" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Trivsel' filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Andet' filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Trivsel' filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Andet' filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+{data.map((letter) => 
+<BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} />)}
     </div>
     <div class="margintop"><Button text="Læs flere"></Button></div>
   </div>
 </GirlsUniLayout>
 
 <script>
+
   const filterButtons = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
 
@@ -85,6 +89,14 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       });
     });
   });
+
+
+
+
+
+
+  
+
 </script>
 
 <style>
