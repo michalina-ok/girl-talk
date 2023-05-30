@@ -67,15 +67,11 @@ import Button from "../components/ui/Button.astro";
     </div>
 
     <div class="section-3">
-      <div class="width-box">
-        <BoxColor
-          color="green"
-          title="Kvalitetsmærke på GirlTalks rådgivning"
-          text="GirlTalk er i 2021 blevet genakkrediteret af RådgivningsDanmark, som er brancheforening for sociale rådgivningstilbud i Danmark. Akkrediteringen er et særligt kvalitetsstempel på arbejdet i rådgivningen."
-        />
+      <div class="akkrediteringsbillede">
+<img src="/images/akkreditering-omos.webp" alt="Akkrediteringsmarkat fra Rådgivning Danmark">
       </div>
       <div class="text-section-3">
-        <h2>Hvilke tilbud har GirlTalk?</h2>
+        <h2 class="secondary-header">Hvilke tilbud har GirlTalk?</h2>
         <div class="body-text-section-3">
           <p>
             GirlTalk har mange forskellige tilbud og indsatser til forskellige
@@ -139,7 +135,14 @@ import Button from "../components/ui/Button.astro";
 </BaseLayout>
 
 <style>
+.akkrediteringsbillede{
+  max-width: 50%;
+}
 
+.akkrediteringsbillede img{
+  width: 100%;
+  border-radius: 15px;
+}
 .color-section-component-container {
 	display: flex;
   flex-direction: column;
