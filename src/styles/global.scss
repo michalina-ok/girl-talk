@@ -227,11 +227,16 @@ img {
   opacity: var(--opacity-50);
   }
 
+  p {
+    max-width: 650px;
+  }
+
 }
 
 @media only screen and (max-width: 387px) {
   .quote-light {
     font-size: 0.73rem;
   }
+
 }
 
