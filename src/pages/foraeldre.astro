@@ -72,7 +72,7 @@ const res = await fetch(supabaseUrl, {
         <p class="indicator">{data.length} af {data.length}</p>
         <div class="lettercontainer">
           {data.map((letter) => 
-          <BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} />)}
+          <BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} href="/specificletter" />)}
               </div>
         <div class="margintop button-container">
           <Button text="Læs flere" />

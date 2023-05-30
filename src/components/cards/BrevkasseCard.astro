@@ -1,12 +1,14 @@
 ---
 import Category from "./Category.astro"
-const { category, header, filter } = Astro.props;
+const { category, header, filter, href } = Astro.props;
 ---
 
 <div class:list={["BrevkasseCard", filter]}>
+    <a href={href}>
     <p class="themeheader">● {category}</p>
     <p class="light-text">{header}</p>
     <p class="themeheader">Læs mere</p>
+</a>
 </div>
 
 <style>
