@@ -12,9 +12,9 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
   <div class="brevkasselayout">
     <ColorSection color="pink" hex="#ffe4ee" title="GirlTalk's brevkasse" text="Skriv et brev" link="https://jpmpz0xim6i.typeform.com/to/pFHo1ZT6" size="m-extra-small-d-medium">
       <div slot="description" class="text-in-component">
-      <p slot="description" class="themeheader">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
-      <p slot="description">Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
-    </div>
+        <p slot="description" class="themeheader">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
+        <p slot="description">Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
+      </div>
     </ColorSection>
     <UnderlinedHeader header="Læs andre pigers tanker" class="subheader" />
 
@@ -27,36 +27,37 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     </div>
     <p class="indicator">12 ud af 129</p>
     <div class="lettercontainer">
-      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Skole og uddannelse' filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Venskaber og familie' filter="venskaber_og_familie all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Krop og sex' filter="krop_og_sex all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Selvværd' filter="selvværd" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Trivsel' filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Andet' filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Trivsel' filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Andet' filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
-      <BrevkasseCard category='Kærlighed' filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Skole og uddannelse" filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Skole og uddannelse" filter="skole_og_uddannelse all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Venskaber og familie" filter="venskaber_og_familie all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Krop og sex" filter="krop_og_sex all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Selvværd" filter="selvværd" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Trivsel" filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Kærlighed" filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Andet" filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Trivsel" filter="trivsel all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Kærlighed" filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Andet" filter="andet all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
+      <BrevkasseCard category="Kærlighed" filter="kærlighed all" header="Jeg er tiltrukket af piger,  selvom jeg er til drenge" />
     </div>
-    <div class="margintop"><Button text="Læs flere"></Button></div>
+    <div class="margintop"><Button text="Læs flere" /></div>
   </div>
 </GirlsUniLayout>
 
 <script>
   const filterButtons = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
-  const dropdownOptions = document.querySelectorAll("select")
-
+  const dropdownOptions = document.querySelectorAll("select");
 
   const buttonsArray = [...filterButtons];
   const filteredArray = [...cardsSection];
-  const optionsArray = [...dropdownOptions]
+  const optionsArray = [...dropdownOptions];
+
+
+  /* MOBILE FILTERING */
 
   optionsArray.forEach((button) => {
     button.addEventListener("change", () => {
-
       if (filteredArray.length) {
         filteredArray.forEach((filteredElement) => {
           if (filteredElement.classList.contains("none")) {
@@ -66,23 +67,27 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       }
 
       filteredArray.forEach((filteredElement) => {
-        
         if (button.value === "alle") {
           filteredArray.forEach((filteredElement) => {
-          if (filteredElement.classList.contains("none")) {
-            filteredElement.classList.remove("none");
-          }
-        })
+            if (filteredElement.classList.contains("none")) {
+              filteredElement.classList.remove("none");
+            }
+          });
         } else {
-        if (!filteredElement.classList.contains(button.value)) {
-          filteredElement.classList.add("none");
+          if (!filteredElement.classList.contains(button.value)) {
+            filteredElement.classList.add("none");
+          }
         }
-      }
       });
     });
   });
 
+    /* DESKTOP FILTERING */
+
   buttonsArray.forEach((button) => {
+
+ /* CHANGING THE COLOR OF THE BUTTON BY TOGGLING CLASSES */
+
     button.addEventListener("click", () => {
       if (buttonsArray.length) {
         buttonsArray.forEach((button) => {
@@ -100,26 +105,26 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
 
       button.classList.toggle("selected");
 
+      /* FILTERING THE CARDS BY TOGGLING CLASSES */
+
       filteredArray.forEach((filteredElement) => {
-        
         if (button.textContent.toLowerCase() === "alle") {
           filteredArray.forEach((filteredElement) => {
-          if (filteredElement.classList.contains("none")) {
-            filteredElement.classList.remove("none");
-          }
-        })
+            if (filteredElement.classList.contains("none")) {
+              filteredElement.classList.remove("none");
+            }
+          });
         } else {
-        if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
-          filteredElement.classList.add("none");
+          if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
+            filteredElement.classList.add("none");
+          }
         }
-      }
       });
     });
   });
 </script>
 
 <style>
-
   .none {
     display: none;
   }
