@@ -9,7 +9,7 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     <div class="flex-container">
     <section class="headline">
       <div class="titleclass">
-        <h2 class="secondary-header">{title}</h2>
+        <slot name="title" class="secondary-header"></slot>
         <slot name="circle"></slot>
       </div>
         <slot name="subheader"></slot>
