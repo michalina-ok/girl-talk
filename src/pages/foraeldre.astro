@@ -18,8 +18,8 @@ const res = await fetch(supabaseUrl, {
     const data = await res.json();
 ---
 
-<BaseLayout title="Parents">
-              <section>
+<BaseLayout title="Forældre">
+  <section>
     <div class="mobilehero">
       <h1 class="primary-header">Forældre</h1>
       <h2 class="subheader">Rådgivning for forældre og pårørende</h2>
@@ -41,7 +41,7 @@ const res = await fetch(supabaseUrl, {
     <div class="desktophero">
       <div class="heroleft">
         <h1 class="primary-header">Forældre</h1>
-        <h2 class="subheader">Rådgivning for forældre og pårørende</h2>
+        <p class="subheader">Rådgivning for forældre og pårørende</p>
         <p>
           Hos vores rådgivning kan du få gode råd og inspiration til alt fra
           opdragelse og grænsesætning, til hvordan du som forælder eller anden
@@ -63,11 +63,11 @@ const res = await fetch(supabaseUrl, {
     <div class="section-2">
       <BoxColorButton
         color="purple"
-        title="Telefonrådgivning"
         text="book rådgivning"
         style="dark"
         size="m-small-d-large">
         <span class="width"></span>
+      <h2 class="subheader" slot="title">Telefonrådgivning</h2>
         <p slot="description">
           Hos vores rådgivning kan du få gode råd og inspiration til alt fra
           opdragelse og grænsesætning, til hvordan du som forælder eller anden

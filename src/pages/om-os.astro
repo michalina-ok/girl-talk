@@ -11,7 +11,7 @@ import Button from "../components/ui/Button.astro";
 <img src="/images/heroimages/girl-sitting-alone.webp" alt="Pige med hænderne på knæene">
 <div class="text-section">
   <h1 class="primary-header">Om GirlTalk</h1>
-  <h3 class="subheader">Ingen piger skal mistrives</h3>
+  <p class="subheader">Ingen piger skal mistrives</p>
   <p>GirlTalk blev skabt i 2004 ud fra visionen om at give piger et sted at gå hen, når livet er svært.
     Det er desværre et trist faktum, at mistrivslen blandt unge i Danmark stiger, og at pigerne er hårdest ramt.I samarbejde med vores mange støtter og samarbejdspartnere arbejder vi for at bremse den udvikling og for at sikre, at alle piger har en at tale med.</p>
 </div>
@@ -25,6 +25,7 @@ import Button from "../components/ui/Button.astro";
       text="Gå til FAQ"
       link="/faq.html"
       size="m-extra-small-d-medium">
+      <h2 class="subheader" slot="title">Hvem kontakter GirlTalk?</h2>
       <p class="pb10px" slot="description">
         GirlTalks målgruppe er piger og unge kvinder i alderen 12 til 24 år.
           Hos GirlTalk er intet problem for stort eller for småt. <br /> Nogle kontakter
@@ -80,6 +81,7 @@ import Button from "../components/ui/Button.astro";
       link="/meettheteam.html"
       size="m-extra-small-d-medium"
     >
+    <h2 class="subheader" slot="title">Hvem arbejder i GirlTalk?</h2>
       <p class="pb10px" slot="description">
           GirlTalks sekretariat er fordelt over tre lokalafdelinger i hhv.
           København, Aalborg og Odense. Ledelsen i GirlTalk er psykologfaglig

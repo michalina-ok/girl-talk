@@ -21,8 +21,13 @@ const { category, header, filter, href } = Astro.props;
         padding-top:  var(--spacing-xs);
         border-radius: 15px;
         border: 2px var(--color-purple) solid;
+        transition: 0.1s ease-in;
     }
 
+
+  .BrevkasseCard:hover {
+    transform: scale(1.04);
+  }
 
     @media only screen and (min-width: 600px) {
 .BrevkasseCard {

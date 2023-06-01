@@ -10,8 +10,13 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
     <section class="indexherosection">
       <img src="/images/heroimages/fpimg.webp" alt="Image with text." />
     </section>
+    <section class="indexherosectionmobile">
+      <h1 class="primary-header">Du er altid god nok</h1>
+      <img src="/images/heroimages/girls-on-stairs-1.webp" alt="Image with text." />
+    </section>
     <div class="BoxColorButtonCenter">
       <BoxColorButton size="m-extra-small-d-medium" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat">
+        <h2 class="subheader" slot="title">Har du tanker, der fylder?</h2>
         <p slot="description">Vi sidder klar til at hjælpe dig</p>
       </BoxColorButton>
     </div>
@@ -22,8 +27,8 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
           <a href="#"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?" /></a>
         </section>
         <section class="double-articlecard-second">
-          <a href="#"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.webp" /></a>
-          <a href="#"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.webp" /></a>
+          <a href="/specificarticlepage.html"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="images/articleimages/redbluegirlarticle.webp" alt="To piger med forskellige kropstyper" /></a>
+          <a href="/specificarticlepage.html"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="images/articleimages/banana.webp" alt="To hænder: én holder en banen og en anden en dildo" /></a>
         </section>
       </div>
     </div>
@@ -62,6 +67,20 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
   .indexherosection {
     padding-bottom: 40px;
     text-align: center;
+    display: none;
+  }
+
+  .indexherosectionmobile {
+    padding-bottom: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .indexherosectionmobile img{
+    border-radius: 8px;
+    width: 100%;
   }
 
   .indexherosection img {
@@ -93,6 +112,21 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
+  }
+
+  .medier-second-grid a{
+    transition: 0.1s ease-in;
+  }
+  .medier-second-grid a:hover{
+    transform: scale(1.04);
+  }
+
+  .medier-second-grid img{
+    transition: 0.1s ease-in;
+  }
+
+  .medier-second-grid img:hover{
+    transform: scale(1.04);
   }
 
   .double-articlecard-second {
@@ -137,6 +171,13 @@ max-width: 450px;
   }
 
   @media only screen and (min-width: 712px) {
+    .indexherosection{
+      display: block;
+    }
+
+    .indexherosectionmobile{
+      display: none;
+    }
     .medier-second-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -156,6 +197,8 @@ max-width: 450px;
     .indexlayout {
       padding: 30px 70px;
     }
+
+    
   }
 
   @media only screen and (min-width: 900px) {
