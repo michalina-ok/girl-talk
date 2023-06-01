@@ -6,9 +6,9 @@ import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
 import SearchBar from "../components/ui/SearchBar.astro";
 import Dropdown from "../components/ui/Dropdown.astro";
 import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
-const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co/rest/v1/brevkasse-girls'
+const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZybnZqcmxtdW1nYXl3Ynh2YXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzODcwNDIsImV4cCI6MjAwMDk2MzA0Mn0.zWbD-YJqJP0ZuJDFHvhqG6JoxRoqVR79RP2mTmp71BQ'
-const res = await fetch(supabaseUrl, {
+const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

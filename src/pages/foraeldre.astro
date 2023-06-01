@@ -4,9 +4,9 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
 import Button from "../components/ui/Button.astro";
 import SearchBar from "../components/ui/SearchBar.astro";
 import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
-const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co/rest/v1/brevkasse-parents'
+const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZybnZqcmxtdW1nYXl3Ynh2YXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzODcwNDIsImV4cCI6MjAwMDk2MzA0Mn0.zWbD-YJqJP0ZuJDFHvhqG6JoxRoqVR79RP2mTmp71BQ'
-const res = await fetch(supabaseUrl, {
+const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
