@@ -24,7 +24,7 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     </div>
     <div class="filters-container">
       <h2 class="secondary-header">Læs om vores fællesskaber</h2>
-      <p class="label-text light-text">filtrér efter vores fællesskaber</p>
+      <p class="label-text light-text">Filtrér efter vores fællesskaber</p>
       <div class="filter-buttons-container">
         <Button text="alle" style="color" size="m-small-d-large" extraInfo="all" />
         <Button text="13-16 år" style="color" size="m-small-d-large" extraInfo="young" />
@@ -80,7 +80,7 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
       </ColorSection>
     </div>
 
-    <div class="contact-container">
+    <div class="contact-container maillink">
       <h2 class="secondary-header">Har du ikke fundet en gruppe til dig selv?</h2>
       <p>I øjeblikket har vi kun fællesskabsgrupper for piger mellem 13 og 24 år. Du er velkommen til at kontakte os, hvis du mener, at der er behov for andre fællesskabsgrupper.</p>
       <a href="mailto:info@girltalk.dk" class="subheader">info@girltalk.dk</a>
@@ -198,6 +198,31 @@ import UnderlinedHeader from "../components/ui/UnderlinedHeader.astro";
     color: var(--color-black-ish);
     opacity: var(--opacity-75);
   }
+
+  .maillink a {
+	color: var(--color-black-ish);
+  position: relative;
+  text-decoration: none;
+}
+
+.maillink a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: var(--color-black-ish);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.maillink a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 
   @media only screen and (min-width: 600px) {
     .header {
