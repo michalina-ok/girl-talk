@@ -19,8 +19,8 @@ import Button from "../components/ui/Button.astro";
           <a href="/specificarticlepage.html"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?" /></a>
         </section>
         <section class="double-articlecard-second">
-          <a href="/specificarticlepage.html"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="/images/articleimages/redbluegirlarticle.webp" /></a>
-          <a href="/specificarticlepage.html"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="/images/articleimages/banana.webp" /></a>
+          <a href="/specificarticlepage.html"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="/images/articleimages/redbluegirlarticle.webp" alt="To piger med forskellige kropstyper" /></a>
+          <a href="/specificarticlepage.html"><ArticleCard header="Hvordan onanerer man?" category="Krop og sex" link="/images/articleimages/banana.webp" alt="To hænder: én holder en banen og en anden en dildo" /></a>
         </section>
       </div>
     </div>
@@ -32,7 +32,8 @@ import Button from "../components/ui/Button.astro";
       </div>
     </div>
     <div class="BoxColorButtonCenter">
-      <BoxColorButton size="m-extra-small-d-medium" color="purple" title="Du er aldrig alene med dine tanker" text="Skriv til brevkassen">
+      <BoxColorButton size="m-extra-small-d-medium" color="purple" text="Skriv til brevkassen">
+        <h2 class="subheader" slot="title">Du er aldrig alene med dine tanker</h2>
         <p slot="description">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
       </BoxColorButton>
     </div>
