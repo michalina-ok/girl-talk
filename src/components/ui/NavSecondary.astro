@@ -128,6 +128,32 @@ z-index: 0;
 .pigelogo{
     width: 100%;
 }
+
+.nav-links-container a {
+	color: var(--color-black-ish);
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links-container a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: var(--color-black-ish);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav-links-container a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 .search-container {
 	position: relative;
 	display: inline-block;
